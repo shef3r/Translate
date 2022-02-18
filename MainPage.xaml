@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Translate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Translate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    x:Name="page"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True" SizeChanged="Page_SizeChanged">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" x:Name="mainmf" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+            <ComboBox PlaceholderText="Input language (auto if none)" SelectionChanged="from_SelectionChanged" x:Name="from" Margin="10,10,10,0" Width="300" ></ComboBox>
+            <TextBox PlaceholderText="Input" AcceptsReturn="False" TextChanged="input_TextChanged" x:Name="input" TextWrapping="Wrap" Width="300" Margin="10,10,10,10"/>
+            </StackPanel>
+            <Button x:Name="Translate" HorizontalAlignment="Center" Click="Translate_Click" Padding="5,5,5,5">
+                <StackPanel>
+                    <SymbolIcon Symbol="Forward" x:Name="MF"></SymbolIcon>
+                    <TextBlock Text="Translate" x:Name="MFD"></TextBlock>
+                </StackPanel>
+            </Button>
+            <StackPanel Orientation="Vertical"><ComboBox SelectionChanged="to_SelectionChanged" PlaceholderText="Output language" x:Name="to" Margin="10,10,10,0" Width="300"></ComboBox>
+            <TextBox PlaceholderText="Output" x:Name="output" TextWrapping="Wrap" Margin="10,10,10,10" MinHeight="32" MinWidth="100" MaxWidth="300"/>
+            </StackPanel></StackPanel>
+        <TextBlock x:Name="fromchosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>
+        <TextBlock x:Name="tochosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>
+    </Grid>
+</Page>
