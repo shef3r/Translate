@@ -1,0 +1,2 @@
+MainPackage=C:\Users\bruno\source\repos\Translate\bin\ARM\Release\Translate_1.0.0.0_ARM.msix
+SymbolPackage=C:\Users\bruno\source\repos\Translate\obj\ARM\Release\Symbols\Translate_1.0.0.0_ARM.appxsym
