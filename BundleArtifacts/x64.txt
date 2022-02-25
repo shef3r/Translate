@@ -1,2 +1,2 @@
-MainPackage=C:\Users\bruno\source\repos\Translate\bin\x64\Release\Translate_1.0.0.0_x64.msix
-SymbolPackage=C:\Users\bruno\source\repos\Translate\obj\x64\Release\Symbols\Translate_1.0.0.0_x64.appxsym
+MainPackage=C:\Users\bruno\source\repos\Translate\bin\x64\Release\Translate_2.0.1.0_x64.msix
+SymbolPackage=C:\Users\bruno\source\repos\Translate\obj\x64\Release\Symbols\Translate_2.0.1.0_x64.appxsym

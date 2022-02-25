@@ -5,27 +5,153 @@
     xmlns:local="using:Translate"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:historyitems="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d"
     x:Name="page"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True" SizeChanged="Page_SizeChanged">
+    <Page.Resources>
+        <!--This top margin is the height of the custom TitleBar-->
+        <Thickness x:Key="NavigationViewContentMargin">0,48,0,0</Thickness>
+        <Thickness x:Key="NavigationViewContentGridBorderThickness">0</Thickness>
+        <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent"></SolidColorBrush>
+    </Page.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <CommandBar IsDynamicOverflowEnabled="False" Margin="0,0,180,0" OverflowButtonVisibility="Collapsed">
+            <AppBarButton Label="History" x:Name="histbutton" IsCompact="True" Click="AppBarButton_Click_1">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" x:Name="mainflyouthistory" Width="380px" Padding="5,5,5,5">
+                            <StackPanel Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="bighistory" CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock TextWrapping="Wrap" x:Name="warnhis1" Margin="10,0,0,0" Text="This section only stores this" />
+                                    <TextBlock TextWrapping="Wrap" x:Name="warnhis2" Margin="10,0,0,0" Text="session's history and does not work" />
+                                    <TextBlock TextWrapping="Wrap" x:Name="warnhis3" Margin="10,0,0,0" Text="with live translation." />
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Padding="12,10,20,15" x:Name="historytext" Text="History" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
+                            </StackPanel>
+                            <ListView Width="370px" x:Name="historyitems" SelectionMode="None" HorizontalAlignment="Stretch" Height="auto">
+                            </ListView>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#xE81C;"></FontIcon>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Label="Settings" Icon="Setting" x:Name="settingsbutton" IsCompact="True" Click="AppBarButton_Click_2">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel Orientation="Vertical" x:Name="mainflyout" Width="380px" Padding="5,5,5,5">
+                            <StackPanel Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
+                                <StackPanel Orientation="Vertical">
+                                <TextBlock TextWrapping="Wrap" x:Name="warn1" Margin="10,0,0,0" Text="Not all settings can be applied instantly" />
+                                <TextBlock TextWrapping="Wrap" x:Name="warn2" Margin="10,0,0,0" Text="or correctly without a restart." /></StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Padding="12,10,20,15" x:Name="settingstext" Text="Settings" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
+                                <Button HorizontalAlignment="Right" x:Name="apply" Margin="144,0,0,0" Click="Button_Click_1">
+                                    <StackPanel Orientation="Horizontal">
+                                        <FontIcon Glyph="&#xE081;" />
+                                        <TextBlock Text="Apply" Padding="5,0,0,0"/>
+                                    </StackPanel>
+                                </Button>
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <StackPanel Orientation="Horizontal" x:Name="mainmf" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Orientation="Vertical">
-            <ComboBox PlaceholderText="Input language (auto if none)" SelectionChanged="from_SelectionChanged" x:Name="from" Margin="10,10,10,0" Width="300" ></ComboBox>
-            <TextBox PlaceholderText="Input" AcceptsReturn="False" TextChanged="input_TextChanged" x:Name="input" TextWrapping="Wrap" Width="300" Margin="10,10,10,10"/>
+                            </StackPanel>
+                            <ScrollViewer Width="360px">
+                                <StackPanel Orientation="Vertical">
+                                    <muxc:Expander CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0">
+                                        <muxc:Expander.Header>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                <FontIcon Glyph="&#xE99A;"/>
+                                                <TextBlock Text="Functionality" HorizontalAlignment="Right" Margin="10,0,0,0"/>
+                                            </StackPanel>
+                                        </muxc:Expander.Header>
+                                        <StackPanel Orientation="Vertical">
+                                            <Grid Width="440px"  x:Name="settingitem0" Padding="5,5,5,5">
+                                                <TextBlock Width="300px" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="Live translation"></TextBlock>
+                                                <ToggleSwitch x:Name="livetrans" OnContent="" OffContent="" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
+                                            </Grid>
+                                        </StackPanel>
+                                    </muxc:Expander>
+                                    <muxc:Expander CornerRadius="4,4,4,4" Padding="15,15,15,15" Margin="0,10,0,0" Width="360px" IsExpanded="True">
+                                        <muxc:Expander.Header>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                <FontIcon Glyph="&#xE2B1;"/>
+                                                <TextBlock Text="Appearance" HorizontalAlignment="Right" Margin="10,0,0,0"/>
+                                            </StackPanel>
+                                        </muxc:Expander.Header>
+                                        <StackPanel Orientation="Vertical">
+                                            <Grid Width="440px" Padding="5,5,5,5" x:Name="settingitem1">
+                                                <TextBlock Width="300px" VerticalAlignment="Top" HorizontalAlignment="Left" Text="What theme would you like to use?"></TextBlock>
+                                                <muxc:RadioButtons Margin="0,15,0,0">
+                                                    <RadioButton  Content="Light" x:Name="lightmode"/>
+                                                    <RadioButton  Content="Dark" x:Name="darkmode"/>
+                                                </muxc:RadioButtons>
+                                            </Grid>
+                                            <Grid Width="440px"  x:Name="settingitem2" Padding="5,5,5,5">
+                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Compact mode"></TextBlock>
+                                                <ToggleSwitch OnContent="" OffContent="" x:Name="compact" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
+                                            </Grid>
+                                            <Grid Width="440px"  x:Name="settingitem5" Padding="5,5,5,5">
+                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Show history"></TextBlock>
+                                                <ToggleSwitch OnContent="" OffContent="" VerticalAlignment="Center" x:Name="hisshow" HorizontalAlignment="Right"></ToggleSwitch>
+                                            </Grid>
+                                        </StackPanel>
+                                    </muxc:Expander>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarSeparator />
+        </CommandBar>
+        <Border x:Name="AppTitleBar"
+                IsHitTestVisible="True"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Height="40"
+                Canvas.ZIndex="5" 
+                Margin="0,0,450,0" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Margin="24,8,0,0">
+                <Image x:Name="AppFontIcon"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"
+                    Source="Assets/Square44x44Logo.png" 
+                    Width="20" 
+                    Height="20"/>
+                <TextBlock x:Name="AppTitle"
+                    Text="Translate"
+                    VerticalAlignment="Center"
+                    Margin="12,0,0,0"
+                    Style="{StaticResource CaptionTextBlockStyle}" />
             </StackPanel>
-            <Button x:Name="Translate" HorizontalAlignment="Center" Click="Translate_Click" Padding="5,5,5,5">
-                <StackPanel>
-                    <SymbolIcon Symbol="Forward" x:Name="MF"></SymbolIcon>
-                    <TextBlock Text="Translate" x:Name="MFD"></TextBlock>
+        </Border>
+        <Grid Background="{ThemeResource LayerFillColorDefaultBrush}" Margin="0,48,0,0" CornerRadius="8,8,0,0" Grid.ColumnSpan="2">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" x:Name="mainmf" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical">
+                        <ComboBox PlaceholderText="Input language" SelectionChanged="from_SelectionChanged" x:Name="from" Margin="10,10,10,0" Width="300" ></ComboBox>
+                        <TextBox PlaceholderText="Input" AcceptsReturn="False" TextChanged="input_TextChanged" x:Name="input" TextWrapping="Wrap" Width="300" Margin="10,10,10,10"/>
+                    </StackPanel>
+                    <Button x:Name="Translate" HorizontalAlignment="Center" Click="Translate_Click" Padding="5,5,5,5">
+                        <StackPanel>
+                            <SymbolIcon Symbol="Forward" x:Name="MF"></SymbolIcon>
+                            <TextBlock Text="Translate" x:Name="MFD"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <StackPanel Orientation="Vertical">
+                        <ComboBox SelectionChanged="to_SelectionChanged" PlaceholderText="Output language" x:Name="to" Margin="10,10,10,0" Width="300"></ComboBox>
+                        <TextBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PlaceholderText="Output" IsReadOnly="True" x:Name="output" TextWrapping="Wrap" Margin="10,10,10,10" MinHeight="32" MinWidth="100" MaxWidth="300" />
+                    </StackPanel>
                 </StackPanel>
-            </Button>
-            <StackPanel Orientation="Vertical"><ComboBox SelectionChanged="to_SelectionChanged" PlaceholderText="Output language" x:Name="to" Margin="10,10,10,0" Width="300"></ComboBox>
-            <TextBox PlaceholderText="Output" x:Name="output" TextWrapping="Wrap" Margin="10,10,10,10" MinHeight="32" MinWidth="100" MaxWidth="300"/>
-            </StackPanel></StackPanel>
-        <TextBlock x:Name="fromchosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>
-        <TextBlock x:Name="tochosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>
+                <TextBlock x:Name="fromchosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>
+                <TextBlock x:Name="tochosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

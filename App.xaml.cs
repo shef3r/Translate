@@ -39,6 +39,7 @@ namespace Translate
         /// <param name="e">Szczegóły dotyczące żądania uruchomienia i procesu.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Nie powtarzaj inicjowania aplikacji, gdy w oknie znajduje się już zawartość,
@@ -80,8 +81,6 @@ namespace Translate
                 uwpTitleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
 
                 uwpTitleBar.BackgroundColor = Windows.UI.Colors.Transparent;
-
-
 
                 //using Windows.ApplicationModel.Core
 

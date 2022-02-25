@@ -2,8 +2,12 @@
 using Windows.Foundation;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
+using Windows.Storage;
 using Windows.UI.Xaml.Controls;
 using Windows.Web.Http;
+using System.Windows.Input;
+using System.Diagnostics;
+using System.Collections.Generic;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
 
@@ -17,6 +21,105 @@ namespace Translate
         public MainPage()
         {
             this.InitializeComponent();
+            Window.Current.SetTitleBar(AppTitleBar);
+            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+            if (localSettings != null)
+            {
+                if (localSettings.Values["history"] != null)
+                {
+                    if (localSettings.Values["history"].ToString() == "False")
+                    {
+                        histbutton.Visibility = Visibility.Collapsed;
+                        hisshow.IsOn = false;
+                    }
+                    else
+                    {
+                        histbutton.Visibility = Visibility.Visible;
+                        hisshow.IsOn = true;
+                    }
+                }
+                if (localSettings.Values["compact"] != null)
+                {
+                    Debug.WriteLine(ApplicationData.Current.LocalSettings.Values["compact"].ToString());
+                    if (ApplicationData.Current.LocalSettings.Values["compact"].ToString() == "True")
+                    {
+                        compact.IsOn = true;
+                        big.Padding = new Thickness(8, 8, 8, 8);
+                        mainflyout.Padding = new Thickness(3, 3, 3, 3);
+                        big.Margin = new Thickness(5, 0, 5, 5);
+                        settingstext.Padding = new Thickness(10, 10, 5, 8);
+                        settingitem0.Padding = new Thickness(5, 3, 5, 3);
+                        settingitem1.Padding = new Thickness(5, 3, 5, 3);
+                        settingitem2.Padding = new Thickness(5, 3, 5, 3);
+                        settingitem5.Padding = new Thickness(5, 3, 5, 3);
+                        mainflyout.Padding = new Thickness(0, 0, 0, 0);
+                        apply.Margin = new Thickness(165, 0, 0, 0);
+                        warn1.Text = "Not all settings can be applied instantly or";
+                        warn2.Text = "correctly without a restart.";
+                        bighistory.Padding = new Thickness(8, 8, 8, 8);
+                        mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
+                        bighistory.Margin = new Thickness(5, 0, 5, 5);
+                        historytext.Padding = new Thickness(10, 10, 5, 8);
+                        mainflyouthistory.Padding = new Thickness(0, 0, 0, 0);
+                        apply.Margin = new Thickness(165, 0, 0, 0);
+                        warnhis1.Text = "This section only stores this session's";
+                        warnhis2.Text = "history and does not work with live";
+                        warnhis3.Text = "translation.";
+                    }
+                    else
+                    {
+                        compact.IsOn = false;
+                        big.Margin = new Thickness(5, 0, 5, 5);
+                        big.Padding = new Thickness(15, 15, 15, 15);
+                        settingitem0.Padding = new Thickness(5, 5, 5, 5);
+                        settingitem1.Padding = new Thickness(5, 5, 5, 5);
+                        settingitem2.Padding = new Thickness(5, 5, 5, 5);
+                        settingitem5.Padding = new Thickness(5, 5, 5, 5);
+                        mainflyout.Padding = new Thickness(5, 5, 5, 5);
+                        settingstext.Padding = new Thickness(10, 10, 20, 15);
+                        apply.Margin = new Thickness(144, 0, 0, 0);
+                        warn1.Text = "Not all settings can be applied instantly";
+                        warn2.Text = "or correctly without a restart.";
+                        bighistory.Padding = new Thickness(15, 15, 15, 15);
+                        mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
+                        bighistory.Margin = new Thickness(5, 0, 5, 5);
+                        historytext.Padding = new Thickness(10, 10, 20, 15);
+                        mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
+                        warnhis1.Text = "This section only stores this";
+                        warnhis2.Text = "session's history and does not work";
+                        warnhis3.Text = "with live translation.";
+                    }
+                }
+                if (localSettings.Values["theme"] != null)
+                {
+
+                    if (localSettings.Values["theme"].ToString() == "1")
+                    {
+                        lightmode.IsChecked = true;
+                        darkmode.IsChecked = false;
+                        page.RequestedTheme = ElementTheme.Light;
+                        AppTitleBar.RequestedTheme = ElementTheme.Light;
+                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                        root.RequestedTheme = ElementTheme.Light;
+                    }
+                    if (localSettings.Values["theme"].ToString() == "2")
+                    {
+                        lightmode.IsChecked = false;
+                        darkmode.IsChecked = true;
+                        page.RequestedTheme = ElementTheme.Dark;
+                        AppTitleBar.RequestedTheme = ElementTheme.Dark;
+                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                        root.RequestedTheme = ElementTheme.Dark;
+                    }
+                    if (localSettings.Values["theme"].ToString() == "3")
+                    {
+                        return;
+                    }
+                    
+
+
+                }
+            }
             from.Items.Add("Afrikaans");
             from.Items.Add("Albanian");
             from.Items.Add("Amharic");
@@ -245,7 +348,7 @@ namespace Translate
                 var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
                 string[] json = result.Content.ToString().Split('"');
                 output.Text = json[1];
-
+                historyitems.Items.Add(from.SelectedItem.ToString() + " → " + to.SelectedItem.ToString() + "\n" + input.Text + " → " + output.Text + "\n");
             }
             catch (Exception ex)
             {
@@ -483,31 +586,66 @@ namespace Translate
             if (from.SelectedItem.ToString() == "Zulu") { fromchosen.Text = "zu"; }
         }
 
-        private void input_TextChanged(object sender, TextChangedEventArgs e)
+        private async void input_TextChanged(object sender, TextChangedEventArgs e)
         {
+            if (livetrans.IsOn == true)
+            {
+                var client = new HttpClient();
+                try
+                {
+                    var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
+                    string[] json = result.Content.ToString().Split('"');
+                    output.Text = json[1];
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    ContentDialog dialogerror = new ContentDialog();
+                    dialogerror.Title = "Oops, an error occured!";
+                    dialogerror.PrimaryButtonText = "OK";
+                    dialogerror.Content = ex.Message;
+                    await dialogerror.ShowAsync();
+                }
+                if (output.Text == "-//W3C//DTD HTML 4.01 Transitional//EN")
+                {
+                    try
+                    {
+                        ContentDialog dialogerror = new ContentDialog();
+                        dialogerror.Title = "Oops, an error occured!";
+                        dialogerror.PrimaryButtonText = "OK";
+                        dialogerror.Content = "You've been temporairly banned from the Google Translate API. This might have happened because you have live translation on. Wait a couple hours and be careful in the future.";
+                        await dialogerror.ShowAsync();
+                        output.Text = null;
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                }
+            }
             if (to.SelectedIndex < -1)
             {
                 Translate.IsEnabled = false;
             }
             else
             {
-                Translate.IsEnabled = true;
-            }
-            if (from.SelectedIndex < -1)
-            {
-                Translate.IsEnabled = false;
-            }
-            else
-            {
-                Translate.IsEnabled = true;
-            }
-            if (input.Text.Length == 0)
-            {
-                Translate.IsEnabled = false;
-            }
-            else
-            {
-                Translate.IsEnabled = true;
+                if (from.SelectedIndex < -1)
+                {
+                    Translate.IsEnabled = false;
+                }
+                else
+                {
+                    if (input.Text.Length == 0)
+                    {
+                        output.Text = "";
+                        Translate.IsEnabled = false;
+                    }
+                    else
+                    {
+                        Translate.IsEnabled = true;
+                    }
+                }
             }
         }
 
@@ -542,6 +680,131 @@ namespace Translate
                 input.MaxHeight = 32;
                 output.MaxHeight = 32;
             }
+        }
+
+        
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AppBarButton_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+        public interface ISettingsService
+        {
+            void SetValue<T>(string key, T value);
+            T GetValue<T>(string key);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (hisshow.IsOn == false)
+            {
+                ApplicationData.Current.LocalSettings.Values["history"] = false;
+                histbutton.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ApplicationData.Current.LocalSettings.Values["history"] = true;
+                histbutton.Visibility = Visibility.Visible;
+            }
+            if (compact.IsOn == true)
+            {
+                ApplicationData.Current.LocalSettings.Values["compact"] = true;
+                big.Padding = new Thickness(8,8,8,8);
+                mainflyout.Padding = new Thickness(3,3,3,3);
+                big.Margin = new Thickness(5, 0, 5, 5);
+                settingstext.Padding = new Thickness(10, 10, 5, 8);
+                settingitem0.Padding = new Thickness(5, 3, 5, 3);
+                settingitem1.Padding = new Thickness(5, 3, 5, 3);
+                settingitem2.Padding = new Thickness(5, 3, 5, 3);
+                settingitem5.Padding = new Thickness(5, 3, 5, 3);
+                mainflyout.Padding = new Thickness(0,0,0,0);
+                apply.Margin = new Thickness(165, 0, 0, 0);
+                warn1.Text = "Not all settings can be applied instantly or";
+                warn2.Text = "correctly without a restart.";
+                bighistory.Padding = new Thickness(8, 8, 8, 8);
+                mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
+                bighistory.Margin = new Thickness(5, 0, 5, 5);
+                historytext.Padding = new Thickness(10, 10, 5, 8);
+                mainflyouthistory.Padding = new Thickness(0, 0, 0, 0);
+                apply.Margin = new Thickness(165, 0, 0, 0);
+                warnhis1.Text = "This section only stores this session's";
+                warnhis2.Text = "history and does not work with live";
+                warnhis3.Text = "translation.";
+            }
+            else
+            {
+                ApplicationData.Current.LocalSettings.Values["compact"] = false;
+                big.Margin = new Thickness(5, 0, 5, 5);
+                big.Padding = new Thickness(15, 15, 15, 15);
+                settingitem0.Padding = new Thickness(5, 5, 5, 5);
+                settingitem1.Padding = new Thickness(5, 5, 5, 5);
+                settingitem2.Padding = new Thickness(5, 5, 5, 5);
+                settingitem5.Padding = new Thickness(5, 5, 5, 5);
+                mainflyout.Padding = new Thickness(5, 5, 5, 5);
+                settingstext.Padding = new Thickness(10, 10, 20, 15);
+                apply.Margin = new Thickness(144, 0, 0, 0);
+                warn1.Text = "Not all settings can be applied instantly";
+                warn2.Text = "or correctly without a restart.";
+                bighistory.Padding = new Thickness(15, 15, 15, 15);
+                mainflyouthistory.Padding = new Thickness(5,5,5,5);
+                bighistory.Margin = new Thickness(5, 0, 5, 5);
+                historytext.Padding = new Thickness(10, 10, 20, 15);
+                mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
+                warnhis1.Text = "This section only stores this";
+                warnhis2.Text = "session's history and does not work";
+                warnhis3.Text = "with live translation.";
+            }
+            if (lightmode.IsChecked == true) 
+            {
+                ApplicationData.Current.LocalSettings.Values["theme"] = "1";
+            }
+            if (darkmode.IsChecked == true)
+            {
+                ApplicationData.Current.LocalSettings.Values["theme"] = "2";
+            }
+            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+            if (localSettings != null)
+            {
+                if (localSettings.Values["theme"] != null)
+                {
+                    if (localSettings.Values["theme"].ToString() == "1")
+                    {
+                        page.RequestedTheme = ElementTheme.Light;
+                        AppTitleBar.RequestedTheme = ElementTheme.Light;
+                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                        root.RequestedTheme = ElementTheme.Light;
+                    }
+                    if (localSettings.Values["theme"].ToString() == "2")
+                    {
+                        page.RequestedTheme = ElementTheme.Dark;
+                        AppTitleBar.RequestedTheme = ElementTheme.Dark;
+                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                        root.RequestedTheme = ElementTheme.Dark;
+                        // this one sets dark mode
+                    }
+
+                }
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void faviconbutton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
