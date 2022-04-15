@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Source>C:\Users\shefer\Desktop\darkicon.png</Source>
-    <SmallTileSource>C:\Users\shefer\Desktop\darkicon.png</SmallTileSource>
-    <MediumTileSource>C:\Users\shefer\Desktop\darkicon.png</MediumTileSource>
-    <WideTileSource>C:\Users\shefer\Desktop\darkicon.png</WideTileSource>
-    <LargeTileSource>C:\Users\shefer\Desktop\darkicon.png</LargeTileSource>
-    <AppIconSource>C:\Users\shefer\Desktop\darkicon.png</AppIconSource>
-    <SplashScreenSource>C:\Users\shefer\Desktop\darkicon.png</SplashScreenSource>
-    <PackageLogoSource>C:\Users\shefer\Desktop\darkicon.png</PackageLogoSource>
+    <Source>C:\Users\shefer\Desktop\icon.png</Source>
+    <SmallTileSource>C:\Users\shefer\Desktop\icon.png</SmallTileSource>
+    <MediumTileSource>C:\Users\shefer\Desktop\icon.png</MediumTileSource>
+    <WideTileSource>C:\Users\shefer\Desktop\icon.png</WideTileSource>
+    <LargeTileSource>C:\Users\shefer\Desktop\icon.png</LargeTileSource>
+    <AppIconSource>C:\Users\shefer\Desktop\icon.png</AppIconSource>
+    <SplashScreenSource>C:\Users\shefer\Desktop\icon.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\shefer\Desktop\icon.png</PackageLogoSource>
     <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxBuildConfigurationSelection>x86|x64|arm|arm64</AppxBuildConfigurationSelection>
