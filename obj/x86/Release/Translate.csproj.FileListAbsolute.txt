@@ -1,0 +1,11 @@
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\Translate.csproj.AssemblyReference.cache
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\App.g.i.cs
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\App.g.cs
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\MainPage.g.i.cs
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\MainPage.g.cs
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\XamlTypeInfo.g.cs
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\App.xaml
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\MainPage.xaml
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\App.xbf
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\MainPage.xbf
+C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\XamlSaveStateFile.xml

@@ -7,7 +7,7 @@
 
     Po więcej informacji o plikach manifestu pakietów, zobacz http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" Publisher="CN=shefer" Version="2.0.1.0" ProcessorArchitecture="x64" />
+  <Identity Name="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" Publisher="CN=shefer" Version="2.1.0.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Translate</DisplayName>
