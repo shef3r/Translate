@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:43:43.124</Modified>
+      <Modified>2022-04-15T14:52:55.065</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\Translate.exe">
       <PackagePath>entrypoint\Translate.exe</PackagePath>
-      <Modified>2022-04-15T14:43:41.637</Modified>
+      <Modified>2022-04-15T14:52:51.999</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -49,227 +49,227 @@
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.250</Modified>
+      <Modified>2022-04-15T14:51:19.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.294</Modified>
+      <Modified>2022-04-15T14:51:19.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.346</Modified>
+      <Modified>2022-04-15T14:51:19.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.421</Modified>
+      <Modified>2022-04-15T14:51:19.919</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.672</Modified>
+      <Modified>2022-04-15T14:51:20.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.550</Modified>
+      <Modified>2022-04-15T14:51:19.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.584</Modified>
+      <Modified>2022-04-15T14:51:19.299</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.617</Modified>
+      <Modified>2022-04-15T14:51:19.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.651</Modified>
+      <Modified>2022-04-15T14:51:19.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.689</Modified>
+      <Modified>2022-04-15T14:51:19.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.326</Modified>
+      <Modified>2022-04-15T14:51:20.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.414</Modified>
+      <Modified>2022-04-15T14:51:20.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.517</Modified>
+      <Modified>2022-04-15T14:51:20.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:06.111</Modified>
+      <Modified>2022-04-15T14:51:21.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.716</Modified>
+      <Modified>2022-04-15T14:51:19.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.745</Modified>
+      <Modified>2022-04-15T14:51:19.399</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.791</Modified>
+      <Modified>2022-04-15T14:51:19.421</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.928</Modified>
+      <Modified>2022-04-15T14:51:19.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:34:43.918</Modified>
+      <Modified>2022-04-15T14:51:20.385</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:39:58.406</Modified>
+      <Modified>2022-04-15T14:51:20.395</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:18:02.971</Modified>
+      <Modified>2022-04-15T14:51:20.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:41:29.701</Modified>
+      <Modified>2022-04-15T14:51:20.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:18:02.971</Modified>
+      <Modified>2022-04-15T14:51:20.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:42:42.408</Modified>
+      <Modified>2022-04-15T14:51:20.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:43:16.170</Modified>
+      <Modified>2022-04-15T14:51:20.375</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.023</Modified>
+      <Modified>2022-04-15T14:51:20.313</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.048</Modified>
+      <Modified>2022-04-15T14:51:20.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.705</Modified>
+      <Modified>2022-04-15T14:51:20.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.740</Modified>
+      <Modified>2022-04-15T14:51:20.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.772</Modified>
+      <Modified>2022-04-15T14:51:20.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.830</Modified>
+      <Modified>2022-04-15T14:51:20.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.852</Modified>
+      <Modified>2022-04-15T14:51:20.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.873</Modified>
+      <Modified>2022-04-15T14:51:20.228</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.954</Modified>
+      <Modified>2022-04-15T14:51:20.285</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.895</Modified>
+      <Modified>2022-04-15T14:51:20.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.916</Modified>
+      <Modified>2022-04-15T14:51:20.246</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:06.133</Modified>
+      <Modified>2022-04-15T14:51:21.375</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:06.157</Modified>
+      <Modified>2022-04-15T14:51:21.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:06.181</Modified>
+      <Modified>2022-04-15T14:51:21.400</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:06.207</Modified>
+      <Modified>2022-04-15T14:51:21.415</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:06.242</Modified>
+      <Modified>2022-04-15T14:51:21.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.961</Modified>
+      <Modified>2022-04-15T14:51:19.553</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.995</Modified>
+      <Modified>2022-04-15T14:51:19.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.032</Modified>
+      <Modified>2022-04-15T14:51:19.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.214</Modified>
+      <Modified>2022-04-15T14:51:19.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -278,27 +278,27 @@
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.687</Modified>
+      <Modified>2022-04-15T14:51:20.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:03.837</Modified>
+      <Modified>2022-04-15T14:51:19.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.800</Modified>
+      <Modified>2022-04-15T14:51:20.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.997</Modified>
+      <Modified>2022-04-15T14:51:20.305</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.077</Modified>
+      <Modified>2022-04-15T14:51:19.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -310,11 +310,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-15T14:43:41.426</Modified>
+      <Modified>2022-04-15T14:52:51.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-15T14:43:41.426</Modified>
+      <Modified>2022-04-15T14:52:51.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -326,11 +326,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-15T14:43:41.838</Modified>
+      <Modified>2022-04-15T14:52:52.911</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\Core\Translate.exe">
       <PackagePath>Translate.exe</PackagePath>
-      <Modified>2022-04-15T14:43:43.110</Modified>
+      <Modified>2022-04-15T14:52:55.034</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
