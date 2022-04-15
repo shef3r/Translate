@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:35:48.358</Modified>
+      <Modified>2022-04-15T14:43:43.124</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\Translate.exe">
       <PackagePath>entrypoint\Translate.exe</PackagePath>
-      <Modified>2022-04-15T14:35:47.144</Modified>
+      <Modified>2022-04-15T14:43:41.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -144,7 +144,7 @@
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:18:02.971</Modified>
+      <Modified>2022-04-15T14:39:58.406</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
@@ -154,7 +154,7 @@
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:35:22.155</Modified>
+      <Modified>2022-04-15T14:41:29.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
@@ -164,12 +164,12 @@
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:04.976</Modified>
+      <Modified>2022-04-15T14:42:42.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-15T14:21:05.091</Modified>
+      <Modified>2022-04-15T14:43:16.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
@@ -310,11 +310,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-15T14:35:46.928</Modified>
+      <Modified>2022-04-15T14:43:41.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-15T14:35:46.928</Modified>
+      <Modified>2022-04-15T14:43:41.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -326,11 +326,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-15T14:34:18.972</Modified>
+      <Modified>2022-04-15T14:43:41.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x64\Debug\Core\Translate.exe">
       <PackagePath>Translate.exe</PackagePath>
-      <Modified>2022-04-15T14:35:48.353</Modified>
+      <Modified>2022-04-15T14:43:43.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

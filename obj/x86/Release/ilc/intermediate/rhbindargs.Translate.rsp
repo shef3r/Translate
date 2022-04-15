@@ -1,0 +1,16 @@
+﻿/osver:6.2
+/appcontainer
+"/runtime:mrt100_app"
+/eh:clr
+/pdb
+"/nativeLink:C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.11-rel-30601-02\tools\x86\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\ilc\intermediate\MDIL\Translate.mdilexe"
+"/i:C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\ilc\intermediate\MDIL"
+"/out:C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\ilc\intermediate\Native\Translate.exe"
+"/pdbAltPath:C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x86\Release\ilc"
+"/res:C:\Users\shefer\Source\Repos\mac-andcheese\Translate\obj\x86\Release\ilc\intermediate\Native.res"
+"/i:C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.sharedlibrary\2.2.8-rel-30601-02\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"

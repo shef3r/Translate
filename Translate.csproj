@@ -22,7 +22,7 @@
     <PackageCertificateKeyFile>Translate_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
-    <AppxPackageDir>C:\Users\bruno\OneDrive\Dokumenty\UWP workspaces and stuff\Public\Translate\Packages\</AppxPackageDir>
+    <AppxPackageDir>C:\Users\shefer\Desktop\Nowy folder\</AppxPackageDir>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm|arm64</AppxBundlePlatforms>
