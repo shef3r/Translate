@@ -48,8 +48,9 @@
                             <StackPanel Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
                                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
                                 <StackPanel Orientation="Vertical">
-                                <TextBlock TextWrapping="Wrap" x:Name="warn1" Margin="10,0,0,0" Text="Not all settings can be applied instantly" />
-                                <TextBlock TextWrapping="Wrap" x:Name="warn2" Margin="10,0,0,0" Text="or correctly without a restart." /></StackPanel>
+                                    <TextBlock TextWrapping="Wrap" x:Name="warn1" Margin="10,0,0,0" Text="Not all settings can be applied instantly" />
+                                    <TextBlock TextWrapping="Wrap" x:Name="warn2" Margin="10,0,0,0" Text="or correctly without a restart." />
+                                </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Padding="12,10,20,15" x:Name="settingstext" Text="Settings" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
@@ -58,6 +59,13 @@
                                         <FontIcon Glyph="&#xE081;" />
                                         <TextBlock Text="Apply" Padding="5,0,0,0"/>
                                     </StackPanel>
+                                    <Button.Resources>
+                                        <muxc:TeachingTip IsLightDismissEnabled="True" Target="{x:Bind apply}" PreferredPlacement="Left" IsOpen="False" x:Name="livetransison">
+                                            <muxc:TeachingTip.Content>
+                                                <TextBlock TextWrapping="WrapWholeWords" Text="Live translation is on. Remember, that setting works only for the current session to make sure you're not gonna get banned from the API!"/>
+                                            </muxc:TeachingTip.Content>
+                                        </muxc:TeachingTip>
+                                    </Button.Resources>
                                 </Button>
 
                             </StackPanel>

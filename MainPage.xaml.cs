@@ -342,28 +342,51 @@ namespace Translate
 
         private async void Translate_Click(object sender, RoutedEventArgs e)
         {
-            var client = new HttpClient();
-            try
+            if (from.SelectedItem != null)
             {
-                var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
-                string[] json = result.Content.ToString().Split('"');
-                output.Text = json[1];
-                historyitems.Items.Add(from.SelectedItem.ToString() + " → " + to.SelectedItem.ToString() + "\n" + input.Text + " → " + output.Text + "\n");
-            }
-            catch (Exception ex)
-            {
-                ContentDialog dialogerror = new ContentDialog();
-                dialogerror.Title = "Oops, an error occured!";
-                dialogerror.PrimaryButtonText = "OK";
-                dialogerror.Content = ex.Message;
-                await dialogerror.ShowAsync();
+                if (to.SelectedItem !=null)
+                {
+                    if (!from.SelectedItem.Equals(to.SelectedItem))
+                    {
+                        if (input.Text != null)
+                        {
+                            if (output.Text != null)
+                            {
+                                var client = new HttpClient();
+                                try
+                                {
+                                    var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
+                                    string[] json = result.Content.ToString().Split('"');
+                                    output.Text = json[1];
+                                    historyitems.Items.Add(from.SelectedItem.ToString() + " → " + to.SelectedItem.ToString() + "\n" + input.Text + " → " + output.Text + "\n");
+                                    if (output.Text == "initial-scale=1, minimum-scale=1, width=device-width")
+                                    {
+                                        try { showerror("There was something wrong with your request. Please try again."); } catch { };
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    showerror(ex.Message);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
-        
+        private async void showerror(string error)
+        {
+            ContentDialog dialogerror = new ContentDialog();
+            dialogerror.Title = "Oops, an error occured!";
+            dialogerror.PrimaryButtonText = "OK";
+            dialogerror.Content = error;
+            await dialogerror.ShowAsync();
+        }
 
         private void to_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            check();
             if (to.SelectedItem.ToString() == "Afrikaans") { tochosen.Text = "af"; }
             if (to.SelectedItem.ToString() == "Albanian") { tochosen.Text = "sq"; }
             if (to.SelectedItem.ToString() == "Amharic") { tochosen.Text = "am"; }
@@ -476,6 +499,7 @@ namespace Translate
 
         private void from_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            check();
             if (from.SelectedItem.ToString() == "Afrikaans") { fromchosen.Text = "af"; }
             if (from.SelectedItem.ToString() == "Albanian") { fromchosen.Text = "sq"; }
             if (from.SelectedItem.ToString() == "Amharic") { fromchosen.Text = "am"; }
@@ -590,62 +614,75 @@ namespace Translate
         {
             if (livetrans.IsOn == true)
             {
-                var client = new HttpClient();
-                try
+                if (output.Text == "initial-scale=1, minimum-scale=1, width=device-width")
                 {
-                    var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
-                    string[] json = result.Content.ToString().Split('"');
-                    output.Text = json[1];
-                    
 
+                    try { showerror("There was something wrong with your request. Please try again."); } catch { };
                 }
-                catch (Exception ex)
+                if (from.SelectedItem != null)
                 {
-                    ContentDialog dialogerror = new ContentDialog();
-                    dialogerror.Title = "Oops, an error occured!";
-                    dialogerror.PrimaryButtonText = "OK";
-                    dialogerror.Content = ex.Message;
-                    await dialogerror.ShowAsync();
-                }
-                if (output.Text == "-//W3C//DTD HTML 4.01 Transitional//EN")
-                {
-                    try
+                    if (to.SelectedItem != null)
                     {
-                        ContentDialog dialogerror = new ContentDialog();
-                        dialogerror.Title = "Oops, an error occured!";
-                        dialogerror.PrimaryButtonText = "OK";
-                        dialogerror.Content = "You've been temporairly banned from the Google Translate API. This might have happened because you have live translation on. Wait a couple hours and be careful in the future.";
-                        await dialogerror.ShowAsync();
-                        output.Text = null;
-                    }
-                    catch
-                    {
-                        return;
+                        var client = new HttpClient();
+                        try
+                        {
+                            var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
+                            string[] json = result.Content.ToString().Split('"');
+                            output.Text = json[1];
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            showerror(ex.Message);
+                        }
+                        if (output.Text == "-//W3C//DTD HTML 4.01 Transitional//EN")
+                        {
+                            try
+                            {
+                                showerror("You've been temporairly banned from the Google Translate API. This might have happened because you have live translation on. Wait a couple hours and be careful in the future.");
+                            }
+                            catch
+                            {
+                                return;
+                            }
+                        }
                     }
                 }
-            }
-            if (to.SelectedIndex < -1)
-            {
-                Translate.IsEnabled = false;
             }
             else
             {
-                if (from.SelectedIndex < -1)
-                {
-                    Translate.IsEnabled = false;
-                }
-                else
-                {
-                    if (input.Text.Length == 0)
-                    {
-                        output.Text = "";
-                        Translate.IsEnabled = false;
-                    }
-                    else
-                    {
-                        Translate.IsEnabled = true;
-                    }
-                }
+                check();
+            }
+        }
+
+        private void check()
+        {
+            int count = 0;
+            if (from.SelectedItem != null)
+            {
+                count++;
+                Debug.WriteLine(count);
+            }
+            if (to.SelectedItem != null)
+            {
+                count++;
+                Debug.WriteLine(count);
+            }
+            if (!string.IsNullOrEmpty(input.Text))
+            {
+                count++;
+                Debug.WriteLine(count);
+            }
+            if (count == 3)
+            {
+                Translate.IsEnabled = true;
+                count = 0;
+            }
+            else
+            {
+                Translate.IsEnabled = false;
+                count = 0;
             }
         }
 
@@ -706,6 +743,16 @@ namespace Translate
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            if (livetrans.IsOn == true)
+            {
+                livetransison.IsOpen = true;
+                Translate.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                livetransison.IsOpen = false;
+                Translate.Visibility = Visibility.Visible;
+            }
             if (hisshow.IsOn == false)
             {
                 ApplicationData.Current.LocalSettings.Values["history"] = false;
