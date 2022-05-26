@@ -54,17 +54,12 @@ namespace Translate
                         settingitem5.Padding = new Thickness(5, 3, 5, 3);
                         mainflyout.Padding = new Thickness(0, 0, 0, 0);
                         apply.Margin = new Thickness(165, 0, 0, 0);
-                        warn1.Text = "Not all settings can be applied instantly or";
-                        warn2.Text = "correctly without a restart.";
                         bighistory.Padding = new Thickness(8, 8, 8, 8);
                         mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
                         bighistory.Margin = new Thickness(5, 0, 5, 5);
                         historytext.Padding = new Thickness(10, 10, 5, 8);
                         mainflyouthistory.Padding = new Thickness(0, 0, 0, 0);
                         apply.Margin = new Thickness(165, 0, 0, 0);
-                        warnhis1.Text = "This section only stores this session's";
-                        warnhis2.Text = "history and does not work with live";
-                        warnhis3.Text = "translation.";
                     }
                     else
                     {
@@ -78,16 +73,11 @@ namespace Translate
                         mainflyout.Padding = new Thickness(5, 5, 5, 5);
                         settingstext.Padding = new Thickness(10, 10, 20, 15);
                         apply.Margin = new Thickness(144, 0, 0, 0);
-                        warn1.Text = "Not all settings can be applied instantly";
-                        warn2.Text = "or correctly without a restart.";
                         bighistory.Padding = new Thickness(15, 15, 15, 15);
                         mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
                         bighistory.Margin = new Thickness(5, 0, 5, 5);
                         historytext.Padding = new Thickness(10, 10, 20, 15);
                         mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
-                        warnhis1.Text = "This section only stores this";
-                        warnhis2.Text = "session's history and does not work";
-                        warnhis3.Text = "with live translation.";
                     }
                 }
                 if (localSettings.Values["theme"] != null)
@@ -776,17 +766,12 @@ namespace Translate
                 settingitem5.Padding = new Thickness(5, 3, 5, 3);
                 mainflyout.Padding = new Thickness(0,0,0,0);
                 apply.Margin = new Thickness(165, 0, 0, 0);
-                warn1.Text = "Not all settings can be applied instantly or";
-                warn2.Text = "correctly without a restart.";
                 bighistory.Padding = new Thickness(8, 8, 8, 8);
                 mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
                 bighistory.Margin = new Thickness(5, 0, 5, 5);
                 historytext.Padding = new Thickness(10, 10, 5, 8);
                 mainflyouthistory.Padding = new Thickness(0, 0, 0, 0);
                 apply.Margin = new Thickness(165, 0, 0, 0);
-                warnhis1.Text = "This section only stores this session's";
-                warnhis2.Text = "history and does not work with live";
-                warnhis3.Text = "translation.";
             }
             else
             {
@@ -800,16 +785,11 @@ namespace Translate
                 mainflyout.Padding = new Thickness(5, 5, 5, 5);
                 settingstext.Padding = new Thickness(10, 10, 20, 15);
                 apply.Margin = new Thickness(144, 0, 0, 0);
-                warn1.Text = "Not all settings can be applied instantly";
-                warn2.Text = "or correctly without a restart.";
                 bighistory.Padding = new Thickness(15, 15, 15, 15);
                 mainflyouthistory.Padding = new Thickness(5,5,5,5);
                 bighistory.Margin = new Thickness(5, 0, 5, 5);
                 historytext.Padding = new Thickness(10, 10, 20, 15);
                 mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
-                warnhis1.Text = "This section only stores this";
-                warnhis2.Text = "session's history and does not work";
-                warnhis3.Text = "with live translation.";
             }
             if (lightmode.IsChecked == true) 
             {

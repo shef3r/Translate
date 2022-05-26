@@ -20,19 +20,17 @@
             <AppBarButton x:ConnectionId='15' Label="History" x:Name="histbutton" IsCompact="True"                             >
                 <AppBarButton.Flyout>
                     <Flyout>
-                        <StackPanel x:ConnectionId='33' Orientation="Vertical" x:Name="mainflyouthistory" Width="380px" Padding="5,5,5,5">
-                            <StackPanel x:ConnectionId='34' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="bighistory" CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
+                        <StackPanel x:ConnectionId='32' Orientation="Vertical" x:Name="mainflyouthistory" Width="380px" Padding="5,5,5,5">
+                            <StackPanel x:ConnectionId='33' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="bighistory" CornerRadius="4,4,4,4" Width="350" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
                                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock x:ConnectionId='37' TextWrapping="Wrap" x:Name="warnhis1" Margin="10,0,0,0" Text="This section only stores this" />
-                                    <TextBlock x:ConnectionId='38' TextWrapping="Wrap" x:Name="warnhis2" Margin="10,0,0,0" Text="session's history and does not work" />
-                                    <TextBlock x:ConnectionId='39' TextWrapping="Wrap" x:Name="warnhis3" Margin="10,0,0,0" Text="with live translation." />
+                                    <TextBlock x:ConnectionId='36' MaxWidth="280" TextWrapping="Wrap" x:Name="warnhis" x:Uid="warnhis" Margin="10,0,0,0"/>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='36' Padding="12,10,20,15" x:Name="historytext" Text="History" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
+                                <TextBlock x:ConnectionId='35' Padding="12,10,20,15" x:Name="historytext" x:Uid="historytext" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
                             </StackPanel>
-                            <ListView x:ConnectionId='35' Width="370px" x:Name="historyitems" SelectionMode="None" HorizontalAlignment="Stretch" Height="auto">
+                            <ListView x:ConnectionId='34' Width="370px" x:Name="historyitems" SelectionMode="None" HorizontalAlignment="Stretch" Height="auto">
                             </ListView>
                         </StackPanel>
                     </Flyout>
@@ -41,28 +39,27 @@
                     <FontIcon Glyph="&#xE81C;"></FontIcon>
                 </AppBarButton.Icon>
             </AppBarButton>
-            <AppBarButton x:ConnectionId='16' Label="Settings" Icon="Setting" x:Name="settingsbutton" IsCompact="True"                             >
+            <AppBarButton x:ConnectionId='16' Icon="Setting" x:Uid="settingsbutton" x:Name="settingsbutton" IsCompact="True"                             >
                 <AppBarButton.Flyout>
                     <Flyout>
                         <StackPanel x:ConnectionId='17' Orientation="Vertical" x:Name="mainflyout" Width="380px" Padding="5,5,5,5">
-                            <StackPanel x:ConnectionId='18' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
+                            <StackPanel x:ConnectionId='18' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="350px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
                                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock x:ConnectionId='31' TextWrapping="Wrap" x:Name="warn1" Margin="10,0,0,0" Text="Not all settings can be applied instantly" />
-                                    <TextBlock x:ConnectionId='32' TextWrapping="Wrap" x:Name="warn2" Margin="10,0,0,0" Text="or correctly without a restart." />
+                                    <TextBlock x:ConnectionId='31' TextWrapping="Wrap" x:Name="warn" x:Uid="warn" Margin="10,0,0,0" MaxWidth="280" />
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='28' Padding="12,10,20,15" x:Name="settingstext" Text="Settings" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
+                                <TextBlock x:ConnectionId='28' Padding="12,10,20,15" x:Name="settingstext" x:Uid="settingstext" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
                                 <Button x:ConnectionId='29' HorizontalAlignment="Right" x:Name="apply" Margin="144,0,0,0"                       >
                                     <StackPanel Orientation="Horizontal">
                                         <FontIcon Glyph="&#xE081;" />
-                                        <TextBlock Text="Apply" Padding="5,0,0,0"/>
+                                        <TextBlock x:Uid="applytext" Padding="5,0,0,0"/>
                                     </StackPanel>
                                     <Button.Resources>
                                         <muxc:TeachingTip x:ConnectionId='30' IsLightDismissEnabled="True"                         PreferredPlacement="Left" IsOpen="False" x:Name="livetransison">
                                             <muxc:TeachingTip.Content>
-                                                <TextBlock TextWrapping="WrapWholeWords" Text="Live translation is on. Remember, that setting works only for the current session to make sure you're not gonna get banned from the API!"/>
+                                                <TextBlock TextWrapping="WrapWholeWords" x:Uid="livetranslationdesc"/>
                                             </muxc:TeachingTip.Content>
                                         </muxc:TeachingTip>
                                     </Button.Resources>
@@ -75,12 +72,12 @@
                                         <muxc:Expander.Header>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                                 <FontIcon Glyph="&#xE99A;"/>
-                                                <TextBlock Text="Functionality" HorizontalAlignment="Right" Margin="10,0,0,0"/>
+                                                <TextBlock x:Uid="funccategory" HorizontalAlignment="Right" Margin="10,0,0,0"/>
                                             </StackPanel>
                                         </muxc:Expander.Header>
                                         <StackPanel Orientation="Vertical">
                                             <Grid x:ConnectionId='26' Width="440px"  x:Name="settingitem0" Padding="5,5,5,5">
-                                                <TextBlock Width="300px" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="Live translation"></TextBlock>
+                                                <TextBlock Width="300px" VerticalAlignment="Center"  HorizontalAlignment="Left" x:Uid="livetranslation"></TextBlock>
                                                 <ToggleSwitch x:ConnectionId='27' x:Name="livetrans" OnContent="" OffContent="" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
                                             </Grid>
                                         </StackPanel>
@@ -89,23 +86,23 @@
                                         <muxc:Expander.Header>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                                 <FontIcon Glyph="&#xE2B1;"/>
-                                                <TextBlock Text="Appearance" HorizontalAlignment="Right" Margin="10,0,0,0"/>
+                                                <TextBlock x:Uid="appearcategory" HorizontalAlignment="Right" Margin="10,0,0,0"/>
                                             </StackPanel>
                                         </muxc:Expander.Header>
                                         <StackPanel Orientation="Vertical">
                                             <Grid x:ConnectionId='19' Width="440px" Padding="5,5,5,5" x:Name="settingitem1">
-                                                <TextBlock Width="300px" VerticalAlignment="Top" HorizontalAlignment="Left" Text="What theme would you like to use?"></TextBlock>
+                                                <TextBlock Width="300px" VerticalAlignment="Top" HorizontalAlignment="Left" x:Uid="themedesc"></TextBlock>
                                                 <muxc:RadioButtons Margin="0,15,0,0">
                                                     <RadioButton x:ConnectionId='24'  Content="Light" x:Name="lightmode"/>
                                                     <RadioButton x:ConnectionId='25'  Content="Dark" x:Name="darkmode"/>
                                                 </muxc:RadioButtons>
                                             </Grid>
                                             <Grid x:ConnectionId='20' Width="440px"  x:Name="settingitem2" Padding="5,5,5,5">
-                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Compact mode"></TextBlock>
+                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" x:Uid="compactoption"></TextBlock>
                                                 <ToggleSwitch x:ConnectionId='23' OnContent="" OffContent="" x:Name="compact" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
                                             </Grid>
                                             <Grid x:ConnectionId='21' Width="440px"  x:Name="settingitem5" Padding="5,5,5,5">
-                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Show history"></TextBlock>
+                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" x:Uid="historyoption"></TextBlock>
                                                 <ToggleSwitch x:ConnectionId='22' OnContent="" OffContent="" VerticalAlignment="Center" x:Name="hisshow" HorizontalAlignment="Right"></ToggleSwitch>
                                             </Grid>
                                         </StackPanel>
@@ -143,18 +140,18 @@
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel x:ConnectionId='3' Orientation="Horizontal" x:Name="mainmf" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Vertical">
-                        <ComboBox x:ConnectionId='11' PlaceholderText="Input language"                                          x:Name="from" Margin="10,10,10,0" Width="300" ></ComboBox>
-                        <TextBox x:ConnectionId='12' PlaceholderText="Input" AcceptsReturn="False"                                 x:Name="input" TextWrapping="Wrap" Width="300" Margin="10,10,10,10"/>
+                        <ComboBox x:ConnectionId='11' x:Uid="inputlang"                                          x:Name="from" Margin="10,10,10,0" Width="300" ></ComboBox>
+                        <TextBox x:ConnectionId='12' x:Uid="inputtext" AcceptsReturn="False"                                 x:Name="input" TextWrapping="Wrap" Width="300" Margin="10,10,10,10"/>
                     </StackPanel>
                     <Button x:ConnectionId='6' x:Name="Translate" HorizontalAlignment="Center"                         Padding="5,5,5,5">
                         <StackPanel>
                             <SymbolIcon x:ConnectionId='9' Symbol="Forward" x:Name="MF"></SymbolIcon>
-                            <TextBlock x:ConnectionId='10' Text="Translate" x:Name="MFD"></TextBlock>
+                            <TextBlock x:ConnectionId='10' x:Uid="translatebutton" x:Name="MFD"></TextBlock>
                         </StackPanel>
                     </Button>
                     <StackPanel Orientation="Vertical">
-                        <ComboBox x:ConnectionId='7'                                        PlaceholderText="Output language" x:Name="to" Margin="10,10,10,0" Width="300"></ComboBox>
-                        <TextBox x:ConnectionId='8' VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PlaceholderText="Output" IsReadOnly="True" x:Name="output" TextWrapping="Wrap" Margin="10,10,10,10" MinHeight="32" MinWidth="100" MaxWidth="300" />
+                        <ComboBox x:ConnectionId='7'                                        x:Uid="outputlang" x:Name="to" Margin="10,10,10,0" Width="300"></ComboBox>
+                        <TextBox x:ConnectionId='8' VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Uid="outputtext" IsReadOnly="True" x:Name="output" TextWrapping="Wrap" Margin="10,10,10,10" MinHeight="32" MinWidth="100" MaxWidth="300" />
                     </StackPanel>
                 </StackPanel>
                 <TextBlock x:ConnectionId='4' x:Name="fromchosen" Height="0" Width="0" Visibility="Collapsed"></TextBlock>

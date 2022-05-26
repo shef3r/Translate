@@ -22,7 +22,7 @@
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.30704.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
-    <Resource Language="PL-PL" />
+    <Resource Language="EN-US" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Translate.exe" EntryPoint="Translate.App">
@@ -48,7 +48,7 @@
     <build:Item Name="VisualStudio" Version="17.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2022" />
     <build:Item Name="OperatingSystem" Version="10.0.22000.1 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.0.32318.288" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.2.32427.441" />
     <build:Item Name="ProjectGUID" Value="{0A958768-BD7E-4BC3-A509-391B07E1E410}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />

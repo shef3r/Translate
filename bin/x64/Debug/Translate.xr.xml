@@ -71,6 +71,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="MaxWidth" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="HorizontalAlignment" />
@@ -81,7 +82,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootEvent Name="SelectionChanged" />
@@ -89,7 +89,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="IsReadOnly" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Margin" />

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MWW08OjnjoQR3t325ujmV2d7gEsytyRgIJaYOKab90/N5FrIMfyzbLyJ/fZuPn5qb9KnU4qhemGESBw3uLRabw==",
+  "dgSpecHash": "FYtXxPQj2J8qQf6brEOte3cgsCY32eD424AkmcaVNtHnsM8TiInwxzkNzqcaBCZuQ3e0oMU3hA1XyYBdo3Ij1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shefer\\Source\\Repos\\mac-andcheese\\Translate\\Translate.csproj",
+  "projectFilePath": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.11-rel-30601-02\\microsoft.net.native.compiler.2.2.11-rel-30601-02.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.13\\microsoft.net.uwpcoreruntimesdk.2.2.13.nupkg.sha512",
