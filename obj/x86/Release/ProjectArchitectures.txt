@@ -1,1 +1,1 @@
-C:\Users\shefer\Source\Repos\mac-andcheese\Translate\Translate.csproj;x86
+C:\Users\shefer\Source\Repos\slaytheboots\Translate\Translate.csproj;x86

@@ -1,13 +1,15 @@
 ﻿using System;
-using Windows.Foundation;
-using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.Storage;
 using Windows.UI.Xaml.Controls;
 using Windows.Web.Http;
-using System.Windows.Input;
 using System.Diagnostics;
-using System.Collections.Generic;
+using Windows.UI.WindowManagement;
+using Windows.UI.Xaml.Hosting;
+using Windows.Management.Deployment;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Text;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
 
@@ -16,13 +18,20 @@ namespace Translate
     /// <summary>
     /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Popup : Page
     {
-        public MainPage()
+        public Popup()
         {
             this.InitializeComponent();
+            if (historyitems.Items.Count == 0) { nohistory.Visibility = Visibility.Visible; }
             Window.Current.SetTitleBar(AppTitleBar);
             ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+            Object value = localSettings.Values["FirstLaunchFinished"];
+
+            if (value == null)
+            {
+                WelcomeDialog();
+            }
             if (localSettings != null)
             {
                 if (localSettings.Values["history"] != null)
@@ -330,6 +339,33 @@ namespace Translate
 
         }
 
+        private async void WelcomeDialog()
+        {
+            try
+            {
+                ContentDialog dialog = new ContentDialog() { PrimaryButtonText = "Let's get started!" };
+                StackPanel desc = new StackPanel();
+                desc.HorizontalAlignment = HorizontalAlignment.Center;
+                desc.Children.Add(new Image() { Source = new BitmapImage() { UriSource = new Uri("ms-appx:///logowtext.png") }, Width = 300, HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center });
+                desc.Children.Add(new TextBlock() { Text = "Welcome to Translate!", FontSize = 30, FontWeight = FontWeights.Bold, FontFamily = new FontFamily("Segoe UI Variable"), HorizontalAlignment = HorizontalAlignment.Center});
+                desc.Children.Add(new TextBlock() { Text = "the Google Translate client for Windows 10 and 11", FontSize = 20, FontFamily = new FontFamily("Segoe UI"), HorizontalAlignment = HorizontalAlignment.Center});
+                dialog.Content = desc;
+                dialog.PrimaryButtonClick += Dialog_PrimaryButtonClick;
+                await dialog.ShowAsync();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                showerror(ex.ToString());
+            }
+        }
+
+        private void Dialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+            localSettings.Values["FirstLaunchFinished"] = true;
+        }
+
         private async void Translate_Click(object sender, RoutedEventArgs e)
         {
             if (from.SelectedItem != null)
@@ -349,6 +385,7 @@ namespace Translate
                                     string[] json = result.Content.ToString().Split('"');
                                     output.Text = json[1];
                                     historyitems.Items.Add(from.SelectedItem.ToString() + " → " + to.SelectedItem.ToString() + "\n" + input.Text + " → " + output.Text + "\n");
+                                    if (historyitems.Items.Count > 0) { nohistory.Visibility = Visibility.Collapsed; }
                                     if (output.Text == "initial-scale=1, minimum-scale=1, width=device-width")
                                     {
                                         try { showerror("There was something wrong with your request. Please try again."); } catch { };
@@ -806,6 +843,7 @@ namespace Translate
                 {
                     if (localSettings.Values["theme"].ToString() == "1")
                     {
+                        // TODO: make themes work in compact overlay
                         page.RequestedTheme = ElementTheme.Light;
                         AppTitleBar.RequestedTheme = ElementTheme.Light;
                         FrameworkElement root = (FrameworkElement)Window.Current.Content;
@@ -813,7 +851,6 @@ namespace Translate
                     }
                     if (localSettings.Values["theme"].ToString() == "2")
                     {
-                        page.RequestedTheme = ElementTheme.Dark;
                         AppTitleBar.RequestedTheme = ElementTheme.Dark;
                         FrameworkElement root = (FrameworkElement)Window.Current.Content;
                         root.RequestedTheme = ElementTheme.Dark;
@@ -832,6 +869,26 @@ namespace Translate
         private void faviconbutton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async void pipbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("slay the house boots down girl queen pussy boss");
+                AppWindow appWindow = await AppWindow.TryCreateAsync();
+                appWindow.Closed += AppWindow_Closed;
+                Frame appWindowFrame = new Frame();
+                AppWindowPage page = (AppWindowPage)appWindowFrame.Content;
+            var localSettings = ApplicationData.Current.LocalSettings;
+            appWindow.Presenter.RequestPresentation(AppWindowPresentationKind.CompactOverlay);
+                appWindowFrame.Navigate(typeof(AppWindowPage));
+                ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowFrame);
+                await appWindow.TryShowAsync();
+                pipbutton.Visibility = Visibility.Collapsed;            
+        }
+
+        private void AppWindow_Closed(AppWindow sender, AppWindowClosedEventArgs args)
+        {
+            pipbutton.Visibility = Visibility.Visible;
         }
     }
 }

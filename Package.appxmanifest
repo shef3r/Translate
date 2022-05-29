@@ -9,7 +9,7 @@
   <Identity
     Name="dfa07d79-53c7-445e-9cd2-38b74ac57cc1"
     Publisher="CN=shefer"
-    Version="2.1.0.0" />
+    Version="2.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -39,6 +39,7 @@
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>

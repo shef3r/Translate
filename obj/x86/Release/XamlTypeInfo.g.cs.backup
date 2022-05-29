@@ -223,83 +223,85 @@ namespace Translate.Translate_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[37];
+            _typeNameTable = new string[38];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Windows.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Microsoft.UI.Xaml.Controls.ControlsResourcesVersion";
             _typeNameTable[4] = "System.Enum";
             _typeNameTable[5] = "System.ValueType";
-            _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.BackdropMaterial";
-            _typeNameTable[7] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[8] = "Boolean";
-            _typeNameTable[9] = "Windows.UI.Xaml.Controls.Control";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.Expander";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[13] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[14] = "Microsoft.UI.Xaml.Controls.ExpandDirection";
-            _typeNameTable[15] = "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings";
-            _typeNameTable[16] = "Microsoft.UI.Xaml.Controls.RadioButtons";
-            _typeNameTable[17] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[18] = "Int32";
-            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.TeachingTip";
-            _typeNameTable[20] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode";
-            _typeNameTable[22] = "String";
-            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility";
-            _typeNameTable[24] = "Windows.UI.Xaml.Thickness";
-            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.IconSource";
-            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode";
-            _typeNameTable[27] = "Windows.UI.Xaml.UIElement";
-            _typeNameTable[28] = "Windows.UI.Xaml.Style";
-            _typeNameTable[29] = "System.Windows.Input.ICommand";
-            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
-            _typeNameTable[31] = "Translate.MainPage";
-            _typeNameTable[32] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[33] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[34] = "Windows.UI.Xaml.Media.Brush";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[36] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[6] = "Translate.AppWindowPage";
+            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[9] = "Microsoft.UI.Xaml.Controls.BackdropMaterial";
+            _typeNameTable[10] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[11] = "Boolean";
+            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Control";
+            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.Expander";
+            _typeNameTable[14] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[15] = "Windows.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[16] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[17] = "Microsoft.UI.Xaml.Controls.ExpandDirection";
+            _typeNameTable[18] = "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.RadioButtons";
+            _typeNameTable[20] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[21] = "Int32";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.TeachingTip";
+            _typeNameTable[23] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[24] = "Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode";
+            _typeNameTable[25] = "String";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility";
+            _typeNameTable[27] = "Windows.UI.Xaml.Thickness";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[29] = "Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode";
+            _typeNameTable[30] = "Windows.UI.Xaml.UIElement";
+            _typeNameTable[31] = "Windows.UI.Xaml.Style";
+            _typeNameTable[32] = "System.Windows.Input.ICommand";
+            _typeNameTable[33] = "Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
+            _typeNameTable[34] = "Translate.Popup";
+            _typeNameTable[35] = "Windows.UI.Xaml.Media.Brush";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[37] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
 
-            _typeTable = new global::System.Type[37];
+            _typeTable = new global::System.Type[38];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::Microsoft.UI.Xaml.Controls.ControlsResourcesVersion);
             _typeTable[4] = typeof(global::System.Enum);
             _typeTable[5] = typeof(global::System.ValueType);
-            _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.BackdropMaterial);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[8] = typeof(global::System.Boolean);
-            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.Control);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.Expander);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.Controls.ExpandDirection);
-            _typeTable[15] = typeof(global::Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings);
-            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Controls.RadioButtons);
-            _typeTable[17] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[18] = typeof(global::System.Int32);
-            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTip);
-            _typeTable[20] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode);
-            _typeTable[22] = typeof(global::System.String);
-            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility);
-            _typeTable[24] = typeof(global::Windows.UI.Xaml.Thickness);
-            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
-            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode);
-            _typeTable[27] = typeof(global::Windows.UI.Xaml.UIElement);
-            _typeTable[28] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[29] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings);
-            _typeTable[31] = typeof(global::Translate.MainPage);
-            _typeTable[32] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[33] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[34] = typeof(global::Windows.UI.Xaml.Media.Brush);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[36] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[6] = typeof(global::Translate.AppWindowPage);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Controls.BackdropMaterial);
+            _typeTable[10] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[11] = typeof(global::System.Boolean);
+            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Control);
+            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.Expander);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.Controls.ExpandDirection);
+            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.RadioButtons);
+            _typeTable[20] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[21] = typeof(global::System.Int32);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTip);
+            _typeTable[23] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode);
+            _typeTable[25] = typeof(global::System.String);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility);
+            _typeTable[27] = typeof(global::Windows.UI.Xaml.Thickness);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode);
+            _typeTable[30] = typeof(global::Windows.UI.Xaml.UIElement);
+            _typeTable[31] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[32] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings);
+            _typeTable[34] = typeof(global::Translate.Popup);
+            _typeTable[35] = typeof(global::Windows.UI.Xaml.Media.Brush);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[37] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -335,12 +337,13 @@ namespace Translate.Translate_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_10_Expander() { return new global::Microsoft.UI.Xaml.Controls.Expander(); }
-        private object Activate_16_RadioButtons() { return new global::Microsoft.UI.Xaml.Controls.RadioButtons(); }
-        private object Activate_19_TeachingTip() { return new global::Microsoft.UI.Xaml.Controls.TeachingTip(); }
-        private object Activate_30_TeachingTipTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings(); }
-        private object Activate_31_MainPage() { return new global::Translate.MainPage(); }
-        private object Activate_35_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_6_AppWindowPage() { return new global::Translate.AppWindowPage(); }
+        private object Activate_13_Expander() { return new global::Microsoft.UI.Xaml.Controls.Expander(); }
+        private object Activate_19_RadioButtons() { return new global::Microsoft.UI.Xaml.Controls.RadioButtons(); }
+        private object Activate_22_TeachingTip() { return new global::Microsoft.UI.Xaml.Controls.TeachingTip(); }
+        private object Activate_33_TeachingTipTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings(); }
+        private object Activate_34_Popup() { return new global::Translate.Popup(); }
+        private object Activate_36_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -348,13 +351,13 @@ namespace Translate.Translate_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_17_IList(object instance, object item)
+        private void VectorAdd_20_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_36_IList(object instance, object item)
+        private void VectorAdd_37_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -404,27 +407,42 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  Microsoft.UI.Xaml.Controls.BackdropMaterial
+            case 6:   //  Translate.AppWindowPage
+                userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_AppWindowPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  Microsoft.UI.Xaml.Controls.BackdropMaterial
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("ApplyToRootOrPageBackground");
                 xamlType = userType;
                 break;
 
-            case 7:   //  Windows.UI.Xaml.DependencyObject
+            case 10:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Boolean
+            case 11:   //  Boolean
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  Windows.UI.Xaml.Controls.Control
+            case 12:   //  Windows.UI.Xaml.Controls.Control
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 10:   //  Microsoft.UI.Xaml.Controls.Expander
+            case 13:   //  Microsoft.UI.Xaml.Controls.Expander
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_10_Expander;
+                userType.Activator = Activate_13_Expander;
                 userType.AddMemberName("Header");
                 userType.AddMemberName("IsExpanded");
                 userType.AddMemberName("HeaderTemplateSelector");
@@ -434,34 +452,34 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 11:   //  Windows.UI.Xaml.Controls.ContentControl
+            case 14:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.DataTemplateSelector
+            case 15:   //  Windows.UI.Xaml.Controls.DataTemplateSelector
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  Windows.UI.Xaml.DataTemplate
+            case 16:   //  Windows.UI.Xaml.DataTemplate
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  Microsoft.UI.Xaml.Controls.ExpandDirection
+            case 17:   //  Microsoft.UI.Xaml.Controls.ExpandDirection
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Down", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Down);
                 userType.AddEnumValue("Up", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Up);
                 xamlType = userType;
                 break;
 
-            case 15:   //  Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings
+            case 18:   //  Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Microsoft.UI.Xaml.Controls.RadioButtons
+            case 19:   //  Microsoft.UI.Xaml.Controls.RadioButtons
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_16_RadioButtons;
+                userType.Activator = Activate_19_RadioButtons;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.RadioButtons.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("SelectedItem");
@@ -474,20 +492,20 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 17:   //  System.Collections.Generic.IList`1<Object>
+            case 20:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_17_IList;
+                userType.CollectionAdd = VectorAdd_20_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Int32
+            case 21:   //  Int32
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  Microsoft.UI.Xaml.Controls.TeachingTip
+            case 22:   //  Microsoft.UI.Xaml.Controls.TeachingTip
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_19_TeachingTip;
+                userType.Activator = Activate_22_TeachingTip;
                 userType.AddMemberName("IsLightDismissEnabled");
                 userType.AddMemberName("Target");
                 userType.AddMemberName("PreferredPlacement");
@@ -512,11 +530,11 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 20:   //  Windows.UI.Xaml.FrameworkElement
+            case 23:   //  Windows.UI.Xaml.FrameworkElement
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode
+            case 24:   //  Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode.Auto);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode.Top);
@@ -535,11 +553,11 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  String
+            case 25:   //  String
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility
+            case 26:   //  Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility.Auto);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility.Visible);
@@ -547,18 +565,18 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 24:   //  Windows.UI.Xaml.Thickness
+            case 27:   //  Windows.UI.Xaml.Thickness
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Microsoft.UI.Xaml.Controls.IconSource
+            case 28:   //  Microsoft.UI.Xaml.Controls.IconSource
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("Foreground");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode
+            case 29:   //  Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode.Auto);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode.Top);
@@ -566,48 +584,40 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 27:   //  Windows.UI.Xaml.UIElement
+            case 30:   //  Windows.UI.Xaml.UIElement
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 28:   //  Windows.UI.Xaml.Style
+            case 31:   //  Windows.UI.Xaml.Style
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 29:   //  System.Windows.Input.ICommand
+            case 32:   //  System.Windows.Input.ICommand
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 30:   //  Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings
+            case 33:   //  Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 31:   //  Translate.MainPage
+            case 34:   //  Translate.Popup
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_MainPage;
+                userType.Activator = Activate_34_Popup;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Windows.UI.Xaml.Controls.Page
+            case 35:   //  Windows.UI.Xaml.Media.Brush
                 xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 34:   //  Windows.UI.Xaml.Media.Brush
-                xamlType = new global::Translate.Translate_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 35:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 36:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_35_TreeViewNode;
+                userType.Activator = Activate_36_TreeViewNode;
                 userType.AddMemberName("IsExpanded");
                 userType.AddMemberName("HasUnrealizedChildren");
                 userType.AddMemberName("Content");
@@ -619,9 +629,9 @@ namespace Translate.Translate_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 36:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 37:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Translate.Translate_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_36_IList;
+                userType.CollectionAdd = VectorAdd_37_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;

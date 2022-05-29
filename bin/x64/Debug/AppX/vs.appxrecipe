@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>B6462226CCB3D79255EE2C4A1CCA2B3EF556E402171713B8960C9C5583CC5771</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F2E7A314745F1005CE1048FDA513D57FECC8086851F89141F85289D0FED99EB4</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>dfa07d79-53c7-445e-9cd2-38b74ac57cc1_2.1.0.0_x64__d3yaftd1444a0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>dfa07d79-53c7-445e-9cd2-38b74ac57cc1_d3yaftd1444a0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>dfa07d79-53c7-445e-9cd2-38b74ac57cc1</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T14:18:40.601</Modified>
+      <Modified>2022-05-29T17:10:59.868</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Translate.exe">
       <PackagePath>entrypoint\Translate.exe</PackagePath>
-      <Modified>2022-05-26T14:18:38.685</Modified>
+      <Modified>2022-05-29T17:10:58.315</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,275 +46,308 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.289</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.300</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.328</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.350</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.828</Modified>
+      <Modified>2022-05-28T21:01:29.719</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.829</Modified>
+      <Modified>2022-05-28T21:01:29.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.830</Modified>
+      <Modified>2022-05-28T21:01:29.816</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.831</Modified>
+      <Modified>2022-05-28T21:01:29.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.833</Modified>
+      <Modified>2022-05-28T21:01:30.148</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\logowtext.png">
+      <PackagePath>logowtext.png</PackagePath>
+      <Modified>2022-05-28T20:43:44.133</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.834</Modified>
+      <Modified>2022-05-28T21:01:29.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.835</Modified>
+      <Modified>2022-05-28T21:01:29.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.835</Modified>
+      <Modified>2022-05-28T21:01:29.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.836</Modified>
+      <Modified>2022-05-28T21:01:29.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.837</Modified>
+      <Modified>2022-05-28T21:01:29.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.838</Modified>
+      <Modified>2022-05-28T21:01:30.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.839</Modified>
+      <Modified>2022-05-28T21:01:30.604</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.840</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SplashScreen.scale-400.png">
-      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.843</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-100.png">
-      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.844</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-125.png">
-      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.845</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-150.png">
-      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.845</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-400.png">
-      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.847</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.848</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.848</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.851</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.853</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.852</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.854</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.855</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.856</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.857</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-100.png">
-      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.857</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-125.png">
-      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.858</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-150.png">
-      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.859</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-400.png">
-      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.860</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-16.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.861</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-24.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.862</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-256.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.863</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-32.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.863</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-48.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.864</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-100.png">
-      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.865</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-125.png">
-      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.865</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-150.png">
-      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.866</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-200.png">
-      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.867</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-400.png">
-      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.868</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-100.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.869</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-125.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.870</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-150.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.870</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-400.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.872</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-05-26T12:44:52.868</Modified>
+      <Modified>2022-05-28T21:01:30.670</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.841</Modified>
+      <Modified>2022-05-28T21:01:30.783</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.274</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.282</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.299</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.846</Modified>
+      <Modified>2022-05-28T21:01:29.355</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.442</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.411</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.421</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.509</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.434</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.447</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.302</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.326</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.338</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.158</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.169</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.859</Modified>
+      <Modified>2022-05-28T21:01:30.191</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.868</Modified>
+      <Modified>2022-05-28T21:01:30.212</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.221</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.290</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.239</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:30.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.366</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.383</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.424</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:31.470</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\text.png">
+      <PackagePath>text.png</PackagePath>
+      <Modified>2022-05-28T20:43:44.137</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.482</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-26T12:44:52.871</Modified>
+      <Modified>2022-05-28T21:01:29.551</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-05-28T21:01:29.689</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-05-26T12:44:52.879</Modified>
+      <Modified>2022-05-28T15:37:24.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Translate.xr.xml">
       <PackagePath>Translate.xr.xml</PackagePath>
-      <Modified>2022-05-26T14:18:38.414</Modified>
+      <Modified>2022-05-28T18:52:51.052</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-26T14:18:38.474</Modified>
+      <Modified>2022-05-29T17:10:58.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\AppWindowPage.xbf">
+      <PackagePath>AppWindowPage.xbf</PackagePath>
+      <Modified>2022-05-29T17:10:58.010</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-05-26T14:18:38.474</Modified>
+      <Modified>2022-05-29T17:10:58.010</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -326,11 +359,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-26T14:18:39.313</Modified>
+      <Modified>2022-05-28T21:02:41.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Core\Translate.exe">
       <PackagePath>Translate.exe</PackagePath>
-      <Modified>2022-05-26T14:18:40.582</Modified>
+      <Modified>2022-05-29T17:10:59.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

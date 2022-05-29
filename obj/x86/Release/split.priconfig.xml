@@ -6,9 +6,9 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="C:\Users\shefer\Source\Repos\mac-andcheese\Translate\bin\x86\Release\ilc\resources.pri">
+  <index root="\" startIndexAt="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x86\Release\ilc\resources.pri">
     <default>
-      <qualifier name="Language" value="pl-PL" />
+      <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
       <qualifier name="Scale" value="200" />
       <qualifier name="HomeRegion" value="001" />

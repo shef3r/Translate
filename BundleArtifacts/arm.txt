@@ -1,2 +1,6 @@
-MainPackage=C:\Users\bruno\source\repos\Translate\bin\ARM\Release\Translate_1.0.0.0_ARM.msix
-SymbolPackage=C:\Users\bruno\source\repos\Translate\obj\ARM\Release\Symbols\Translate_1.0.0.0_ARM.appxsym
+MainPackage=C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\ARM\Release\Translate_2.2.0.0_ARM.msix
+SymbolPackage=C:\Users\shefer\Source\Repos\slaytheboots\Translate\obj\ARM\Release\Symbols\Translate_2.2.0.0_ARM.appxsym
+ResourcePack=C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\ARM\Release\Translate_2.2.0.0_scale-100.msix
+ResourcePack=C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\ARM\Release\Translate_2.2.0.0_scale-125.msix
+ResourcePack=C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\ARM\Release\Translate_2.2.0.0_scale-150.msix
+ResourcePack=C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\ARM\Release\Translate_2.2.0.0_scale-400.msix

@@ -7,7 +7,7 @@
 
     Po więcej informacji o plikach manifestu pakietów, zobacz http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" Publisher="CN=shefer" Version="2.1.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" Publisher="CN=shefer" Version="2.2.0.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Translate</DisplayName>
@@ -22,13 +22,14 @@
     <PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.30704.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
-    <Resource Language="PL-PL" />
+    <Resource Language="EN-US" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Translate.exe" EntryPoint="Translate.App">
       <uap:VisualElements DisplayName="Translate" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Translate" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge" />
       </uap:VisualElements>
     </Application>
   </Applications>
@@ -40,7 +41,7 @@
     <build:Item Name="VisualStudio" Version="17.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2022" />
     <build:Item Name="OperatingSystem" Version="10.0.22000.1 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.0.32318.288" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.2.32427.441" />
     <build:Item Name="ProjectGUID" Value="{0A958768-BD7E-4BC3-A509-391B07E1E410}" />
     <build:Item Name="ilc.exe" Version="2.2.30601.02 built by: PROJECTNREL" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="10.0.19041.685" />
