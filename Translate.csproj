@@ -172,6 +172,7 @@
     <Content Include="Assets\LargeTile.scale-400.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="logo.png" />
     <Content Include="logowtext.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -10,6 +10,7 @@ using Windows.Management.Deployment;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Text;
+using Windows.UI.Xaml.Navigation;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
 
@@ -114,7 +115,7 @@ namespace Translate
                     {
                         return;
                     }
-                    
+
 
 
                 }
@@ -347,8 +348,8 @@ namespace Translate
                 StackPanel desc = new StackPanel();
                 desc.HorizontalAlignment = HorizontalAlignment.Center;
                 desc.Children.Add(new Image() { Source = new BitmapImage() { UriSource = new Uri("ms-appx:///logowtext.png") }, Width = 300, HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center });
-                desc.Children.Add(new TextBlock() { Text = "Welcome to Translate!", FontSize = 30, FontWeight = FontWeights.Bold, FontFamily = new FontFamily("Segoe UI Variable"), HorizontalAlignment = HorizontalAlignment.Center});
-                desc.Children.Add(new TextBlock() { Text = "the Google Translate client for Windows 10 and 11", FontSize = 20, FontFamily = new FontFamily("Segoe UI"), HorizontalAlignment = HorizontalAlignment.Center});
+                desc.Children.Add(new TextBlock() { Text = "Welcome to Translate!", FontSize = 30, FontWeight = FontWeights.Bold, FontFamily = new FontFamily("Segoe UI Variable"), HorizontalAlignment = HorizontalAlignment.Center });
+                desc.Children.Add(new TextBlock() { Text = "the Google Translate client for Windows 10 and 11", FontSize = 20, FontFamily = new FontFamily("Segoe UI"), HorizontalAlignment = HorizontalAlignment.Center });
                 dialog.Content = desc;
                 dialog.PrimaryButtonClick += Dialog_PrimaryButtonClick;
                 await dialog.ShowAsync();
@@ -370,7 +371,7 @@ namespace Translate
         {
             if (from.SelectedItem != null)
             {
-                if (to.SelectedItem !=null)
+                if (to.SelectedItem != null)
                 {
                     if (!from.SelectedItem.Equals(to.SelectedItem))
                     {
@@ -746,7 +747,7 @@ namespace Translate
             }
         }
 
-        
+
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -793,15 +794,15 @@ namespace Translate
             if (compact.IsOn == true)
             {
                 ApplicationData.Current.LocalSettings.Values["compact"] = true;
-                big.Padding = new Thickness(8,8,8,8);
-                mainflyout.Padding = new Thickness(3,3,3,3);
+                big.Padding = new Thickness(8, 8, 8, 8);
+                mainflyout.Padding = new Thickness(3, 3, 3, 3);
                 big.Margin = new Thickness(5, 0, 5, 5);
                 settingstext.Padding = new Thickness(10, 10, 5, 8);
                 settingitem0.Padding = new Thickness(5, 3, 5, 3);
                 settingitem1.Padding = new Thickness(5, 3, 5, 3);
                 settingitem2.Padding = new Thickness(5, 3, 5, 3);
                 settingitem5.Padding = new Thickness(5, 3, 5, 3);
-                mainflyout.Padding = new Thickness(0,0,0,0);
+                mainflyout.Padding = new Thickness(0, 0, 0, 0);
                 apply.Margin = new Thickness(165, 0, 0, 0);
                 bighistory.Padding = new Thickness(8, 8, 8, 8);
                 mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
@@ -823,12 +824,12 @@ namespace Translate
                 settingstext.Padding = new Thickness(10, 10, 20, 15);
                 apply.Margin = new Thickness(144, 0, 0, 0);
                 bighistory.Padding = new Thickness(15, 15, 15, 15);
-                mainflyouthistory.Padding = new Thickness(5,5,5,5);
+                mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
                 bighistory.Margin = new Thickness(5, 0, 5, 5);
                 historytext.Padding = new Thickness(10, 10, 20, 15);
                 mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
             }
-            if (lightmode.IsChecked == true) 
+            if (lightmode.IsChecked == true)
             {
                 ApplicationData.Current.LocalSettings.Values["theme"] = "1";
             }
@@ -873,22 +874,32 @@ namespace Translate
 
         private async void pipbutton_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("slay the house boots down girl queen pussy boss");
-                AppWindow appWindow = await AppWindow.TryCreateAsync();
-                appWindow.Closed += AppWindow_Closed;
-                Frame appWindowFrame = new Frame();
-                AppWindowPage page = (AppWindowPage)appWindowFrame.Content;
+            AppWindow appWindow = await AppWindow.TryCreateAsync();
+            appWindow.Closed += AppWindow_Closed;
+            Frame appWindowFrame = new Frame();
+            AppWindowPage page = (AppWindowPage)appWindowFrame.Content;
             var localSettings = ApplicationData.Current.LocalSettings;
             appWindow.Presenter.RequestPresentation(AppWindowPresentationKind.CompactOverlay);
-                appWindowFrame.Navigate(typeof(AppWindowPage));
-                ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowFrame);
-                await appWindow.TryShowAsync();
-                pipbutton.Visibility = Visibility.Collapsed;            
+            appWindowFrame.Navigate(typeof(AppWindowPage));
+            ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowFrame);
+            await appWindow.TryShowAsync();
+            pipbutton.Visibility = Visibility.Collapsed;
         }
 
         private void AppWindow_Closed(AppWindow sender, AppWindowClosedEventArgs args)
         {
             pipbutton.Visibility = Visibility.Visible;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter is string)
+            {
+                input.Text = e.Parameter.ToString().Replace("%20", " ");
+            }
+            else
+            {
+            }
         }
     }
 }

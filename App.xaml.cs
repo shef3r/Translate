@@ -7,10 +7,13 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
+using Windows.UI.WindowManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -117,6 +120,63 @@ namespace Translate
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Zapisz stan aplikacji i zatrzymaj wszelkie aktywności w tle
             deferral.Complete();
+        }
+        protected override async void OnActivated(IActivatedEventArgs e)
+        {
+            if (e.Kind == ActivationKind.Protocol)
+            {
+                Frame rootFrame = Window.Current.Content as Frame;
+
+                // Nie powtarzaj inicjowania aplikacji, gdy w oknie znajduje się już zawartość,
+                // upewnij się tylko, że okno jest aktywne
+                if (rootFrame == null)
+                {
+                    // Utwórz ramkę, która będzie pełnić funkcję kontekstu nawigacji, i przejdź do pierwszej strony
+                    rootFrame = new Frame();
+
+                    rootFrame.NavigationFailed += OnNavigationFailed;
+
+                    if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                    {
+                        //TODO: Załaduj stan z wstrzymanej wcześniej aplikacji
+                    }
+
+                    // Umieść ramkę w bieżącym oknie
+                    Window.Current.Content = rootFrame;
+                }
+                var args = e as ProtocolActivatedEventArgs;
+                var message = "no parameters passed";
+                if (rootFrame.Content == null)
+                {
+                    // Kiedy stos nawigacji nie jest przywrócony, przejdź do pierwszej strony,
+                    // konfigurując nową stronę przez przekazanie wymaganych informacji jako
+                    // parametr
+                    rootFrame.Navigate(typeof(Popup), args.Uri.AbsolutePath);
+                }
+                // Upewnij się, ze bieżące okno jest aktywne
+                //----< Transparent Title >----
+
+                //using Windows.UI.ViewManagement;
+
+                //window as default-size
+
+                Windows.UI.ViewManagement.ApplicationViewTitleBar uwpTitleBar = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TitleBar;
+
+                uwpTitleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
+
+                uwpTitleBar.BackgroundColor = Windows.UI.Colors.Transparent;
+
+                //using Windows.ApplicationModel.Core
+
+                Windows.ApplicationModel.Core.CoreApplicationViewTitleBar coreTitleBar = Windows.ApplicationModel.Core.CoreApplication.GetCurrentView().TitleBar;
+
+                coreTitleBar.ExtendViewIntoTitleBar = true;
+
+                //----</ Transparent Title >----
+
+                Window.Current.Activate();
+                
+            }
         }
     }
 }

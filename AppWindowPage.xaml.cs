@@ -520,7 +520,7 @@ namespace Translate
             if (from.SelectedItem.ToString() == "Zulu") { fromchosen.Text = "zu"; }
         }
 
-        private async void input_TextChanged(object sender, TextChangedEventArgs e)
+        private void input_TextChanged(object sender, TextChangedEventArgs e)
         {
             check();
         }

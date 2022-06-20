@@ -152,3 +152,4 @@ C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Assets\Wide310
 C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Assets\Wide310x150Logo.scale-400.png
 C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\logowtext.png
 C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\text.png
+C:\Users\shefer\source\repos\slaytheboots\Translate\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.winmd_637672071680000000.json

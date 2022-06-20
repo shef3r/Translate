@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj": {}
+    "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj": {
+    "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj",
+        "projectUniqueName": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj",
         "projectName": "Translate",
-        "projectPath": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj",
+        "projectPath": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj",
         "packagesPath": "C:\\Users\\shefer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\obj\\",
+        "outputPath": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

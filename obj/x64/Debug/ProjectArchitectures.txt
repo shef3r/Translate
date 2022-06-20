@@ -1,1 +1,1 @@
-C:\Users\shefer\Source\Repos\slaytheboots\Translate\Translate.csproj;x64
+C:\Users\shefer\source\repos\slaytheboots\Translate\Translate.csproj;x64
