@@ -8,6 +8,7 @@ using Windows.UI.WindowManagement;
 using Windows.UI.Xaml.Hosting;
 using Windows.Management.Deployment;
 using Windows.UI.Xaml.Media;
+using SoftwareKobo.Net;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Text;
 using Windows.UI.Xaml.Navigation;
@@ -895,7 +896,7 @@ namespace Translate
         {
             if (e.Parameter is string)
             {
-                input.Text = e.Parameter.ToString().Replace("%20", " ");
+                input.Text = SoftwareKobo.Net.WebUtility.UrlDecode(e.Parameter.ToString());
             }
             else
             {

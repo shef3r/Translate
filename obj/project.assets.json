@@ -439,6 +439,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1860,6 +1869,15 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
         }
       },
       "System.Buffers/4.3.0": {
@@ -3323,6 +3341,15 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
         }
       },
       "System.Buffers/4.3.0": {
@@ -4835,6 +4862,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        }
+      },
       "System.Buffers/4.3.0": {
         "type": "package",
         "compile": {
@@ -6291,6 +6327,15 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
         }
       },
       "System.Buffers/4.3.0": {
@@ -7756,6 +7801,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        }
+      },
       "System.Buffers/4.3.0": {
         "type": "package",
         "compile": {
@@ -9212,6 +9266,15 @@
         },
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
         }
       },
       "System.Buffers/4.3.0": {
@@ -10675,6 +10738,15 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "SoftwareKobo.Net.WebUtility/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
+        },
+        "runtime": {
+          "lib/SoftwareKobo.Net.WebUtility.dll": {}
         }
       },
       "System.Buffers/4.3.0": {
@@ -16733,6 +16805,18 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
+    "SoftwareKobo.Net.WebUtility/1.0.4": {
+      "sha512": "vCk5wFm1JiazRjxZHLjWFJojB7yyJO/4HbJLom/4fm7CDcuMW/DPjADiVoZzi3CpITrvKwsnTRrYfU/03nudeQ==",
+      "type": "package",
+      "path": "softwarekobo.net.webutility/1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/SoftwareKobo.Net.WebUtility.dll",
+        "softwarekobo.net.webutility.1.0.4.nupkg.sha512",
+        "softwarekobo.net.webutility.nuspec"
+      ]
+    },
     "System.Buffers/4.3.0": {
       "sha512": "ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
       "type": "package",
@@ -19054,6 +19138,7 @@
     "UAP,Version=v10.0.17763": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.13",
       "Microsoft.UI.Xaml >= 2.7.0",
+      "SoftwareKobo.Net.WebUtility >= 1.0.4",
       "System.Net.Requests >= 4.3.0"
     ]
   },
@@ -19065,11 +19150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj",
+      "projectUniqueName": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj",
       "projectName": "Translate",
-      "projectPath": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\Translate.csproj",
+      "projectPath": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj",
       "packagesPath": "C:\\Users\\shefer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shefer\\Source\\Repos\\slaytheboots\\Translate\\obj\\",
+      "outputPath": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -19104,6 +19189,10 @@
           "Microsoft.UI.Xaml": {
             "target": "Package",
             "version": "[2.7.0, )"
+          },
+          "SoftwareKobo.Net.WebUtility": {
+            "target": "Package",
+            "version": "[1.0.4, )"
           },
           "System.Net.Requests": {
             "target": "Package",
@@ -19140,5 +19229,17 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „SoftwareKobo.Net.WebUtility 1.0.4” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1” zamiast platformy docelowej projektu „UAP,Version=v10.0.17763”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "SoftwareKobo.Net.WebUtility",
+      "targetGraphs": [
+        "UAP,Version=v10.0.17763"
+      ]
+    }
+  ]
 }

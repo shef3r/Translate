@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[2.7.0, )"
             },
+            "SoftwareKobo.Net.WebUtility": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
             "System.Net.Requests": {
               "target": "Package",
               "version": "[4.3.0, )"

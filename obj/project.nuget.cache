@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zRnT4R+kW4O4FVUxt5rGpnX7UlzTQN4Pm7XkhG+lOWLN3VK2mMOimzI6OXJpt6ScF+uYA3aHBfKt9R0ZH+Y1rg==",
+  "dgSpecHash": "8PHCfDmOFH2w3IgnI0q1mhgkxUpQXgvL02hmU8vVcXUY9j/mtYMF0QMemcl1rOb9YGhbHwIzxLMXYe2BPMcTTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\shefer\\source\\repos\\slaytheboots\\Translate\\Translate.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.13\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.13.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.13\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
     "C:\\Users\\shefer\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
+    "C:\\Users\\shefer\\.nuget\\packages\\softwarekobo.net.webutility\\1.0.4\\softwarekobo.net.webutility.1.0.4.nupkg.sha512",
     "C:\\Users\\shefer\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\shefer\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\shefer\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
@@ -117,5 +118,16 @@
     "C:\\Users\\shefer\\.nuget\\packages\\system.threading.overlapped\\4.3.0\\system.threading.overlapped.4.3.0.nupkg.sha512",
     "C:\\Users\\shefer\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „SoftwareKobo.Net.WebUtility 1.0.4” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1” zamiast platformy docelowej projektu „UAP,Version=v10.0.17763”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "SoftwareKobo.Net.WebUtility",
+      "targetGraphs": [
+        "UAP,Version=v10.0.17763"
+      ]
+    }
+  ]
 }
