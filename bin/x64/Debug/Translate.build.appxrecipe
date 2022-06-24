@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-06K628H</Machine>
+    <Machine>DESKTOP-R5E13DH</Machine>
     <WindowsUser>shefer</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>dfa07d79-53c7-445e-9cd2-38b74ac57cc1</PackageIdentityName>
     <PackageIdentityPublisher>CN=shefer</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\shefer\source\repos\slaytheboots\Translate\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\shefer\Source\Repos\slaytheboots\Translate\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\shefer\source\repos\slaytheboots\Translate\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\shefer\source\repos\slaytheboots\Translate\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\shefer\source\repos\slaytheboots\Translate\bin\x64\Debug\Translate.exe">
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Translate.exe">
       <PackagePath>entrypoint\Translate.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
@@ -287,10 +287,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\source\repos\slaytheboots\Translate\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\source\repos\slaytheboots\Translate\bin\x64\Debug\Core\Translate.exe">
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Debug\Core\Translate.exe">
       <PackagePath>Translate.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">

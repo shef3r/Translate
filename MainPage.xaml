@@ -149,12 +149,17 @@
                         <ComboBox x:Uid="inputlang" SelectionChanged="from_SelectionChanged" x:Name="from" Margin="10,10,10,0" Width="300" ></ComboBox>
                         <TextBox x:Uid="inputtext" AcceptsReturn="False" TextChanged="input_TextChanged" x:Name="input" TextWrapping="Wrap" Width="300" Margin="10,10,10,10"/>
                     </StackPanel>
-                    <Button x:Name="Translate" HorizontalAlignment="Center" Click="Translate_Click" Padding="5,5,5,5">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button x:Name="switchlang" Click="switchlang_Click" Margin="0,0,0,5" Padding="5" Width="{Binding Height, ElementName=switchlang}">
+                            <SymbolIcon Symbol="Switch"/>
+                        </Button>
+                    <Button x:Name="Translate" Click="Translate_Click" Padding="5,5,5,5">
                         <StackPanel>
                             <SymbolIcon Symbol="Forward" x:Name="MF"></SymbolIcon>
                             <TextBlock x:Uid="translatebutton" x:Name="MFD"></TextBlock>
                         </StackPanel>
                     </Button>
+                    </StackPanel>
                     <StackPanel Orientation="Vertical">
                         <ComboBox SelectionChanged="to_SelectionChanged" x:Uid="outputlang" x:Name="to" Margin="10,10,10,0" Width="300"></ComboBox>
                         <TextBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Uid="outputtext" IsReadOnly="True" x:Name="output" TextWrapping="Wrap" Margin="10,10,10,10" MinHeight="32" MinWidth="100" MaxWidth="300" />

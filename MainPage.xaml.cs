@@ -338,7 +338,7 @@ namespace Translate
             to.Items.Add("Yoruba");
             to.Items.Add("Zulu");
             Translate.IsEnabled = false;
-
+            switchlang.IsEnabled = false;
         }
 
         private async void WelcomeDialog()
@@ -415,6 +415,7 @@ namespace Translate
 
         private void to_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             check();
             if (to.SelectedItem.ToString() == "Afrikaans") { tochosen.Text = "af"; }
             if (to.SelectedItem.ToString() == "Albanian") { tochosen.Text = "sq"; }
@@ -713,6 +714,16 @@ namespace Translate
                 Translate.IsEnabled = false;
                 count = 0;
             }
+            if (from.SelectedItem != null)
+            {
+                if (to.SelectedItem != null)
+                {
+                    if (!from.SelectedItem.Equals(to.SelectedItem))
+                    {
+                        switchlang.IsEnabled = true;
+                    }
+                }
+            }
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -901,6 +912,14 @@ namespace Translate
             else
             {
             }
+        }
+
+        private void switchlang_Click(object sender, RoutedEventArgs e)
+        {
+            var fromlang = from.SelectedItem;
+            var tolang = to.SelectedItem;
+            from.SelectedItem = tolang;
+            to.SelectedItem = fromlang;
         }
     }
 }
