@@ -133,14 +133,6 @@
     <value>Functionality</value>
     <comment>Functionality category text in Settings</comment>
   </data>
-  <data name="historyoption.Text" xml:space="preserve">
-    <value>Show history</value>
-    <comment>History option text in Settings</comment>
-  </data>
-  <data name="historytext.Text" xml:space="preserve">
-    <value>Session history</value>
-    <comment>Title of the history flyout</comment>
-  </data>
   <data name="inputlang.PlaceholderText" xml:space="preserve">
     <value>Input language</value>
     <comment>Placeholder in input language chooser</comment>
@@ -154,12 +146,8 @@
     <comment>Live translation option text in Settings</comment>
   </data>
   <data name="livetranslationdesc.Text" xml:space="preserve">
-    <value>Live translation is on. Remember that setting works only for the current session to make sure you're not gonna get banned from the API!</value>
+    <value>Live translation is on. Remember that setting works only for the current session (and doesn't work in PiP windows) to make sure you're not gonna get banned from the API!</value>
     <comment>flyout text when enabling live translation</comment>
-  </data>
-  <data name="nohistory.Text" xml:space="preserve">
-    <value>There's no history :(</value>
-    <comment>Text shown in session history flyout if there aren't any items</comment>
   </data>
   <data name="outputlang.PlaceholderText" xml:space="preserve">
     <value>Output language</value>

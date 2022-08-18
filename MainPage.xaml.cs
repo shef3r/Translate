@@ -12,6 +12,7 @@ using SoftwareKobo.Net;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Text;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.Generic;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
 
@@ -25,10 +26,11 @@ namespace Translate
         public Popup()
         {
             this.InitializeComponent();
-            if (historyitems.Items.Count == 0) { nohistory.Visibility = Visibility.Visible; }
+
             Window.Current.SetTitleBar(AppTitleBar);
             ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
             Object value = localSettings.Values["FirstLaunchFinished"];
+            
 
             if (value == null)
             {
@@ -36,19 +38,7 @@ namespace Translate
             }
             if (localSettings != null)
             {
-                if (localSettings.Values["history"] != null)
-                {
-                    if (localSettings.Values["history"].ToString() == "False")
-                    {
-                        histbutton.Visibility = Visibility.Collapsed;
-                        hisshow.IsOn = false;
-                    }
-                    else
-                    {
-                        histbutton.Visibility = Visibility.Visible;
-                        hisshow.IsOn = true;
-                    }
-                }
+                
                 if (localSettings.Values["compact"] != null)
                 {
                     Debug.WriteLine(ApplicationData.Current.LocalSettings.Values["compact"].ToString());
@@ -62,14 +52,8 @@ namespace Translate
                         settingitem0.Padding = new Thickness(5, 3, 5, 3);
                         settingitem1.Padding = new Thickness(5, 3, 5, 3);
                         settingitem2.Padding = new Thickness(5, 3, 5, 3);
-                        settingitem5.Padding = new Thickness(5, 3, 5, 3);
                         mainflyout.Padding = new Thickness(0, 0, 0, 0);
                         apply.Margin = new Thickness(165, 0, 0, 0);
-                        bighistory.Padding = new Thickness(8, 8, 8, 8);
-                        mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
-                        bighistory.Margin = new Thickness(5, 0, 5, 5);
-                        historytext.Padding = new Thickness(10, 10, 5, 8);
-                        mainflyouthistory.Padding = new Thickness(0, 0, 0, 0);
                         apply.Margin = new Thickness(165, 0, 0, 0);
                     }
                     else
@@ -80,15 +64,9 @@ namespace Translate
                         settingitem0.Padding = new Thickness(5, 5, 5, 5);
                         settingitem1.Padding = new Thickness(5, 5, 5, 5);
                         settingitem2.Padding = new Thickness(5, 5, 5, 5);
-                        settingitem5.Padding = new Thickness(5, 5, 5, 5);
                         mainflyout.Padding = new Thickness(5, 5, 5, 5);
                         settingstext.Padding = new Thickness(10, 10, 20, 15);
                         apply.Margin = new Thickness(144, 0, 0, 0);
-                        bighistory.Padding = new Thickness(15, 15, 15, 15);
-                        mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
-                        bighistory.Margin = new Thickness(5, 0, 5, 5);
-                        historytext.Padding = new Thickness(10, 10, 20, 15);
-                        mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
                     }
                 }
                 if (localSettings.Values["theme"] != null)
@@ -386,11 +364,13 @@ namespace Translate
                                     var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
                                     string[] json = result.Content.ToString().Split('"');
                                     output.Text = json[1];
-                                    historyitems.Items.Add(from.SelectedItem.ToString() + " → " + to.SelectedItem.ToString() + "\n" + input.Text + " → " + output.Text + "\n");
-                                    if (historyitems.Items.Count > 0) { nohistory.Visibility = Visibility.Collapsed; }
-                                    if (output.Text == "initial-scale=1, minimum-scale=1, width=device-width")
-                                    {
-                                        try { showerror("There was something wrong with your request. Please try again."); } catch { };
+                                        if (output.Text == "initial-scale=1, minimum-scale=1, width=device-width")
+                                        {
+                                            try
+                                            {
+                                                showerror("There was something wrong with your request. Please try again.");
+                                            }
+                                            catch { };
                                     }
                                 }
                                 catch (Exception ex)
@@ -666,6 +646,7 @@ namespace Translate
                         {
                             showerror(ex.Message);
                         }
+                        
                         if (output.Text == "-//W3C//DTD HTML 4.01 Transitional//EN")
                         {
                             try
@@ -793,16 +774,6 @@ namespace Translate
                 livetransison.IsOpen = false;
                 Translate.Visibility = Visibility.Visible;
             }
-            if (hisshow.IsOn == false)
-            {
-                ApplicationData.Current.LocalSettings.Values["history"] = false;
-                histbutton.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                ApplicationData.Current.LocalSettings.Values["history"] = true;
-                histbutton.Visibility = Visibility.Visible;
-            }
             if (compact.IsOn == true)
             {
                 ApplicationData.Current.LocalSettings.Values["compact"] = true;
@@ -813,14 +784,8 @@ namespace Translate
                 settingitem0.Padding = new Thickness(5, 3, 5, 3);
                 settingitem1.Padding = new Thickness(5, 3, 5, 3);
                 settingitem2.Padding = new Thickness(5, 3, 5, 3);
-                settingitem5.Padding = new Thickness(5, 3, 5, 3);
                 mainflyout.Padding = new Thickness(0, 0, 0, 0);
                 apply.Margin = new Thickness(165, 0, 0, 0);
-                bighistory.Padding = new Thickness(8, 8, 8, 8);
-                mainflyouthistory.Padding = new Thickness(3, 3, 3, 3);
-                bighistory.Margin = new Thickness(5, 0, 5, 5);
-                historytext.Padding = new Thickness(10, 10, 5, 8);
-                mainflyouthistory.Padding = new Thickness(0, 0, 0, 0);
                 apply.Margin = new Thickness(165, 0, 0, 0);
             }
             else
@@ -831,49 +796,42 @@ namespace Translate
                 settingitem0.Padding = new Thickness(5, 5, 5, 5);
                 settingitem1.Padding = new Thickness(5, 5, 5, 5);
                 settingitem2.Padding = new Thickness(5, 5, 5, 5);
-                settingitem5.Padding = new Thickness(5, 5, 5, 5);
                 mainflyout.Padding = new Thickness(5, 5, 5, 5);
                 settingstext.Padding = new Thickness(10, 10, 20, 15);
                 apply.Margin = new Thickness(144, 0, 0, 0);
-                bighistory.Padding = new Thickness(15, 15, 15, 15);
-                mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
-                bighistory.Margin = new Thickness(5, 0, 5, 5);
-                historytext.Padding = new Thickness(10, 10, 20, 15);
-                mainflyouthistory.Padding = new Thickness(5, 5, 5, 5);
-            }
-            if (lightmode.IsChecked == true)
-            {
-                ApplicationData.Current.LocalSettings.Values["theme"] = "1";
-            }
-            if (darkmode.IsChecked == true)
-            {
-                ApplicationData.Current.LocalSettings.Values["theme"] = "2";
-            }
-            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
-            if (localSettings != null)
-            {
-                if (localSettings.Values["theme"] != null)
+                if (lightmode.IsChecked == true)
                 {
-                    if (localSettings.Values["theme"].ToString() == "1")
+                    ApplicationData.Current.LocalSettings.Values["theme"] = "1";
+                }
+                if (darkmode.IsChecked == true)
+                {
+                    ApplicationData.Current.LocalSettings.Values["theme"] = "2";
+                }
+                ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+                if (localSettings != null)
+                {
+                    if (localSettings.Values["theme"] != null)
                     {
-                        // TODO: make themes work in compact overlay
-                        page.RequestedTheme = ElementTheme.Light;
-                        AppTitleBar.RequestedTheme = ElementTheme.Light;
-                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
-                        root.RequestedTheme = ElementTheme.Light;
-                    }
-                    if (localSettings.Values["theme"].ToString() == "2")
-                    {
-                        AppTitleBar.RequestedTheme = ElementTheme.Dark;
-                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
-                        root.RequestedTheme = ElementTheme.Dark;
-                        // this one sets dark mode
-                    }
+                        if (localSettings.Values["theme"].ToString() == "1")
+                        {
+                            // TODO: make themes work in compact overlay
+                            page.RequestedTheme = ElementTheme.Light;
+                            AppTitleBar.RequestedTheme = ElementTheme.Light;
+                            FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                            root.RequestedTheme = ElementTheme.Light;
+                        }
+                        if (localSettings.Values["theme"].ToString() == "2")
+                        {
+                            AppTitleBar.RequestedTheme = ElementTheme.Dark;
+                            FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                            root.RequestedTheme = ElementTheme.Dark;
+                            // this one sets dark mode
+                        }
 
+                    }
                 }
             }
         }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
@@ -888,12 +846,22 @@ namespace Translate
         {
             AppWindow appWindow = await AppWindow.TryCreateAsync();
             appWindow.Closed += AppWindow_Closed;
-            Frame appWindowFrame = new Frame();
+            appWindow.TitleBar.ExtendsContentIntoTitleBar = true;
+            appWindow.TitleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
+            Frame appWindowFrame = new Frame() { Background = new SolidColorBrush() { Color = Windows.UI.Colors.Green } };
             AppWindowPage page = (AppWindowPage)appWindowFrame.Content;
             var localSettings = ApplicationData.Current.LocalSettings;
             appWindow.Presenter.RequestPresentation(AppWindowPresentationKind.CompactOverlay);
             appWindowFrame.Navigate(typeof(AppWindowPage));
             ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowFrame);
+            if (localSettings.Values["theme"].ToString() == "1")
+            {
+                appWindowFrame.RequestedTheme = ElementTheme.Light;
+            }
+            if (localSettings.Values["theme"].ToString() == "2")
+            {
+                appWindowFrame.RequestedTheme = ElementTheme.Dark;
+            }
             await appWindow.TryShowAsync();
             pipbutton.Visibility = Visibility.Collapsed;
         }
@@ -920,6 +888,11 @@ namespace Translate
             var tolang = to.SelectedItem;
             from.SelectedItem = tolang;
             to.SelectedItem = fromlang;
+        }
+
+        private void license_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

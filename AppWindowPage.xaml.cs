@@ -16,6 +16,7 @@ using Windows.Web.Http;
 using System.Windows.Input;
 using System.Diagnostics;
 using System.Collections.Generic;
+using Windows.Storage;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,7 +30,43 @@ namespace Translate
         public AppWindowPage()
         {
             this.InitializeComponent();
-            Window.Current.SetTitleBar(AppTitleBar);
+            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+
+            if (localSettings != null)
+            {
+                if (localSettings.Values["compact"] != null)
+                {
+                    Debug.WriteLine(ApplicationData.Current.LocalSettings.Values["compact"].ToString());
+                    
+                }
+                if (localSettings.Values["theme"] != null)
+                {
+
+                    if (localSettings.Values["theme"].ToString() == "1")
+                    {
+                        page.RequestedTheme = ElementTheme.Light;
+                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                        root.RequestedTheme = ElementTheme.Light;
+                        maingrid.RequestedTheme = ElementTheme.Light;
+                        maingrid.Background = new SolidColorBrush() { Color = Windows.UI.Colors.White };
+                    }
+                    if (localSettings.Values["theme"].ToString() == "2")
+                    {
+                        page.RequestedTheme = ElementTheme.Dark;
+                        FrameworkElement root = (FrameworkElement)Window.Current.Content;
+                        root.RequestedTheme = ElementTheme.Dark;
+                        maingrid.Background = new SolidColorBrush() { Color = Windows.UI.Colors.Black};
+                    }
+                    if (localSettings.Values["theme"].ToString() == "3")
+                    {
+                        return;
+                    }
+
+
+
+                }
+            }
+
             from.Items.Add("Afrikaans");
             from.Items.Add("Albanian");
             from.Items.Add("Amharic");
@@ -268,7 +305,7 @@ namespace Translate
                                     var result = await client.GetAsync(new Uri("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + fromchosen.Text + "&tl=" + tochosen.Text + "&dt=t&q=" + input.Text));
                                     string[] json = result.Content.ToString().Split('"');
                                     output.Text = json[1];
-                                    // TODO: Fix history saving on PiP
+                                    ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
                                     if (output.Text == "initial-scale=1, minimum-scale=1, width=device-width")
                                     {
                                         try { showerror("There was something wrong with your request. Please try again."); } catch { };
@@ -520,9 +557,9 @@ namespace Translate
             if (from.SelectedItem.ToString() == "Zulu") { fromchosen.Text = "zu"; }
         }
 
-        private void input_TextChanged(object sender, TextChangedEventArgs e)
+        private async void input_TextChanged(object sender, TextChangedEventArgs e)
         {
-            check();
+                check();
         }
 
         private void check()

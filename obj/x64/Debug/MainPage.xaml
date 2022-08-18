@@ -5,7 +5,7 @@
     xmlns:local="using:Translate"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:historyitems="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     x:Name="page"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"                               >
@@ -22,59 +22,36 @@
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xEE49;" />
                 </AppBarButton.Icon>
             </AppBarButton>
-            <AppBarButton x:ConnectionId='17' Label="History" x:Name="histbutton" IsCompact="True"                             >
+            
+            <AppBarButton x:ConnectionId='17' Icon="Setting" x:Uid="settingsbutton" x:Name="settingsbutton" IsCompact="True"                             >
                 <AppBarButton.Flyout>
                     <Flyout>
-                        <StackPanel x:ConnectionId='34' Orientation="Vertical" x:Name="mainflyouthistory" Width="380px" Padding="5,5,5,5">
-                            <StackPanel x:ConnectionId='35' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="bighistory" CornerRadius="4,4,4,4" Width="350" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
+                        <StackPanel x:ConnectionId='18' Orientation="Vertical" x:Name="mainflyout" Width="380px" Padding="5,5,5,5">
+                            <StackPanel x:ConnectionId='19' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="350px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
                                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock x:ConnectionId='39' MaxWidth="280" TextWrapping="Wrap" x:Name="warnhis" x:Uid="warnhis" Margin="10,0,0,0"/>
+                                    <TextBlock x:ConnectionId='32' TextWrapping="Wrap" x:Name="warn" x:Uid="warn" Margin="10,0,0,0" MaxWidth="280" />
                                 </StackPanel>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='38' Padding="12,10,20,15" x:Name="historytext" x:Uid="historytext" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
-                            </StackPanel>
-                            <TextBlock x:ConnectionId='36' x:Uid="nohistory" Foreground="{ThemeResource ButtonDisabledForegroundThemeBrush}" FontSize="20" FontFamily="Segoe UI Variable" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="nohistory"/>
-                            <ListView x:ConnectionId='37' Width="370px" x:Name="historyitems" x:FieldModifier="public" SelectionMode="None" HorizontalAlignment="Stretch" Height="auto">
-                            </ListView>
-                        </StackPanel>
-                    </Flyout>
-                </AppBarButton.Flyout>
-                <AppBarButton.Icon>
-                    <FontIcon Glyph="&#xE81C;"></FontIcon>
-                </AppBarButton.Icon>
-            </AppBarButton>
-            <AppBarButton x:ConnectionId='18' Icon="Setting" x:Uid="settingsbutton" x:Name="settingsbutton" IsCompact="True"                             >
-                <AppBarButton.Flyout>
-                    <Flyout>
-                        <StackPanel x:ConnectionId='19' Orientation="Vertical" x:Name="mainflyout" Width="380px" Padding="5,5,5,5">
-                            <StackPanel x:ConnectionId='20' Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="350px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
-                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock x:ConnectionId='33' TextWrapping="Wrap" x:Name="warn" x:Uid="warn" Margin="10,0,0,0" MaxWidth="280" />
-                                </StackPanel>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='30' Padding="12,10,20,15" x:Name="settingstext" x:Uid="settingstext" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
-                                <Button x:ConnectionId='31' HorizontalAlignment="Right" x:Name="apply" Margin="144,0,0,0"                       >
+                            <Grid Width="{Binding Width, ElementName=expander}" Margin="0,10,0,10" Padding="2">
+                                <TextBlock x:ConnectionId='29' x:Name="settingstext" x:Uid="settingstext" Style="{ThemeResource TitleTextBlockStyle}"></TextBlock>
+                                <Button x:ConnectionId='30' HorizontalAlignment="Right" x:Name="apply"                       >
                                     <StackPanel Orientation="Horizontal">
                                         <FontIcon Glyph="&#xE081;" />
                                         <TextBlock x:Uid="applytext" Padding="5,0,0,0"/>
                                     </StackPanel>
                                     <Button.Resources>
-                                        <muxc:TeachingTip x:ConnectionId='32' IsLightDismissEnabled="True"                         PreferredPlacement="Left" IsOpen="False" x:Name="livetransison">
+                                        <muxc:TeachingTip x:ConnectionId='31' IsLightDismissEnabled="True"                         PreferredPlacement="Left" IsOpen="False" x:Name="livetransison">
                                             <muxc:TeachingTip.Content>
                                                 <TextBlock TextWrapping="WrapWholeWords" x:Uid="livetranslationdesc"/>
                                             </muxc:TeachingTip.Content>
                                         </muxc:TeachingTip>
                                     </Button.Resources>
                                 </Button>
-
-                            </StackPanel>
-                            <ScrollViewer Width="360px">
+                            </Grid>
+                            <ScrollViewer HorizontalAlignment="Center">
                                 <StackPanel Orientation="Vertical">
-                                    <muxc:Expander CornerRadius="4,4,4,4" Width="360px" Padding="15,15,15,15" Margin="0,0,0,0">
+                                    <muxc:Expander x:ConnectionId='21' CornerRadius="4,4,4,4" Width="360px" x:Name="expander" Padding="15,15,15,15" Margin="0,0,0,0">
                                         <muxc:Expander.Header>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                                 <FontIcon Glyph="&#xE99A;"/>
@@ -82,13 +59,13 @@
                                             </StackPanel>
                                         </muxc:Expander.Header>
                                         <StackPanel Orientation="Vertical">
-                                            <Grid x:ConnectionId='28' Width="440px"  x:Name="settingitem0" Padding="5,5,5,5">
+                                            <Grid x:ConnectionId='27' Width="440px"  x:Name="settingitem0" Padding="5,5,5,5">
                                                 <TextBlock Width="300px" VerticalAlignment="Center"  HorizontalAlignment="Left" x:Uid="livetranslation"></TextBlock>
-                                                <ToggleSwitch x:ConnectionId='29' x:Name="livetrans" OnContent="" OffContent="" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
+                                                <ToggleSwitch x:ConnectionId='28' x:Name="livetrans" OnContent="" OffContent="" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
                                             </Grid>
                                         </StackPanel>
                                     </muxc:Expander>
-                                    <muxc:Expander CornerRadius="4,4,4,4" Padding="15,15,15,15" Margin="0,10,0,0" Width="360px" IsExpanded="True">
+                                    <muxc:Expander CornerRadius="4,4,4,4" Padding="15,15,15,15" Margin="0,10,0,10" Width="360px" IsExpanded="True">
                                         <muxc:Expander.Header>
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                                 <FontIcon Glyph="&#xE2B1;"/>
@@ -96,25 +73,31 @@
                                             </StackPanel>
                                         </muxc:Expander.Header>
                                         <StackPanel Orientation="Vertical">
-                                            <Grid x:ConnectionId='21' Width="440px" Padding="5,5,5,5" x:Name="settingitem1">
+                                            <Grid x:ConnectionId='22' Width="440px" Padding="5,5,5,5" x:Name="settingitem1">
                                                 <TextBlock Width="300px" VerticalAlignment="Top" HorizontalAlignment="Left" x:Uid="themedesc"></TextBlock>
                                                 <muxc:RadioButtons Margin="0,15,0,0">
-                                                    <RadioButton x:ConnectionId='26'  Content="Light" x:Name="lightmode"/>
-                                                    <RadioButton x:ConnectionId='27'  Content="Dark" x:Name="darkmode"/>
+                                                    <RadioButton x:ConnectionId='25'  Content="Light" x:Name="lightmode"/>
+                                                    <RadioButton x:ConnectionId='26'  Content="Dark" x:Name="darkmode"/>
                                                 </muxc:RadioButtons>
                                             </Grid>
-                                            <Grid x:ConnectionId='22' Width="440px"  x:Name="settingitem2" Padding="5,5,5,5">
+                                            <Grid x:ConnectionId='23' Width="440px"  x:Name="settingitem2" Padding="5,5,5,5">
                                                 <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" x:Uid="compactoption"></TextBlock>
-                                                <ToggleSwitch x:ConnectionId='25' OnContent="" OffContent="" x:Name="compact" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
-                                            </Grid>
-                                            <Grid x:ConnectionId='23' Width="440px"  x:Name="settingitem5" Padding="5,5,5,5">
-                                                <TextBlock Width="300px" VerticalAlignment="Center" HorizontalAlignment="Left" x:Uid="historyoption"></TextBlock>
-                                                <ToggleSwitch x:ConnectionId='24' OnContent="" OffContent="" VerticalAlignment="Center" x:Name="hisshow" HorizontalAlignment="Right"></ToggleSwitch>
+                                                <ToggleSwitch x:ConnectionId='24' OnContent="" OffContent="" x:Name="compact" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
                                             </Grid>
                                         </StackPanel>
                                     </muxc:Expander>
                                 </StackPanel>
                             </ScrollViewer>
+                            <StackPanel Orientation="Vertical" Margin="0,5,0,0" VerticalAlignment="Bottom">
+                                <Line X1="0" X2="400" Stretch="Fill" Stroke="{StaticResource TextBoxDisabledForegroundThemeBrush}" VerticalAlignment="Top" Margin="0,0,0,5"/>
+                                <Grid VerticalAlignment="Center">
+                                    <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE946;" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" Margin="10,0,0,0" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Version, licensing and credit info" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" VerticalAlignment="Center" FontSize="10" Margin="32,0,0,0"/>
+                                    <Button x:ConnectionId='20' Background="Transparent" x:Name="license"                       BorderThickness="0" HorizontalAlignment="Right">
+                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8A7;" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" FontSize="15"/>
+                                    </Button>
+                                </Grid>
+                            </StackPanel>
                         </StackPanel>
                     </Flyout>
                 </AppBarButton.Flyout>
