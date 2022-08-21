@@ -25,7 +25,7 @@
             
             <AppBarButton Icon="Setting" x:Uid="settingsbutton" x:Name="settingsbutton" IsCompact="True" Click="AppBarButton_Click_2">
                 <AppBarButton.Flyout>
-                    <Flyout>
+                    <Flyout x:Name="settingsflyout" >
                         <StackPanel Orientation="Vertical" x:Name="mainflyout" Width="380px" Padding="5,5,5,5">
                             <StackPanel Background="{ThemeResource LayerFillColorDefaultBrush}" x:Name="big" CornerRadius="4,4,4,4" Width="350px" Padding="15,15,15,15" Margin="0,0,0,0" Orientation="Horizontal">
                                 <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE7BA;" />
@@ -125,7 +125,7 @@
                     Style="{StaticResource CaptionTextBlockStyle}" />
             </StackPanel>
         </Border>
-        <Grid Background="{ThemeResource LayerFillColorDefaultBrush}" Margin="0,48,0,0" CornerRadius="8,8,0,0" Grid.ColumnSpan="2">
+        <Grid Background="{ThemeResource LayerFillColorDefaultBrush}" Margin="0,48,0,0" CornerRadius="8,8,0,0" Grid.ColumnSpan="2" x:Name="mainbg">
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal" x:Name="mainmf" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Vertical">
@@ -136,7 +136,7 @@
                         <Button x:Name="switchlang" Click="switchlang_Click" Margin="0,0,0,5" Padding="5" Width="{Binding Height, ElementName=switchlang}">
                             <SymbolIcon Symbol="Switch"/>
                         </Button>
-                    <Button x:Name="Translate" Click="Translate_Click" Padding="5,5,5,5">
+                    <Button x:Name="Translatebutton" Click="Translate_Click" Padding="5,5,5,5">
                         <StackPanel>
                             <SymbolIcon Symbol="Forward" x:Name="MF"></SymbolIcon>
                             <TextBlock x:Uid="translatebutton" x:Name="MFD"></TextBlock>

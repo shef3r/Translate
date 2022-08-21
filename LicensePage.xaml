@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Translate.LicensePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Translate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Margin="0"
+    Padding="0"
+    HorizontalAlignment="Stretch">
+
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Height="48">
+            <Button x:Name="backButton" Click="backButton_Click" Background="Transparent" Margin="5,0,0,0" BorderThickness="0">
+                <FontIcon FontSize="12" Glyph="&#xE112;" />
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <ListView x:Name="chooser" SelectionMode="Single" SelectionChanged="chooser_SelectionChanged">
+                <ListViewItem x:Name="licensebutton">
+                    <StackPanel Orientation="Horizontal">
+                        <SymbolIcon Symbol="Document" />
+                        <TextBlock Text="License" Padding="5,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="authorsbutton">
+                    <StackPanel Orientation="Horizontal">
+                        <SymbolIcon Symbol="Contact" />
+                        <TextBlock Text="Authors &amp; credits" Padding="5,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="aboutbutton">
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon Glyph="&#xE946;" />
+                        <TextBlock Text="About" Padding="5,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+            <StackPanel Orientation="Vertical" Margin="15,0,0,0">
+                <Grid MinHeight="500" HorizontalAlignment="Stretch" x:Name="license">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}">License</TextBlock>
+                    <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" Margin="0,40,0,0">
+                        <TextBlock TextWrapping="WrapWholeWords" Height="9000000" >
+                        </TextBlock>
+                    </ScrollViewer>
+                </Grid>
+                <Grid Background="Green" MinWidth="800" MinHeight="500" HorizontalAlignment="Stretch" x:Name="credits"/>
+                <Grid Background="Blue" MinWidth="800" MinHeight="500" HorizontalAlignment="Stretch" x:Name="about"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+   
+</Page>

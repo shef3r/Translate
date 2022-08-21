@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Text;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.Generic;
+using Windows.ApplicationModel.Core;
+using Windows.UI.ViewManagement;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
 
@@ -75,24 +77,25 @@ namespace Translate
                     if (localSettings.Values["theme"].ToString() == "1")
                     {
                         lightmode.IsChecked = true;
-                        darkmode.IsChecked = false;
                         page.RequestedTheme = ElementTheme.Light;
                         AppTitleBar.RequestedTheme = ElementTheme.Light;
                         FrameworkElement root = (FrameworkElement)Window.Current.Content;
                         root.RequestedTheme = ElementTheme.Light;
+                        ApplicationView.GetForCurrentView().TitleBar.ButtonForegroundColor = Windows.UI.Colors.Black;
+                        settingsbutton.Foreground = new SolidColorBrush { Color = Windows.UI.Colors.Black };
+                        pipbutton.Foreground = new SolidColorBrush { Color = Windows.UI.Colors.Black };
+                        mainbg.RequestedTheme = ElementTheme.Light;
                     }
                     if (localSettings.Values["theme"].ToString() == "2")
                     {
-                        lightmode.IsChecked = false;
-                        darkmode.IsChecked = true;
-                        page.RequestedTheme = ElementTheme.Dark;
                         AppTitleBar.RequestedTheme = ElementTheme.Dark;
+                        darkmode.IsChecked = true;
                         FrameworkElement root = (FrameworkElement)Window.Current.Content;
                         root.RequestedTheme = ElementTheme.Dark;
-                    }
-                    if (localSettings.Values["theme"].ToString() == "3")
-                    {
-                        return;
+                        ApplicationView.GetForCurrentView().TitleBar.ButtonForegroundColor = Windows.UI.Colors.White;
+                        settingsbutton.Foreground = new SolidColorBrush { Color = Windows.UI.Colors.White };
+                        pipbutton.Foreground = new SolidColorBrush { Color = Windows.UI.Colors.White };
+                        mainbg.RequestedTheme = ElementTheme.Dark;
                     }
 
 
@@ -315,7 +318,7 @@ namespace Translate
             to.Items.Add("Yiddish");
             to.Items.Add("Yoruba");
             to.Items.Add("Zulu");
-            Translate.IsEnabled = false;
+            Translatebutton.IsEnabled = false;
             switchlang.IsEnabled = false;
         }
 
@@ -687,12 +690,12 @@ namespace Translate
             }
             if (count == 3)
             {
-                Translate.IsEnabled = true;
+                Translatebutton.IsEnabled = true;
                 count = 0;
             }
             else
             {
-                Translate.IsEnabled = false;
+                Translatebutton.IsEnabled = false;
                 count = 0;
             }
             if (from.SelectedItem != null)
@@ -764,15 +767,16 @@ namespace Translate
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            
             if (livetrans.IsOn == true)
             {
                 livetransison.IsOpen = true;
-                Translate.Visibility = Visibility.Collapsed;
+                Translatebutton.Visibility = Visibility.Collapsed;
             }
             else
             {
                 livetransison.IsOpen = false;
-                Translate.Visibility = Visibility.Visible;
+                Translatebutton.Visibility = Visibility.Visible;
             }
             if (compact.IsOn == true)
             {
@@ -814,24 +818,28 @@ namespace Translate
                     {
                         if (localSettings.Values["theme"].ToString() == "1")
                         {
-                            // TODO: make themes work in compact overlay
                             page.RequestedTheme = ElementTheme.Light;
                             AppTitleBar.RequestedTheme = ElementTheme.Light;
                             FrameworkElement root = (FrameworkElement)Window.Current.Content;
                             root.RequestedTheme = ElementTheme.Light;
+                            ApplicationView.GetForCurrentView().TitleBar.ButtonForegroundColor = Windows.UI.Colors.Black;
+                            mainbg.RequestedTheme = ElementTheme.Light;
                         }
                         if (localSettings.Values["theme"].ToString() == "2")
                         {
                             AppTitleBar.RequestedTheme = ElementTheme.Dark;
                             FrameworkElement root = (FrameworkElement)Window.Current.Content;
                             root.RequestedTheme = ElementTheme.Dark;
-                            // this one sets dark mode
+                            ApplicationView.GetForCurrentView().TitleBar.ButtonForegroundColor = Windows.UI.Colors.White;
+                            mainbg.RequestedTheme = ElementTheme.Dark;
+                            
                         }
 
                     }
                 }
             }
         }
+
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
@@ -894,9 +902,9 @@ namespace Translate
             to.SelectedItem = fromlang;
         }
 
-        private void license_Click(object sender, RoutedEventArgs e)
+        private async void license_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.Frame.Navigate(typeof(Translate.LicensePage));
         }
     }
 }

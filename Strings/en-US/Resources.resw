@@ -181,8 +181,4 @@
     <value>Not all settings can be applied instantly or correctly without a restart.</value>
     <comment>warning in settings</comment>
   </data>
-  <data name="warnhis.Text" xml:space="preserve">
-    <value>This section only stores this session's history and does not work with live translation.</value>
-    <comment>warning about turning on session history</comment>
-  </data>
 </root>
