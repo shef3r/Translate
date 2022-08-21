@@ -9,7 +9,7 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     x:Name="page"
     Opacity="1"
-    Background="Green">
+    Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <!--This top margin is the height of the custom TitleBar-->
         <Thickness x:Key="NavigationViewContentMargin">0,36,0,0</Thickness>

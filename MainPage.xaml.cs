@@ -854,7 +854,9 @@ namespace Translate
             appWindow.Presenter.RequestPresentation(AppWindowPresentationKind.CompactOverlay);
             appWindowFrame.Navigate(typeof(AppWindowPage));
             ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowFrame);
-            if (localSettings.Values["theme"].ToString() == "1")
+            if (localSettings.Values["theme"] != null)
+            {
+                if (localSettings.Values["theme"].ToString() == "1")
             {
                 appWindowFrame.RequestedTheme = ElementTheme.Light;
             }
@@ -862,6 +864,8 @@ namespace Translate
             {
                 appWindowFrame.RequestedTheme = ElementTheme.Dark;
             }
+            }
+            
             await appWindow.TryShowAsync();
             pipbutton.Visibility = Visibility.Collapsed;
         }
