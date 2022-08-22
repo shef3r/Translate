@@ -7,7 +7,7 @@
 
     Po więcej informacji o plikach manifestu pakietów, zobacz http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="shefer.TranslateApp" Publisher="CN=shefer" Version="2.2.0.0" ProcessorArchitecture="x64" />
+  <Identity Name="shefer.TranslateApp" Publisher="CN=shefer" Version="3.1.0.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Translate</DisplayName>
@@ -23,7 +23,6 @@
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
-    <Resource Language="PL-PL" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Translate.exe" EntryPoint="Translate.App">

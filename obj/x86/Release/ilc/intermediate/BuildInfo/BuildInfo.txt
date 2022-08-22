@@ -13,6 +13,7 @@ Microsoft.VisualBasic.dll                             : 4.6.30316.01
 Microsoft.Win32.Primitives.dll                        : 4.6.30316.01
 mscorlib.dll                                          : 4.6.30316.01
 netstandard.dll                                       : 4.6.30316.1
+SoftwareKobo.Net.WebUtility.dll                       : 1.0.0.0
 System.AppContext.dll                                 : 4.6.30316.01
 System.Buffers.dll                                    : 4.6.30316.01
 System.Collections.Concurrent.dll                     : 4.6.30316.01

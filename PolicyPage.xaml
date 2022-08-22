@@ -21,32 +21,38 @@
             <ListView x:Name="chooser" SelectionMode="Single" SelectionChanged="chooser_SelectionChanged">
                 <ListViewItem x:Name="licensebutton">
                     <StackPanel Orientation="Horizontal">
-                        <SymbolIcon Symbol="Document" />
+                        <FontIcon FontSize="18" VerticalAlignment="Center" Glyph="&#xE130;" />
                         <TextBlock x:Uid="privacypolicylabel" Padding="5,0,0,0"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem x:Name="authorsbutton" AutomationProperties.Name="Contact">
                     <StackPanel Orientation="Horizontal">
-                        <SymbolIcon Symbol="Contact" />
+                        <FontIcon FontSize="18" VerticalAlignment="Center" Glyph="&#xE13D;" />
                         <TextBlock x:Uid="contacttext" Padding="5,0,0,0"/>
                     </StackPanel>
-                </ListViewItem>
-                <ListViewItem x:Name="aboutbutton" AutomationProperties.Name="About">
-                    <StackPanel Orientation="Horizontal">
-                        <FontIcon Glyph="&#xE946;" />
-                        <TextBlock x:Uid="abouttext" Padding="5,0,0,0"/>
-                    </StackPanel>
-                </ListViewItem>
+                </ListViewItem> 
             </ListView>
             <StackPanel Orientation="Vertical" Margin="15,0,0,0">
                 <Grid MinHeight="500" HorizontalAlignment="Stretch" x:Name="prvpol">
                     <TextBlock Style="{StaticResource TitleTextBlockStyle}" x:Uid="privacypolicylabel"></TextBlock>
-                    <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" Margin="0,40,0,0">
-                        <TextBlock TextWrapping="WrapWholeWords" x:Uid="prvpoltext" AutomationProperties.Name="Privacy policy text"/>
+                    <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="140" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" Margin="0,40,0,0">
+                        <TextBlock TextWrapping="Wrap" Width="550" x:Uid="prvpoltext" AutomationProperties.Name="Privacy policy text"/>
                     </ScrollViewer>
                 </Grid>
-                <Grid Background="Green" MinWidth="800" MinHeight="500" HorizontalAlignment="Stretch" x:Name="credits"/>
-                <Grid Background="Blue" MinWidth="800" MinHeight="500" HorizontalAlignment="Stretch" x:Name="about"/>
+                <Grid MinHeight="500" HorizontalAlignment="Left" x:Name="credits">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" x:Uid="thanksto"/>
+                    <RichTextBlock MaxWidth="500">
+                        <Paragraph>
+                            <Bold>Alur</Bold> (AlurDesign) - for helping me with the store release, icon design and more &lt;3 (
+                            <Hyperlink NavigateUri="https://figma.com/@AlurDesign">Figma</Hyperlink> ,
+                            <Hyperlink NavigateUri="https://github.com/AlurDesign">GitHub</Hyperlink> ,
+                            <Hyperlink NavigateUri="https://twitter.com/@AlurDesign">Twitter</Hyperlink> )
+                        </Paragraph>
+                        <Paragraph>
+                            <Bold>Google</Bold> - for their Translate service/API
+                        </Paragraph>
+                    </RichTextBlock>
+                </Grid>
             </StackPanel>
         </StackPanel>
     </StackPanel>

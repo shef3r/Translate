@@ -19,24 +19,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>EDF29D11848CAA4EF6444787B9A7A07A87A50243DB3AD215D11C040967463836</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>shefer.TranslateApp_2.2.0.0_x64__d3yaftd1444a0</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>32EAA84502597F14FB378F7A4F5B64EDB9530FEC5DB16C0E8FDCFD59B295A432</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>shefer.TranslateApp_3.1.0.0_x64__d3yaftd1444a0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>shefer.TranslateApp_d3yaftd1444a0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>shefer.TranslateApp</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=shefer</RegisteredPackagePublisher>
-    <RegisteredVersion>2.2.0.0</RegisteredVersion>
+    <RegisteredVersion>3.1.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-08-22T18:32:26.129</Modified>
+      <Modified>2022-08-22T19:10:17.762</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\Translate.exe">
       <PackagePath>entrypoint\Translate.exe</PackagePath>
-      <Modified>2022-08-22T18:31:27.901</Modified>
+      <Modified>2022-08-22T19:10:13.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -343,23 +343,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\Translate.xr.xml">
       <PackagePath>Translate.xr.xml</PackagePath>
-      <Modified>2022-08-22T18:31:27.145</Modified>
+      <Modified>2022-08-22T19:10:13.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-08-22T18:32:24.840</Modified>
+      <Modified>2022-08-22T19:10:13.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\AppWindowPage.xbf">
       <PackagePath>AppWindowPage.xbf</PackagePath>
-      <Modified>2022-08-22T18:32:24.840</Modified>
+      <Modified>2022-08-22T19:10:13.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\PolicyPage.xbf">
       <PackagePath>PolicyPage.xbf</PackagePath>
-      <Modified>2022-08-22T18:32:24.840</Modified>
+      <Modified>2022-08-22T19:10:13.528</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-08-22T18:32:24.839</Modified>
+      <Modified>2022-08-22T19:10:13.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -371,11 +371,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-08-22T18:31:28.265</Modified>
+      <Modified>2022-08-22T18:57:42.877</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\Core\Translate.exe">
       <PackagePath>Translate.exe</PackagePath>
-      <Modified>2022-08-22T18:32:26.122</Modified>
+      <Modified>2022-08-22T19:10:17.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

@@ -34,19 +34,11 @@ namespace Translate
             {
                 prvpol.Visibility = Visibility.Visible;
                 credits.Visibility = Visibility.Collapsed;
-                about.Visibility = Visibility.Collapsed;
             }
             if (authorsbutton.IsSelected)
             {
                 prvpol.Visibility = Visibility.Collapsed;
                 credits.Visibility = Visibility.Visible;
-                about.Visibility = Visibility.Collapsed;
-            }
-            if (aboutbutton.IsSelected)
-            {
-                prvpol.Visibility = Visibility.Collapsed;
-                credits.Visibility = Visibility.Collapsed;
-                about.Visibility = Visibility.Visible;
             }
         }
 
