@@ -20,9 +20,9 @@ namespace Translate
     /// <summary>
     /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
     /// </summary>
-    public sealed partial class LicensePage : Page
+    public sealed partial class PolicyPage : Page
     {
-        public LicensePage()
+        public PolicyPage()
         {
             this.InitializeComponent();
             licensebutton.IsSelected = true;
@@ -32,19 +32,19 @@ namespace Translate
         {
             if (licensebutton.IsSelected)
             {
-                license.Visibility = Visibility.Visible;
+                prvpol.Visibility = Visibility.Visible;
                 credits.Visibility = Visibility.Collapsed;
                 about.Visibility = Visibility.Collapsed;
             }
             if (authorsbutton.IsSelected)
             {
-                license.Visibility = Visibility.Collapsed;
+                prvpol.Visibility = Visibility.Collapsed;
                 credits.Visibility = Visibility.Visible;
                 about.Visibility = Visibility.Collapsed;
             }
             if (aboutbutton.IsSelected)
             {
-                license.Visibility = Visibility.Collapsed;
+                prvpol.Visibility = Visibility.Collapsed;
                 credits.Visibility = Visibility.Collapsed;
                 about.Visibility = Visibility.Visible;
             }

@@ -76,8 +76,8 @@
                                             <Grid Width="440px" Padding="5,5,5,5" x:Name="settingitem1">
                                                 <TextBlock Width="300px" VerticalAlignment="Top" HorizontalAlignment="Left" x:Uid="themedesc"></TextBlock>
                                                 <muxc:RadioButtons Margin="0,15,0,0">
-                                                    <RadioButton  Content="Light" x:Name="lightmode"/>
-                                                    <RadioButton  Content="Dark" x:Name="darkmode"/>
+                                                    <RadioButton x:Uid="lightmodebutton" x:Name="lightmode"/>
+                                                    <RadioButton x:Uid="darkmodebutton" x:Name="darkmode"/>
                                                 </muxc:RadioButtons>
                                             </Grid>
                                             <Grid Width="440px"  x:Name="settingitem2" Padding="5,5,5,5">
@@ -92,7 +92,7 @@
                                 <Line X1="0" X2="400" Stretch="Fill" Stroke="{StaticResource TextBoxDisabledForegroundThemeBrush}" VerticalAlignment="Top" Margin="0,0,0,5"/>
                                 <Grid VerticalAlignment="Center">
                                     <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE946;" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" Margin="10,0,0,0" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Version, licensing and credit info" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" VerticalAlignment="Center" FontSize="10" Margin="32,0,0,0"/>
+                                    <TextBlock x:Uid="verabtinfolabel" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" VerticalAlignment="Center" FontSize="10" Margin="32,0,0,0"/>
                                     <Button Background="Transparent" x:Name="license" Click="license_Click" BorderThickness="0" HorizontalAlignment="Right">
                                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8A7;" Foreground="{StaticResource TextBoxDisabledForegroundThemeBrush}" FontSize="15"/>
                                     </Button>

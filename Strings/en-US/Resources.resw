@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="abouttext.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="appearcategory.Text" xml:space="preserve">
     <value>Appearance</value>
     <comment>Appearance category text in Settings</comment>
@@ -129,6 +132,12 @@
     <value>Compact mode</value>
     <comment>Compact mode option text in Settings</comment>
   </data>
+  <data name="contacttext.Text" xml:space="preserve">
+    <value>Authors &amp; credits</value>
+  </data>
+  <data name="darkmodebutton.Content" xml:space="preserve">
+    <value>Dark</value>
+  </data>
   <data name="funccategory.Text" xml:space="preserve">
     <value>Functionality</value>
     <comment>Functionality category text in Settings</comment>
@@ -140,6 +149,9 @@
   <data name="inputtext.PlaceholderText" xml:space="preserve">
     <value>Input</value>
     <comment>Placeholder in input textbox</comment>
+  </data>
+  <data name="lightmodebutton.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
   <data name="livetranslation.Text" xml:space="preserve">
     <value>Live translation</value>
@@ -161,6 +173,13 @@
     <value>Pictire-in-Picture mode</value>
     <comment>Label of the PiP button on the titlebar</comment>
   </data>
+  <data name="privacypolicylabel.Text" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="prvpoltext.Text" xml:space="preserve">
+    <value>This app uploads the text you type for translating to Google servers. Please check their privacy policy for more info about what happens to your data and how it is stored.
+We don't collect any other information.</value>
+  </data>
   <data name="settingsbutton.Label" xml:space="preserve">
     <value>Settings</value>
     <comment>Label of the settings button on the titlebar</comment>
@@ -176,6 +195,9 @@
   <data name="translatebutton.Text" xml:space="preserve">
     <value>Translate</value>
     <comment>Text in the translate button</comment>
+  </data>
+  <data name="verabtinfolabel.Text" xml:space="preserve">
+    <value>Version, privacy policy and credit info</value>
   </data>
   <data name="warn.Text" xml:space="preserve">
     <value>Not all settings can be applied instantly or correctly without a restart.</value>

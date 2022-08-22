@@ -278,8 +278,8 @@
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\AppWindowPage.xbf">
       <PackagePath>AppWindowPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\LicensePage.xbf">
-      <PackagePath>LicensePage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\PolicyPage.xbf">
+      <PackagePath>PolicyPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>

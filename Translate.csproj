@@ -131,8 +131,8 @@
     <Compile Include="AppWindowPage.xaml.cs">
       <DependentUpon>AppWindowPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LicensePage.xaml.cs">
-      <DependentUpon>LicensePage.xaml</DependentUpon>
+    <Compile Include="PolicyPage.xaml.cs">
+      <DependentUpon>PolicyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -328,7 +328,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LicensePage.xaml">
+    <Page Include="PolicyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

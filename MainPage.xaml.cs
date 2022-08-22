@@ -904,7 +904,7 @@ namespace Translate
 
         private async void license_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Translate.LicensePage));
+            this.Frame.Navigate(typeof(Translate.PolicyPage));
         }
     }
 }

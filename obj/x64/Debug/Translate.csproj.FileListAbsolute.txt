@@ -264,8 +264,8 @@ C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\MultipleQualifiersPe
 C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
 C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.winmd_637672071680000000.json
-C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\LicensePage.xbf
-C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\LicensePage.g.i.cs
-C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\LicensePage.g.cs
-C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\LicensePage.xaml
-C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\LicensePage.xbf
+C:\Users\shefer\Source\Repos\shef3r\Translate\bin\x64\Debug\PolicyPage.xbf
+C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\PolicyPage.g.i.cs
+C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\PolicyPage.g.cs
+C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\PolicyPage.xaml
+C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x64\Debug\PolicyPage.xbf

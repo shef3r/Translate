@@ -56,10 +56,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
@@ -125,13 +124,17 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
+      <RootMethod Name="GetName" />
+      <RootMethod Name="SetName" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
       <RootProperty Name="Symbol" />
     </RootType>
-    <RootType FullName="Translate.LicensePage" />
+    <RootType FullName="Translate.PolicyPage" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.BackdropMaterial">
       <RootMethod Name="GetApplyToRootOrPageBackground" />
       <RootMethod Name="SetApplyToRootOrPageBackground" />
@@ -201,9 +204,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Items" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="Content" />
-    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton" />
     <RootType FullName="Microsoft.UI.Xaml.Controls.TeachingTip">
       <RootProperty Name="IsLightDismissEnabled" />
       <RootProperty Name="Target" />
