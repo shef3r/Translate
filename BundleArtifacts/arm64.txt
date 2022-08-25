@@ -1,6 +1,0 @@
-MainPackage=C:\Users\bruno\source\repos\Translate\bin\ARM64\Release\Translate_1.0.0.0_ARM64.msix
-SymbolPackage=C:\Users\bruno\source\repos\Translate\obj\ARM64\Release\Symbols\Translate_1.0.0.0_ARM64.appxsym
-ResourcePack=C:\Users\bruno\source\repos\Translate\bin\ARM64\Release\Translate_1.0.0.0_scale-100.msix
-ResourcePack=C:\Users\bruno\source\repos\Translate\bin\ARM64\Release\Translate_1.0.0.0_scale-125.msix
-ResourcePack=C:\Users\bruno\source\repos\Translate\bin\ARM64\Release\Translate_1.0.0.0_scale-150.msix
-ResourcePack=C:\Users\bruno\source\repos\Translate\bin\ARM64\Release\Translate_1.0.0.0_scale-400.msix

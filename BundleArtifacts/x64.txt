@@ -1,2 +1,0 @@
-MainPackage=C:\Users\shefer\Source\Repos\slaytheboots\Translate\bin\x64\Release\Translate_2.2.0.0_x64.msix
-SymbolPackage=C:\Users\shefer\Source\Repos\slaytheboots\Translate\obj\x64\Release\Symbols\Translate_2.2.0.0_x64.appxsym
