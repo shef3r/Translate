@@ -1,9 +1,0 @@
-﻿"C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x86\Release\ilc\in\SoftwareKobo.Net.WebUtility.dll"
-"C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x86\Release\ilc\in\Translate.exe"
-/Lib:"C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x86\Release\ilc\in"
-/Lib:"C:\Users\shefer\.nuget\packages\runtime.win10-x86.microsoft.net.native.compiler\2.2.11-rel-30601-02\tools\x86\ilc\lib\Private"
-/WinMD:"C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x86\Release\ilc\in\WinMetadata\Microsoft.UI.Xaml.winmd"
-/WinMD:"C:\Users\shefer\Source\Repos\shef3r\Translate\obj\x86\Release\ilc\in\WinMetadata\Windows.winmd"
-/VSTelemetrySessionSettings:"{\"IsOptedIn\":true,\"HostName\":\"Dev14\",\"AppInsightsInstrumentationKey\":\"f144292e-e3b2-4011-ac90-20e5c03fbce5\",\"AsimovInstrumentationKey\":\"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70\",\"AppId\":1001,\"UserId\":\"6cb22f0a-1d7c-41f8-93d8-05731a9eeada\",\"Id\":\"305c14ea-ce3c-4516-b2fa-06fdf27c9f65\",\"ProcessStartTime\":637967874590497990,\"SkuName\":\"VS_Community\",\"VSExeVersion\":\"17.3.32811.315\",\"BucketFiltersToEnableWatsonForFaults\":[{\"AdditionalProperties\":[],\"Id\":\"53126781-21df-4995-bac8-6c850c7c1efb\",\"WatsonEventType\":\"VisualStudioMemWatson\",\"BucketParameterFilters\":[\"(?i)perfwatsonstarvation\",null,null,null,null,null,null,null,null,null]}],\"BucketFiltersToAddDumpsToFaults\":[{\"AdditionalProperties\":[{\"Key\":\"DumpType\",\"Value\":\"Heap\"}],\"Id\":\"e9940337-2ead-49ca-8069-098d308bf8c0\",\"WatsonEventType\":\"VisualStudioNonFatalErrors2\",\"BucketParameterFilters\":[null,null,\"vs.fault.faulttest\",null,null,null,null,null,null,null]}]}"
-/RdXmlPath:"C:\Users\shefer\.nuget\packages\microsoft.net.native.compiler\2.2.11-rel-30601-02\tools\LibraryXML"
-/RunOnlyPreDR
