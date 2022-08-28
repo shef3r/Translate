@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="shefer.TranslateApp"
+    Name="TranslateApp"
     Publisher="CN=shefer"
-    Version="3.1.0.0" />
+    Version="3.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="dfa07d79-53c7-445e-9cd2-38b74ac57cc1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Translate</DisplayName>
-    <PublisherDisplayName>shefer</PublisherDisplayName>
+    <PublisherDisplayName>shef3r w/ AlurDesign</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
