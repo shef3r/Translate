@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Translate_Legacy.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Translate_Legacy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Stretch" Margin="5,0,10,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical">
+                    <Grid x:Name="settingitem0">
+                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" VerticalAlignment="Center"  HorizontalAlignment="Left" x:Uid="livetranssetting"></TextBlock>
+                        <ToggleSwitch x:Name="livetrans" OnContent="" OffContent="" VerticalAlignment="Center" HorizontalAlignment="Right"></ToggleSwitch>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Grid x:Name="settingitem1">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource SubheaderTextBlockStyle}" x:Uid="themesetting"></TextBlock>
+                        <ComboBox x:Uid="selecttheme" x:Name="themeselector" Width="100" HorizontalAlignment="Right">
+                            <ComboBoxItem x:Name="lightmode" x:Uid="lightmodetext"></ComboBoxItem>
+                            <ComboBoxItem x:Name="darkmode" x:Uid="darkmodetext"></ComboBoxItem>
+                            <ComboBoxItem x:Name="systemmode" x:Uid="systemmodetext"></ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                </StackPanel>
+                <Button HorizontalAlignment="Center" x:Name="apply" Click="apply_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <SymbolIcon Symbol="Accept"/>
+                        <TextBlock Margin="5,0,0,0" x:Uid="applytext"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

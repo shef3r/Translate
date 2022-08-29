@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Translate_Legacy.TranslatePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Translate_Legacy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" HorizontalAlignment="Stretch" Margin="0,0,5,0" Loaded="Page_Loaded">
+
+    <StackPanel Margin="0,0,5,0" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ComboBox Margin="10,0,10,0" Grid.Column="0" x:Uid="inputlang" x:Name="from" HorizontalAlignment="Stretch">
+                <ComboBox.PlaceholderText>
+                    Input
+                </ComboBox.PlaceholderText>
+            </ComboBox>
+            <Button x:Name="switchlang" HorizontalAlignment="Stretch" Margin="10,0,10,0" Grid.Column="1">
+                <SymbolIcon Symbol="Switch"/>
+            </Button>
+            <ComboBox x:Uid="outputlang" PlaceholderText="Output" Margin="10,0,10,0" Grid.Column="2" x:Name="to" HorizontalAlignment="Stretch" />
+        </Grid>
+        <TextBox x:Uid="inputtext" PlaceholderText="Input text" AcceptsReturn="False" x:Name="input" TextWrapping="Wrap" MinHeight="100" Margin="10,0,10,0"/>
+        <Button HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Forward"/>
+                <TextBlock Margin="5,0,0,0" Text="Translate"/>
+            </StackPanel>
+        </Button>
+        <TextBox IsReadOnly="True" x:Uid="outputtext" x:Name="output" TextWrapping="Wrap" PlaceholderText="Output text" Margin="10,0,10,0" MinHeight="100"/>
+        <TextBlock x:Name="fromchosen" Height="0" Width="0" Visibility="Collapsed"/>
+        <TextBlock x:Name="tochosen" Height="0" Width="0" Visibility="Collapsed"/>
+    </StackPanel>
+</Page>
