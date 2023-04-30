@@ -10,3 +10,4 @@ You can contribute anytime by translating the app or reporting bugs in the issue
 - [x] Make the settings page UI
 - [ ] Fix the description textboxes in the settings page
 - [ ] Add a page that explains the licensing + privacy policy
+- [ ] Fix the titlebar glitch after navigation
