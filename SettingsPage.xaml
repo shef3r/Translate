@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="Translate.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Translate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <Grid>
+        <Grid Height="48" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Button Canvas.ZIndex="1" Background="Transparent" VerticalAlignment="Top" Height="32" Width="50" CornerRadius="0" Margin="0,0,0,0" BorderThickness="0" x:Name="BackButton" Click="BackButton_Click">
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE012;" FontSize="10"/>
+            </Button>
+            <Grid x:Name="TitleBar" Height="48" HorizontalAlignment="Stretch" Canvas.ZIndex="0" VerticalAlignment="Top"></Grid>
+        </Grid>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" MaxWidth="800" Margin="0,36,0,0" Padding="20,10,20,10" VerticalAlignment="Stretch">
+            <Grid>
+                <TextBlock VerticalAlignment="Bottom" FontFamily="Segoe UI" FontSize="36" FontWeight="SemiBold">Settings</TextBlock>
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Grid Margin="0,20,0,0"  VerticalAlignment="Center" Background="{StaticResource LayerFillColorDefaultBrush}" Height="48" CornerRadius="8" Padding="10,3,10,3">
+                        <FontIcon VerticalAlignment="Center" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE7BA;" HorizontalAlignment="Left" Margin="0,0,20,0"/>
+                        <StackPanel VerticalAlignment="Center" Orientation="Vertical" HorizontalAlignment="Left" Margin="30,0,0,0">
+                            <TextBlock VerticalAlignment="Center" FontSize="12"><Bold>Warning:</Bold> Some settings may not<LineBreak></LineBreak>apply until the app is restarted.</TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="0,20,0,0" Background="{StaticResource LayerFillColorDefaultBrush}" Height="64" CornerRadius="8" Padding="20,5,20,5" VerticalAlignment="Top">
+                <SymbolIcon Symbol="FontSize" HorizontalAlignment="Left" Margin="0,0,20,0"/>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Center">
+                        <TextBlock>Font size</TextBlock>
+                    <TextBlock Foreground="{StaticResource ButtonDisabledForegroundThemeBrush}" FontSize="12">Change the font size of the text editor (translation input and output)</TextBlock>
+                    </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock Margin="0,5,0,0">10</TextBlock>
+                    <Slider Margin="10,0,10,0" Width="100" Minimum="10" Maximum="64"></Slider>
+                    <TextBlock Margin="0,5,0,0">64</TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="0,10,0,0" Background="{StaticResource LayerFillColorDefaultBrush}" Height="64" CornerRadius="8" Padding="20,5,20,5" VerticalAlignment="Top">
+                <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE99A;" HorizontalAlignment="Left" Margin="0,0,20,0"/>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Center">
+                    <TextBlock>Live translation</TextBlock>
+                    <TextBlock Foreground="{StaticResource ButtonDisabledForegroundThemeBrush}" FontSize="12">Translate text without using any buttons. May get you banned for abusing the Google Translate API.</TextBlock>
+                </StackPanel>
+                <ToggleSwitch HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="0,0,-120,0" OnContent="" OffContent=""/>
+            </Grid>
+            <Grid Margin="0,10,0,0" Background="{StaticResource LayerFillColorDefaultBrush}" Height="64" CornerRadius="8" Padding="20,5,20,5" VerticalAlignment="Top">
+                <SymbolIcon Symbol="BackToWindow" HorizontalAlignment="Left" Margin="0,0,20,0"/>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Center">
+                    <TextBlock>Compact mode</TextBlock>
+                    <TextBlock Foreground="{StaticResource ButtonDisabledForegroundThemeBrush}" FontSize="12">Make all spacing smaller.</TextBlock>
+                </StackPanel>
+                <ToggleSwitch HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="0,0,-120,0" OnContent="" OffContent=""/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
