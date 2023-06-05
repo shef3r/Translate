@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ten plik zawiera dyrektywy środowiska uruchomieniowego, specyfikacje dotyczące typów, do których aplikacja uzyskuje dostęp
+    poprzez odbicie i inne wzorce kodu dynamicznego. Dyrektywy środowiska uruchomieniowego są używane do kontrolowania
+    optymalizatora .NET Native, zapewniają one, że optymalizator nie usunie kodu, do którego uzyskuje dostęp biblioteka. Jeśli
+    biblioteka nie wykonuje żadnych odbić, nie musisz edytować tego pliku. Niemniej,
+    jeśli biblioteka wykonuje odbicia wobec typów, zwłaszcza typów przekazywanych do niej lub pochodnych z jej typów,
+    należy napisać dyrektywy środowiska uruchomieniowego.
+
+    Najpopularniejszym użyciem odbicia w bibliotekach jest odnajdywanie informacji o typach przekazanych
+    do biblioteki. Dyrektywy środowiska uruchomieniowego mają trzy sposoby na wyrażenie wymagań dotyczących typów przekazywanych do
+   biblioteki.
+
+    1.  Parameter, GenericParameter, TypeParameter, TypeEnumerableParameter
+        Użyj tych dyrektyw, aby odzwierciedlić typy przekazywane jako parametr.
+
+    2.  SubTypes
+        Użyj dyrektywy SubTypes, aby odzwierciedlić typy pochodne z innego typu.
+
+    3.  AttributeImplies
+        Użyj dyrektywy AttributeImplies, aby wskazać, że biblioteka musi odzwierciedlać
+        typy lub metody zawierająca atrybut.
+
+    Aby uzyskać więcej informacji o pisaniu dyrektyw środowiska uruchomieniowego dla bibliotek, odwiedź stronę
+    https://go.microsoft.com/fwlink/?LinkID=391919
+-->
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <Library Name="TranslateBackend">
+
+  	<!-- dodaj dyrektywy dla swojej biblioteki tutaj -->
+
+  </Library>
+</Directives>

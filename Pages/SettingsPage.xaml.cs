@@ -15,19 +15,16 @@ using Windows.UI.Xaml.Navigation;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Translate
+namespace Translate.Pages
 {
+    /// <summary>
+    /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
+    /// </summary>
     public sealed partial class SettingsPage : Page
     {
         public SettingsPage()
         {
             this.InitializeComponent();
-            Window.Current.SetTitleBar(TitleBar);
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

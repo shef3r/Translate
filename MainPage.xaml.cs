@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Translate.Pages;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,12 +28,32 @@ namespace Translate
         public MainPage()
         {
             this.InitializeComponent();
+            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
             Window.Current.SetTitleBar(TitleBar);
         }
 
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        private void navview_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
-            this.Frame.Navigate(typeof(SettingsPage));
+            string page = args.SelectedItemContainer.Tag.ToString();
+            Debug.WriteLine(page);
+            if (args.IsSettingsSelected)
+            {
+                contentFrame.Navigate(typeof(SettingsPage));
+            }
+            else if (page == "History")
+            {
+                contentFrame.Navigate(typeof(HistoryPage));
+            }
+            else
+            {
+                contentFrame.Navigate(typeof(TranslatePage));
+            }
+        }
+
+        private void navview_Loaded(object sender, RoutedEventArgs e)
+        {
+            (sender as Microsoft.UI.Xaml.Controls.NavigationView).SelectedItem = TranslatePageButton;
         }
     }
 }
