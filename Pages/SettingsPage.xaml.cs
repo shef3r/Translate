@@ -26,5 +26,20 @@ namespace Translate.Pages
         {
             this.InitializeComponent();
         }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            
+            double width = (sender as Grid).ActualWidth;
+            if (width > 1000)
+            {
+                panel.Width = 1000;
+            }
+            else
+            {
+                panel.Width = width;
+            }
+            System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
+        }
     }
 }

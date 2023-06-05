@@ -10,6 +10,7 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Rectangle VerticalAlignment="Top" Height="48" Fill="Transparent" x:Name="DragRegion"/>
         <Grid x:Name="TitleBar" VerticalAlignment="Top" Height="48">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>

@@ -30,7 +30,7 @@ namespace Translate
             this.InitializeComponent();
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
-            Window.Current.SetTitleBar(TitleBar);
+            Window.Current.SetTitleBar(DragRegion);
         }
 
         private void navview_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
