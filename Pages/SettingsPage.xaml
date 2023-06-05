@@ -40,10 +40,26 @@
     Severity="Warning"
     Message="Please note that some settings may need a restart of the app after applying to work properly." />
             <Grid HorizontalAlignment="Stretch" Style="{StaticResource SettingGridStyle}" Margin="0,10,0,0">
+                <TextBlock FontFamily="{StaticResource SymbolThemeFontFamily}" TextWrapping="NoWrap"   VerticalAlignment="Center" FontSize="20">&#xEE49;</TextBlock>
+                <StackPanel VerticalAlignment="Center" Margin="35,0,100,0" Orientation="Vertical">
+                    <TextBlock TextTrimming="CharacterEllipsis">Compact mode</TextBlock>
+                    <TextBlock FontSize="11" Opacity="0.7" TextTrimming="CharacterEllipsis">Reduce the padding of all elements on your screen, museful for small screens. </TextBlock>
+                </StackPanel>
+                <ToggleSwitch HorizontalAlignment="Right" OnContent="On" OffContent="Off" Margin="0,0,-70,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" Style="{StaticResource SettingGridStyle}" Margin="0,10,0,0">
                 <TextBlock FontFamily="{StaticResource SymbolThemeFontFamily}" TextWrapping="NoWrap"   VerticalAlignment="Center" FontSize="20">&#xE81C;</TextBlock>
                 <StackPanel VerticalAlignment="Center" Margin="35,0,100,0" Orientation="Vertical">
-                    <TextBlock TextTrimming="CharacterEllipsis">eriuteruiteruiteurituiretuiertuieruieruiteriuteriuteriuteriutiuertiuertiuertiueriuteruiteruireiutreuiteriutuiretuiretiuretiuuewriuewruiewuirewiur</TextBlock>
-                    <TextBlock FontSize="11" Opacity="0.7" TextTrimming="CharacterEllipsis">eriuteruiteruiteurituiretuiertuieruieruiteriuteriuteriuteriutiuertiuertiuertiueriuteruiteruireiutreuiteriutuiretuiretiuretiuuewriuewruiewuirewiurfdsfjdsfkjsdfjksdfkjsdfjksdfjksdjkfdsjkfdsjkfjksdfjkdsfjkdsjkfds</TextBlock>
+                    <TextBlock TextTrimming="CharacterEllipsis">History</TextBlock>
+                    <TextBlock FontSize="11" Opacity="0.7" TextTrimming="CharacterEllipsis">Locally keep your previous translations.</TextBlock>
+                </StackPanel>
+                <ToggleSwitch HorizontalAlignment="Right" OnContent="On" OffContent="Off" Margin="0,0,-70,0"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" Style="{StaticResource SettingGridStyle}" Margin="0,10,0,0">
+                <TextBlock FontFamily="{StaticResource SymbolThemeFontFamily}" TextWrapping="NoWrap"   VerticalAlignment="Center" FontSize="20">&#xE99A;</TextBlock>
+                <StackPanel VerticalAlignment="Center" Margin="35,0,100,0" Orientation="Vertical">
+                    <TextBlock TextTrimming="CharacterEllipsis">Automatic translation</TextBlock>
+                    <TextBlock FontSize="11" Opacity="0.7" TextTrimming="CharacterEllipsis">Removes the translate button, translates as you type. This will abuse the API, so be careful.</TextBlock>
                 </StackPanel>
                 <ToggleSwitch HorizontalAlignment="Right" OnContent="On" OffContent="Off" Margin="0,0,-70,0"/>
             </Grid>
