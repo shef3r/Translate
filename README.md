@@ -8,6 +8,5 @@ You can contribute anytime by translating the app or reporting bugs in the issue
 - [ ] Make the app actually translate
 - [ ] Make the main page UI
 - [x] Make the settings page UI
-- [ ] Fix the description textboxes in the settings page
+- [x] Fix the description textboxes in the settings page
 - [ ] Add a page that explains the licensing + privacy policy
-- [ ] Fix the titlebar glitch after navigation
