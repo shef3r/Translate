@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.ApplicationModel.Email.DataProvider;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +26,27 @@ namespace Translate.Pages
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
+        internal IPropertySet settings = Windows.Storage.ApplicationData.Current.LocalSettings.Values;
+        public event EventHandler<string> SettingChangedEvent;
+
         public SettingsPage()
         {
             this.InitializeComponent();
+            if (settings["history"] != null)
+            {
+                bool value = (bool)settings["history"];
+                historyswitch.IsOn = value;
+            }
+            if (settings["compactmode"] != null)
+            {
+                bool value = (bool)settings["compactmode"];
+                compactswitch.IsOn = value;
+            }
+            if (settings["autotranslate"] != null)
+            {
+                bool value = (bool)settings["autotranslate"];
+                autoswitch.IsOn = value;
+            }
         }
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -41,5 +63,12 @@ namespace Translate.Pages
             }
             System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
         }
+
+        private void compactswitch_Toggled(object sender, RoutedEventArgs e) { settings["compactmode"] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, "compactmode");
+        }
+
+        private void historyswitch_Toggled(object sender, RoutedEventArgs e) { settings["history"] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, "history"); }
+
+        private void autoswitch_Toggled(object sender, RoutedEventArgs e) { settings["autotranslate"] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, "autotranslate"); }
     }
 }
