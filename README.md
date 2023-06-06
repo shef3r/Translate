@@ -6,7 +6,9 @@ You can contribute anytime by translating the app or reporting bugs in the issue
 ## TO-DO
 - [ ] Make saving settings work
 - [ ] Make the app actually translate
-- [ ] Make the main page UI
+- [ ] Make the translation page UI
+- [ ] Make the history page UI
+- [ ] Make compact mode setting work on the infobar on SettingsPage
 - [x] Make the settings page UI
 - [x] Fix the description textboxes in the settings page
 - [ ] Add a page that explains the licensing + privacy policy
