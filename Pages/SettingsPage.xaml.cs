@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -49,6 +50,41 @@ namespace Translate.Pages
             }
         }
 
+        private void UpdateSettings(string setting)
+        {
+            if (setting != null)
+            {
+                bool value = (bool)settings[setting];
+                if (setting == "compactmode")
+                {
+                    // TODO: add padding change to infobar
+                    if (!value)
+                    {
+                        settingtitle.FontSize = 30;
+                        setting1.Padding = new Thickness(16);
+                        setting2.Padding = new Thickness(16);
+                        setting3.Padding = new Thickness(16);
+                    }
+                    else if (value)
+                    {
+                        settingtitle.FontSize = 20;
+                        setting1.Padding = new Thickness(15, 10, 15, 10);
+                        setting2.Padding = new Thickness(15, 10, 15, 10);
+                        setting3.Padding = new Thickness(15, 10, 15, 10);
+                    }
+                }
+                else
+                {
+                }
+            }
+            else
+            {
+                UpdateSettings("history");
+                UpdateSettings("autotranslate");
+                UpdateSettings("compactmode");
+            }
+        }
+
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             
@@ -64,11 +100,10 @@ namespace Translate.Pages
             System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
         }
 
-        private void compactswitch_Toggled(object sender, RoutedEventArgs e) { settings["compactmode"] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, "compactmode");
-        }
+        private void compactswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "compactmode"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
 
-        private void historyswitch_Toggled(object sender, RoutedEventArgs e) { settings["history"] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, "history"); }
+        private void historyswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "history"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
 
-        private void autoswitch_Toggled(object sender, RoutedEventArgs e) { settings["autotranslate"] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, "autotranslate"); }
+        private void autoswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "autotranslate"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
     }
 }
