@@ -55,11 +55,22 @@ namespace Translate
                 }
                 else if (setting == "autotranslate")
                 {
-
+                    
                 }
                 else if (setting == "compactmode")
                 {
-
+                    if (value)
+                    {
+                        TitleBar.Height = 32;
+                        navview.Margin = new Thickness(0, 32, 0, 0);
+                        DragRegion.Height = 32;
+                    }
+                    else if (!value)
+                    {
+                        TitleBar.Height = 48;
+                        navview.Margin = new Thickness(0, 48, 0, 0);
+                        DragRegion.Height = 48;
+                    }
                 }
                 else
                 {
