@@ -8,6 +8,28 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock>History</TextBlock>
+        <ListView Margin="15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionMode="Multiple" x:Name="TestList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="30,15,30,15" HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding inputText}" Margin="0,0,5,0" TextWrapping="Wrap" MaxLines="3" TextTrimming="CharacterEllipsis"/>
+                            <TextBlock Opacity=".7" FontSize="12" HorizontalAlignment="Center" Text="{Binding input}"/>
+                        </StackPanel>
+                        <FontIcon Glyph="&#xF0AF;" Opacity=".7" Grid.Column="1" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <StackPanel Grid.Column="2" Orientation="Vertical" Margin="5,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding outputText}" TextWrapping="Wrap" MaxLines="3" TextTrimming="CharacterEllipsis"/>
+                            <TextBlock Opacity=".7" FontSize="12" HorizontalAlignment="Center" Text="{Binding output}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <AppBarButton Icon="Delete" Background="{StaticResource LayerFillColorDefaultBrush}" IsCompact="False" Label="Remove selected items" LabelPosition="Collapsed"/>
     </Grid>
 </Page>

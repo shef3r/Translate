@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock>Translate</TextBlock>
-    </Grid>
+    <StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBox PlaceholderText="Input" x:Name="inputtxtbox"/>
+            <TextBox PlaceholderText="Output" x:Name="outputtxtbox"/>
+            <TextBox PlaceholderText="Input lang" x:Name="inputlangtxtbox"/>
+            <TextBox PlaceholderText="Output lang" x:Name="outputlangtxtbox"/>
+        </StackPanel>
+        <Button Click="Button_Click">Test</Button>
+    </StackPanel>
 </Page>

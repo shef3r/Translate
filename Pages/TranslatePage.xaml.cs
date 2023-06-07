@@ -1,30 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System.Text.Json;
+using Translate.Models;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-//Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Translate.Pages
 {
-    /// <summary>
-    /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
-    /// </summary>
     public sealed partial class TranslatePage : Page
     {
+        public EntryList history = new EntryList();
+        public string jsonpath;
+
         public TranslatePage()
         {
             this.InitializeComponent();
+            jsonpath = ApplicationData.Current.LocalFolder.Path + "\\data.json";
+            LoadDataAsync();
+        }
+
+        private async void LoadDataAsync()
+        {
+            try
+            {
+                StorageFile file = await ApplicationData.Current.LocalFolder.GetFileAsync("data.json");
+                string data = await FileIO.ReadTextAsync(file);
+                if (!string.IsNullOrEmpty(data))
+                {
+                    history = JsonSerializer.Deserialize<EntryList>(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle file access or deserialization errors
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            history.entries.Add(new HistoryEntry() { 
+                inputText = inputtxtbox.Text,
+                outputText = outputtxtbox.Text,
+                input = inputlangtxtbox.Text,
+                output = outputlangtxtbox.Text
+            });
+
+            try
+            {
+                string modifiedJsonData = JsonSerializer.Serialize(history);
+                StorageFile file = await ApplicationData.Current.LocalFolder.CreateFileAsync("data.json", CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(file, modifiedJsonData);
+            }
+            catch (Exception ex)
+            {
+                // Handle file access or serialization errors
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
         }
     }
 }

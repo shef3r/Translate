@@ -4,11 +4,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Translate.Pages;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Management.Deployment;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,10 +32,22 @@ namespace Translate
         public MainPage()
         {
             this.InitializeComponent();
+            CreateDataFile();
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
             Window.Current.SetTitleBar(DragRegion);
             UpdateSettings(null);
+        }
+
+        private async void CreateDataFile()
+        {
+            if ((await ApplicationData.Current.LocalFolder.GetFilesAsync()).Count == 0)
+            {
+                await Windows.Storage.ApplicationData.Current.LocalFolder.CreateFileAsync("data.json");
+            }
+            else
+            {
+            }
         }
 
         private async void UpdateSettings(string setting)

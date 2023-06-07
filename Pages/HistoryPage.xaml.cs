@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.Json;
+using Translate.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +28,15 @@ namespace Translate.Pages
         public HistoryPage()
         {
             this.InitializeComponent();
+            string jsonpath = ApplicationData.Current.LocalFolder.Path + "\\data.json";
+            if (File.Exists(jsonpath))
+            {
+                if (!string.IsNullOrEmpty((File.ReadAllText(jsonpath)))) {
+                    string data = File.ReadAllText(jsonpath);
+                    TestList.ItemsSource = JsonSerializer.Deserialize<EntryList>(data).entries;
+                }
+                
+            }
         }
     }
 }
