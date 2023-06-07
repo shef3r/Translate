@@ -100,7 +100,10 @@ namespace Translate.Pages
             System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
         }
 
-        private void compactswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "compactmode"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
+        private void compactswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "compactmode"; 
+            settings[setting] = (sender as ToggleSwitch).IsOn;
+            SettingChangedEvent?.Invoke(this, setting); 
+            UpdateSettings(setting); }
 
         private void historyswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "history"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
 

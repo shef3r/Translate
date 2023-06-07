@@ -36,52 +36,61 @@ namespace Translate
             UpdateSettings(null);
         }
 
-        private void UpdateSettings(string setting)
+        private async void UpdateSettings(string setting)
         {
-            if (setting != null)
+            if (setting == null)
             {
-                bool value = (bool)settings[setting];
+                UpdateSettings("compactmode");
+                UpdateSettings("history");
+            }
+            else if (settings != null && (settings[setting].ToString() == "True" | settings[setting].ToString() == "False"))
+            {
+                bool value = StringToBool(settings[setting].ToString());
+                if (setting == "compactmode")
+                {
+                    Debug.WriteLine(setting);
+                    int height;
+                    if (value)
+                    {
+                        height = 32;
+                    }
+                    else
+                    {
+                        height = 48;
+                    }
+                    Debug.Write(height);
+                    TitleBar.Height = height;
+                    DragRegion.Height = height;
+                    navview.Margin = new Thickness(0, height, 0, 0);
+                }
                 if (setting == "history")
                 {
                     if (value)
                     {
                         HistoryPageButton.Visibility = Visibility.Visible;
                     }
-                    else if (!value)
+                    else
                     {
                         HistoryPageButton.Visibility = Visibility.Collapsed;
                     }
-
-                }
-                else if (setting == "autotranslate")
-                {
-                    
-                }
-                else if (setting == "compactmode")
-                {
-                    if (value)
-                    {
-                        TitleBar.Height = 32;
-                        navview.Margin = new Thickness(0, 32, 0, 0);
-                        DragRegion.Height = 32;
-                    }
-                    else if (!value)
-                    {
-                        TitleBar.Height = 48;
-                        navview.Margin = new Thickness(0, 48, 0, 0);
-                        DragRegion.Height = 48;
-                    }
-                }
-                else
-                {
                 }
             }
             else
             {
-                UpdateSettings("history");
-                UpdateSettings("autotranslate");
-                UpdateSettings("compactmode");
-            } 
+                Debug.WriteLine(settings[setting]);
+            }
+        }
+
+        private bool StringToBool(string v)
+        {
+            if (v == "True")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void PageInFrame_ValueTransferredEvent(object sender, string value)
@@ -111,6 +120,7 @@ namespace Translate
 
         private void SettingChanged(object sender, string setting)
         {
+            Debug.WriteLine(setting);
             UpdateSettings(setting);
         }
 
