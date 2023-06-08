@@ -5,15 +5,24 @@
     xmlns:local="using:Translate.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    SizeChanged="Page_SizeChanged">
 
-    <StackPanel>
-        <StackPanel Orientation="Vertical">
-            <TextBox PlaceholderText="Input" x:Name="inputtxtbox"/>
-            <TextBox PlaceholderText="Output" x:Name="outputtxtbox"/>
-            <TextBox PlaceholderText="Input lang" x:Name="inputlangtxtbox"/>
-            <TextBox PlaceholderText="Output lang" x:Name="outputlangtxtbox"/>
-        </StackPanel>
-        <Button Click="Button_Click">Test</Button>
+    <StackPanel Orientation="Horizontal" x:Name="mainpanel">
+        <Grid HorizontalAlignment="Stretch" x:Name="txtboxes" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox PlaceholderText="Input" Grid.Row="0" Margin="20,20,20,10" x:Name="inputtxtbox"/>
+            <TextBox PlaceholderText="Output" Grid.Row="1" Margin="20,10,20,20" x:Name="outputtxtbox"/>
+        </Grid>
+        <Grid Width="300" x:Name="listcont" VerticalAlignment="Stretch">
+            <StackPanel VerticalAlignment="Bottom" Margin="0,0,15,20">
+                    <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Input language" x:Name="inputlangtxtbox" Margin="5"/>
+                    <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Output language" x:Name="outputlangtxtbox" Margin="5"/>
+                    <Button HorizontalAlignment="Stretch" Height="100" FontSize="30" Click="Button_Click" Margin="5,5,5,0">Translate</Button>
+            </StackPanel>
+        </Grid>
     </StackPanel>
 </Page>

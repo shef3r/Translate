@@ -40,7 +40,7 @@ namespace Translate
                 UpdateSettings("compactmode");
                 UpdateSettings("history");
             }
-            else if (settings != null && (settings[setting].ToString() == "True" | settings[setting].ToString() == "False"))
+            else if (settings?.ContainsKey(setting) == true && (settings[setting]?.ToString() == "True" || settings[setting]?.ToString() == "False"))
             {
                 bool value = StringToBool(settings[setting].ToString());
                 if (setting == "compactmode")

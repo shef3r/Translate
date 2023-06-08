@@ -3,20 +3,82 @@ using System.Text.Json;
 using Translate.Models;
 using Windows.Storage;
 using Windows.UI.Xaml;
+using TranslateBackend;
 using Windows.UI.Xaml.Controls;
+using Windows.Globalization;
+using System.Net;
+using Windows.Foundation.Collections;
+using Microsoft.UI.Xaml.Controls;
+using System.Diagnostics;
 
 namespace Translate.Pages
 {
     public sealed partial class TranslatePage : Page
     {
+        internal IPropertySet settings = Windows.Storage.ApplicationData.Current.LocalSettings.Values;
         public EntryList history = new EntryList();
         public string jsonpath;
+        public NameParser parser = new NameParser();
 
         public TranslatePage()
         {
             this.InitializeComponent();
+            UpdateSettings(null);
             jsonpath = ApplicationData.Current.LocalFolder.Path + "\\data.json";
             LoadDataAsync();
+            foreach (string key in parser.languageDictionary.Keys)
+            {
+                inputlangtxtbox.Items.Add(key);
+                outputlangtxtbox.Items.Add(key);
+            }
+        }
+
+        private void UpdateSettings(string setting)
+        {
+            if (setting == null)
+            {
+                UpdateSettings("compactmode");
+                UpdateSettings("fontSize");
+            }
+            else if (settings != null && settings.ContainsKey(setting) && (settings[setting]?.ToString() == "True" || settings[setting]?.ToString() == "False"))
+            {
+                if (setting == "compactmode")
+                {
+                    bool value = StringToBool(settings[setting].ToString());
+                    Debug.WriteLine(setting);
+                    int height;
+                    if (value)
+                    {
+                        height = 32;
+                    }
+                    else
+                    {
+                        height = 48;
+                    }
+                    Debug.Write(height);
+                    // handle compact mode here.
+                }
+                else if (setting == "fontSize")
+                {
+                    // make font size changes work
+                }
+            }
+            else
+            {
+                Debug.WriteLine(settings[setting]);
+            }
+        }
+
+        private bool StringToBool(string v)
+        {
+            if (v == "True")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private async void LoadDataAsync()
@@ -41,8 +103,8 @@ namespace Translate.Pages
             history.entries.Add(new HistoryEntry() { 
                 inputText = inputtxtbox.Text,
                 outputText = outputtxtbox.Text,
-                input = inputlangtxtbox.Text,
-                output = outputlangtxtbox.Text
+                input = inputlangtxtbox.SelectedItem.ToString(),
+                output = outputlangtxtbox.SelectedItem.ToString()
             });
 
             try
@@ -54,6 +116,38 @@ namespace Translate.Pages
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            double availableWidth = e.NewSize.Width;
+            double availableHeight = e.NewSize.Height;
+
+            // Adjust the orientation of the mainpanel based on the available width and height
+            if (availableWidth >= availableHeight)
+            {
+                mainpanel.Orientation = Orientation.Horizontal;
+            }
+            else
+            {
+                mainpanel.Orientation = Orientation.Vertical;
+            }
+
+            // Calculate the width and height of the textboxes grid based on the mainpanel's orientation
+            if (mainpanel.Orientation == Orientation.Horizontal)
+            {
+                double textBoxesWidth = availableWidth - 300;
+                txtboxes.Width = textBoxesWidth;
+                txtboxes.Height = availableHeight;
+                listcont.HorizontalAlignment = HorizontalAlignment.Right;
+            }
+            else
+            {
+                double textBoxesHeight = availableHeight - 200;
+                txtboxes.Width = availableWidth;
+                txtboxes.Height = textBoxesHeight;
+                listcont.HorizontalAlignment = HorizontalAlignment.Center;
             }
         }
     }

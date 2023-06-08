@@ -3,7 +3,6 @@ using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-
 namespace Translate.Pages
 {
     public sealed partial class SettingsPage : Page
@@ -14,6 +13,8 @@ namespace Translate.Pages
         public SettingsPage()
         {
             this.InitializeComponent();
+            var fontlist = Microsoft.Graphics.Canvas.Text.CanvasTextFormat.GetSystemFontFamilies();
+            fonts.ItemsSource = fontlist;
             if (settings["history"] != null)
             {
                 bool value = (bool)settings["history"];
@@ -29,15 +30,16 @@ namespace Translate.Pages
                 bool value = (bool)settings["autotranslate"];
                 autoswitch.IsOn = value;
             }
+            if (settings["fontSize"] != null)
+            {
+                // make font size retrieving work
+            }
+            // make font family retrieving work
         }
 
-        private void UpdateSettings(string setting)
+        private void UpdateSettings()
         {
-            if (setting != null)
-            {
-                bool value = (bool)settings[setting];
-                if (setting == "compactmode")
-                {
+            bool value = (bool)settings["compactmode"];
                     // TODO: add padding change to infobar
                     if (!value)
                     {
@@ -53,17 +55,6 @@ namespace Translate.Pages
                         setting2.Padding = new Thickness(15, 10, 15, 10);
                         setting3.Padding = new Thickness(15, 10, 15, 10);
                     }
-                }
-                else
-                {
-                }
-            }
-            else
-            {
-                UpdateSettings("history");
-                UpdateSettings("autotranslate");
-                UpdateSettings("compactmode");
-            }
         }
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -84,10 +75,25 @@ namespace Translate.Pages
         private void compactswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "compactmode"; 
             settings[setting] = (sender as ToggleSwitch).IsOn;
             SettingChangedEvent?.Invoke(this, setting); 
-            UpdateSettings(setting); }
+            UpdateSettings(); }
 
-        private void historyswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "history"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
+        private void historyswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "history"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); }
 
-        private void autoswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "autotranslate"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); UpdateSettings(setting); }
+        private void autoswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "autotranslate"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); }
+
+        private void NumberBoxSpinButtonPlacementExample_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
+        {
+            if (sender.Value < 5)
+            {
+                sender.Value = 16;
+            }
+            string setting = "fontSize";
+            // make font size saving work
+        }
+
+        private void fonts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // make font family saving work
+        }
     }
 }
