@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml.Controls;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.Json;
 using Translate.Models;
+using Windows.Devices.SmartCards;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -16,26 +19,49 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-//Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Translate.Pages
 {
-    /// <summary>
-    /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
-    /// </summary>
     public sealed partial class HistoryPage : Page
     {
+        public EntryList entries = new EntryList();
+        internal IPropertySet settings = Windows.Storage.ApplicationData.Current.LocalSettings.Values;
+
         public HistoryPage()
         {
             this.InitializeComponent();
             string jsonpath = ApplicationData.Current.LocalFolder.Path + "\\data.json";
             if (File.Exists(jsonpath))
             {
-                if (!string.IsNullOrEmpty((File.ReadAllText(jsonpath)))) {
+                if (!string.IsNullOrEmpty((File.ReadAllText(jsonpath))))
+                {
                     string data = File.ReadAllText(jsonpath);
-                    TestList.ItemsSource = JsonSerializer.Deserialize<EntryList>(data).entries;
+                    entries = JsonSerializer.Deserialize<EntryList>(data);
                 }
-                
+            }
+
+            // Show "No items." text if there are no items
+            if (entries.entries.Count == 0)
+            {
+                NoItemsTextBlock.Visibility = Visibility.Visible;
+                TestList.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                NoItemsTextBlock.Visibility = Visibility.Collapsed;
+                TestList.Visibility = Visibility.Visible;
+                TestList.ItemsSource = entries.entries;
+            }
+        }
+
+        private bool StringToBool(string v)
+        {
+            if (v == "True")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

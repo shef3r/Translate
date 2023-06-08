@@ -50,7 +50,7 @@ namespace Translate
             }
         }
 
-        private async void UpdateSettings(string setting)
+        private void UpdateSettings(string setting)
         {
             if (setting == null)
             {

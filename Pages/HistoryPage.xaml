@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid>
-        <ListView Margin="15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionMode="Multiple" x:Name="TestList">
+        <ListView Margin="15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionMode="None" x:Name="TestList">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="30,15,30,15" HorizontalAlignment="Center">
@@ -30,6 +30,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <AppBarButton Icon="Delete" Background="{StaticResource LayerFillColorDefaultBrush}" IsCompact="False" Label="Remove selected items" LabelPosition="Collapsed"/>
+        <TextBlock x:Name="NoItemsTextBlock" Text="No items." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
     </Grid>
 </Page>
