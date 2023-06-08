@@ -19,13 +19,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-//Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
-
 namespace Translate
 {
-    /// <summary>
-    /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         internal IPropertySet settings = Windows.Storage.ApplicationData.Current.LocalSettings.Values;
@@ -106,12 +101,6 @@ namespace Translate
                 return false;
             }
         }
-
-        private void PageInFrame_ValueTransferredEvent(object sender, string value)
-            {
-                // Access the transferred value here
-                // Use the 'value' parameter as needed
-            }
 
         private void navview_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {

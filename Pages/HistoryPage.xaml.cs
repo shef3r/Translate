@@ -39,7 +39,6 @@ namespace Translate.Pages
                 }
             }
 
-            // Show "No items." text if there are no items
             if (entries.entries.Count == 0)
             {
                 NoItemsTextBlock.Visibility = Visibility.Visible;

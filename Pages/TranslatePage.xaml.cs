@@ -33,7 +33,6 @@ namespace Translate.Pages
             }
             catch (Exception ex)
             {
-                // Handle file access or deserialization errors
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
@@ -55,7 +54,6 @@ namespace Translate.Pages
             }
             catch (Exception ex)
             {
-                // Handle file access or serialization errors
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
