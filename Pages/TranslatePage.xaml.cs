@@ -5,12 +5,7 @@ using Windows.Storage;
 using Windows.UI.Xaml;
 using TranslateBackend;
 using Windows.UI.Xaml.Controls;
-using Windows.Globalization;
-using System.Net;
 using Windows.Foundation.Collections;
-using Microsoft.UI.Xaml.Controls;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Translate.Pages
@@ -22,6 +17,7 @@ namespace Translate.Pages
         public string jsonpath;
         public NameParser parser = new NameParser();
         public bool automatic;
+        public Translator translator = new Translator();
 
         public TranslatePage()
         {
@@ -124,9 +120,7 @@ namespace Translate.Pages
                     history = JsonSerializer.Deserialize<EntryList>(data);
                 }
             }
-            catch (Exception ex)
-            {
-            }
+            catch { }
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -160,7 +154,11 @@ namespace Translate.Pages
 
         private async void ShowError(Exception exception)
         {
-            await (new ContentDialog() { Title = "Oops, an error occured. Here are the the details:", Content = exception.Message, PrimaryButtonText= "OK" }).ShowAsync();
+            try
+            {
+                await (new ContentDialog() { Title = "Oops, an error occured. Here are the the details:", Content = exception.Message, PrimaryButtonText= "OK" }).ShowAsync();
+            }
+            catch { }
         }
 
         private async void WriteToHistory(string input, string output, string inputLang, string outputLang)
@@ -181,9 +179,7 @@ namespace Translate.Pages
                 StorageFile file = await ApplicationData.Current.LocalFolder.CreateFileAsync("data.json", CreationCollisionOption.ReplaceExisting);
                 await FileIO.WriteTextAsync(file, modifiedJsonData);
             }
-            catch (Exception ex)
-            {
-            }
+            catch { }
         }
 
         private async Task<string> TranslateText(string inputText, string inputLanguage, string outputLanguage)
@@ -196,7 +192,20 @@ namespace Translate.Pages
             }
             else
             {
-                return "[TRANSLATION]";
+                // TRANSLATION CODE HERE!
+                string fromcode = parser.GetCode(inputLanguage);
+                string tocode = parser.GetCode(outputLanguage);
+                TranslationQuery query = new TranslationQuery() { fromCode = fromcode, toCode = tocode, translateQuery = inputText };
+
+                try
+                {
+                    return await translator.GetTranslation(query);
+                }
+                catch (Exception ex)
+                {
+                    ShowError(ex);
+                    return null;
+                }
             }
             
         }

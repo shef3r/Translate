@@ -150,17 +150,17 @@ namespace TranslateBackend
         {
             name = name.ToLower();
             name = name[0].ToString().ToUpper() + name.Substring(1);
-            string languageName = name;
+
             foreach (KeyValuePair<string, string> pair in languageDictionary)
             {
-                if (pair.Value == languageName)
+                if (pair.Key.ToLower() == name.ToLower())
                 {
-                    string languageCode = pair.Key;
+                    string languageCode = pair.Value;
                     return languageCode;
                 }
             }
-            // If no matching language code was found, return null or throw an exception
-            return null;
+
+            throw new Exception("No code found. Name: " + name);
         }
         public string GetName(string code)
         {
