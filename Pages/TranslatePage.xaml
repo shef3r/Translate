@@ -21,7 +21,7 @@
             <StackPanel VerticalAlignment="Bottom" Margin="0,0,15,20">
                     <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Input language" x:Name="inputlangtxtbox" Margin="5"/>
                     <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Output language" x:Name="outputlangtxtbox" Margin="5"/>
-                    <Button HorizontalAlignment="Stretch" Height="100" FontSize="30" Click="Button_Click" Margin="5,5,5,0">Translate</Button>
+                    <Button HorizontalAlignment="Stretch" Height="100" FontSize="30" x:Name="TranslateButton" Click="Button_Click" Margin="5,5,5,0">Translate</Button>
             </StackPanel>
         </Grid>
     </StackPanel>

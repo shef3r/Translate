@@ -11,6 +11,7 @@ using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Controls;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Translate.Pages
 {
@@ -20,6 +21,7 @@ namespace Translate.Pages
         public EntryList history = new EntryList();
         public string jsonpath;
         public NameParser parser = new NameParser();
+        public bool automatic;
 
         public TranslatePage()
         {
@@ -39,6 +41,7 @@ namespace Translate.Pages
             if (setting == null)
             {
                 UpdateSettings("compactmode");
+                UpdateSettings("autotranslate");
                 UpdateSettings("fontSize");
             }
             else if (settings != null && settings.ContainsKey(setting) && (settings[setting]?.ToString() == "True" || settings[setting]?.ToString() == "False"))
@@ -57,7 +60,20 @@ namespace Translate.Pages
                     }
                     // handle compact mode here.
                 }
-                
+                if (setting == "autotranslate")
+                {
+                    bool value = StringToBool(settings[setting].ToString());
+                    if (value)
+                    {
+                        TranslateButton.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        TranslateButton.Visibility = Visibility.Visible;
+                    }
+                    automatic = value;
+                }
+
             }
             else if (setting == "fontSize")
             {
@@ -115,12 +131,49 @@ namespace Translate.Pages
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            history.entries.Add(new HistoryEntry() { 
-                inputText = inputtxtbox.Text,
-                outputText = outputtxtbox.Text,
-                input = inputlangtxtbox.SelectedItem.ToString(),
-                output = outputlangtxtbox.SelectedItem.ToString()
+            if (inputlangtxtbox.SelectedItem == null || outputlangtxtbox.SelectedItem == null)
+            {
+                try
+                {
+                    string translation = await TranslateText(inputtxtbox.Text, null, null);
+                }
+                catch (Exception ex)
+                {
+                    ShowError(ex);
+                }
+            }
+            else
+            {
+                try
+                {
+                    string translation = await TranslateText(inputtxtbox.Text, inputlangtxtbox.SelectedItem.ToString(), outputlangtxtbox.SelectedItem.ToString());
+                    outputtxtbox.Text = translation;
+                    WriteToHistory(inputtxtbox.Text, translation, inputlangtxtbox.SelectedItem.ToString(), outputlangtxtbox.SelectedItem.ToString());
+                }
+                catch (Exception ex)
+                {
+                    ShowError(ex);
+                }
+            }
+        }
+
+
+        private async void ShowError(Exception exception)
+        {
+            await (new ContentDialog() { Title = "Oops, an error occured. Here are the the details:", Content = exception.Message, PrimaryButtonText= "OK" }).ShowAsync();
+        }
+
+        private async void WriteToHistory(string input, string output, string inputLang, string outputLang)
+        {
+            history.entries.Add(new HistoryEntry()
+            {
+                inputText = input,
+                outputText = output,
+                input = inputLang,
+                output = outputLang
             });
+
+
 
             try
             {
@@ -131,6 +184,21 @@ namespace Translate.Pages
             catch (Exception ex)
             {
             }
+        }
+
+        private async Task<string> TranslateText(string inputText, string inputLanguage, string outputLanguage)
+        {
+            await Task.Delay(1000);
+
+            if (inputText == null || inputLanguage == null || outputLanguage == null)
+            {
+                throw new Exception("One of the values is null. Check if you selected a language in both language fields and if the input textbox has text.");
+            }
+            else
+            {
+                return "[TRANSLATION]";
+            }
+            
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
