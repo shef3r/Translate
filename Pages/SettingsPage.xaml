@@ -71,9 +71,8 @@
                     <TextBlock FontSize="11" Opacity="0.7" TextTrimming="CharacterEllipsis">Change the font size of the input and output textboxes. Values lower than 5 are not accepted for readability reasons.</TextBlock>
                 </StackPanel>
                 <muxc:NumberBox x:Name="NumberBoxSpinButtonPlacementExample"
-                Value="16"
                 ValueChanged="NumberBoxSpinButtonPlacementExample_ValueChanged"
-                SpinButtonPlacementMode="Inline"
+                SpinButtonPlacementMode="Compact"
                 SmallChange="1"
                 LargeChange="10" HorizontalAlignment="Right" />
             </Grid>

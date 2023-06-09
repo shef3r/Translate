@@ -45,7 +45,7 @@ namespace Translate.Pages
                 if (setting == "compactmode")
                 {
                     bool value = StringToBool(settings[setting].ToString());
-                    Debug.WriteLine(setting);
+                    // Debug.WriteLine(setting);
                     int height;
                     if (value)
                     {
@@ -55,17 +55,28 @@ namespace Translate.Pages
                     {
                         height = 48;
                     }
-                    Debug.Write(height);
+                    // Debug.Write(height);
                     // handle compact mode here.
                 }
-                else if (setting == "fontSize")
+                
+            }
+            else if (settings != null && settings.ContainsKey(setting) && setting == "fontSize")
+            {
+                if (settings["fontSize"] != null)
                 {
-                    // make font size changes work
+                    System.Diagnostics.Debug.WriteLine($"setting to: {settings["fontSize"]}");
+                    inputtxtbox.FontSize = Convert.ToDouble(settings["fontSize"]);
+                    outputtxtbox.FontSize = Convert.ToDouble(settings["fontSize"]);
+                }
+                else
+                {
+                    inputtxtbox.FontSize = 16;
+                    outputtxtbox.FontSize = 16;
                 }
             }
             else
             {
-                Debug.WriteLine(settings[setting]);
+               // Debug.WriteLine(settings[setting]);
             }
         }
 
@@ -94,7 +105,7 @@ namespace Translate.Pages
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
+                // System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
 
@@ -115,7 +126,7 @@ namespace Translate.Pages
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
+                // System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
 

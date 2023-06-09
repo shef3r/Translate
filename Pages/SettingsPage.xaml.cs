@@ -32,8 +32,13 @@ namespace Translate.Pages
             }
             if (settings["fontSize"] != null)
             {
-                // make font size retrieving work
+                System.Diagnostics.Debug.WriteLine($"setting to: {settings["fontSize"]}");
+                NumberBoxSpinButtonPlacementExample.Value = Convert.ToDouble(settings["fontSize"]);
             }
+            else
+            {
+                NumberBoxSpinButtonPlacementExample.Value = 16;
+            } 
             // make font family retrieving work
         }
 
@@ -69,7 +74,7 @@ namespace Translate.Pages
             {
                 panel.Width = width;
             }
-            System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
+            // System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
         }
 
         private void compactswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "compactmode"; 
@@ -83,12 +88,10 @@ namespace Translate.Pages
 
         private void NumberBoxSpinButtonPlacementExample_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
         {
-            if (sender.Value < 5)
-            {
-                sender.Value = 16;
-            }
             string setting = "fontSize";
-            // make font size saving work
+            settings[setting] = sender.Value.ToString();
+            System.Diagnostics.Debug.WriteLine($"Should be: {sender.Value}, is: {settings[setting]}");
+            SettingChangedEvent?.Invoke(this, setting);
         }
 
         private void fonts_SelectionChanged(object sender, SelectionChangedEventArgs e)
