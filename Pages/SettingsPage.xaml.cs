@@ -38,8 +38,16 @@ namespace Translate.Pages
             else
             {
                 NumberBoxSpinButtonPlacementExample.Value = 16;
-            } 
-            // make font family retrieving work
+            }
+            if (settings["fontFamily"] != null)
+            {
+                System.Diagnostics.Debug.WriteLine($"setting to: {settings["fontFamily"]}");
+                fonts.SelectedItem = settings["fontFamily"];
+            }
+            else
+            {
+                fonts.SelectedItem = "Segoe UI";
+            }
         }
 
         private void UpdateSettings()
@@ -96,7 +104,10 @@ namespace Translate.Pages
 
         private void fonts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // make font family saving work
+            string setting = "fontFamily";
+            settings[setting] = (sender as ComboBox).SelectedItem.ToString();
+            System.Diagnostics.Debug.WriteLine($"Should be: {(sender as ComboBox).SelectedItem}, is: {(sender as ComboBox).SelectedItem}");
+            SettingChangedEvent?.Invoke(this, setting);
         }
     }
 }

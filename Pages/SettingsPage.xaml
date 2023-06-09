@@ -73,6 +73,7 @@
                 <muxc:NumberBox x:Name="NumberBoxSpinButtonPlacementExample"
                 ValueChanged="NumberBoxSpinButtonPlacementExample_ValueChanged"
                 SpinButtonPlacementMode="Compact"
+                Minimum="5"
                 SmallChange="1"
                 LargeChange="10" HorizontalAlignment="Right" />
             </Grid>

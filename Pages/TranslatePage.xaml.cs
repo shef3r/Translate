@@ -10,6 +10,7 @@ using System.Net;
 using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Controls;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Translate.Pages
 {
@@ -60,7 +61,7 @@ namespace Translate.Pages
                 }
                 
             }
-            else if (settings != null && settings.ContainsKey(setting) && setting == "fontSize")
+            else if (setting == "fontSize")
             {
                 if (settings["fontSize"] != null)
                 {
@@ -74,9 +75,19 @@ namespace Translate.Pages
                     outputtxtbox.FontSize = 16;
                 }
             }
+            
+            System.Diagnostics.Debug.WriteLine($"! ! ! checking that h0e");
+            if (settings["fontFamily"] != null)
+            {
+                System.Diagnostics.Debug.WriteLine($"! ! ! setting to: {settings["fontFamily"]}");
+                inputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily($"{settings["fontFamily"]}");
+                outputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily($"{settings["fontFamily"]}");
+            }
             else
             {
-               // Debug.WriteLine(settings[setting]);
+                System.Diagnostics.Debug.WriteLine($"setting to default, wh0re");
+                inputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily("Segoe UI");
+                outputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily("Segoe UI");
             }
         }
 
