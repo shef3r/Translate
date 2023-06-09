@@ -45,7 +45,6 @@ namespace Translate
                 bool value = StringToBool(settings[setting].ToString());
                 if (setting == "compactmode")
                 {
-                   // Debug.WriteLine(setting);
                     int height;
                     if (value)
                     {
@@ -55,7 +54,6 @@ namespace Translate
                     {
                         height = 48;
                     }
-                    // Debug.Write(height);
                     TitleBar.Height = height;
                     DragRegion.Height = height;
                     navview.Margin = new Thickness(0, height, 0, 0);
@@ -74,7 +72,6 @@ namespace Translate
             }
             else
             {
-                // Debug.WriteLine(settings[setting]);
             }
         }
 
@@ -93,7 +90,6 @@ namespace Translate
         private void navview_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
             string page = args.SelectedItemContainer.Tag.ToString();
-            // Debug.WriteLine(page);
             if (args.IsSettingsSelected)
             {
                 contentFrame.Navigate(typeof(SettingsPage));
@@ -111,7 +107,6 @@ namespace Translate
 
         private void SettingChanged(object sender, string setting)
         {
-            // Debug.WriteLine(setting);
             UpdateSettings(setting);
         }
 

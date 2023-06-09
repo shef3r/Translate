@@ -32,7 +32,6 @@ namespace Translate.Pages
             }
             if (settings["fontSize"] != null)
             {
-                System.Diagnostics.Debug.WriteLine($"setting to: {settings["fontSize"]}");
                 NumberBoxSpinButtonPlacementExample.Value = Convert.ToDouble(settings["fontSize"]);
             }
             else
@@ -41,7 +40,6 @@ namespace Translate.Pages
             }
             if (settings["fontFamily"] != null)
             {
-                System.Diagnostics.Debug.WriteLine($"setting to: {settings["fontFamily"]}");
                 fonts.SelectedItem = settings["fontFamily"];
             }
             else
@@ -82,7 +80,6 @@ namespace Translate.Pages
             {
                 panel.Width = width;
             }
-            // System.Diagnostics.Debug.WriteLine($"{panel.Width}, {width}");
         }
 
         private void compactswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "compactmode"; 
@@ -98,7 +95,6 @@ namespace Translate.Pages
         {
             string setting = "fontSize";
             settings[setting] = sender.Value.ToString();
-            System.Diagnostics.Debug.WriteLine($"Should be: {sender.Value}, is: {settings[setting]}");
             SettingChangedEvent?.Invoke(this, setting);
         }
 
@@ -106,7 +102,6 @@ namespace Translate.Pages
         {
             string setting = "fontFamily";
             settings[setting] = (sender as ComboBox).SelectedItem.ToString();
-            System.Diagnostics.Debug.WriteLine($"Should be: {(sender as ComboBox).SelectedItem}, is: {(sender as ComboBox).SelectedItem}");
             SettingChangedEvent?.Invoke(this, setting);
         }
     }

@@ -46,7 +46,6 @@ namespace Translate.Pages
                 if (setting == "compactmode")
                 {
                     bool value = StringToBool(settings[setting].ToString());
-                    // Debug.WriteLine(setting);
                     int height;
                     if (value)
                     {
@@ -56,7 +55,6 @@ namespace Translate.Pages
                     {
                         height = 48;
                     }
-                    // Debug.Write(height);
                     // handle compact mode here.
                 }
                 
@@ -65,7 +63,6 @@ namespace Translate.Pages
             {
                 if (settings["fontSize"] != null)
                 {
-                    System.Diagnostics.Debug.WriteLine($"setting to: {settings["fontSize"]}");
                     inputtxtbox.FontSize = Convert.ToDouble(settings["fontSize"]);
                     outputtxtbox.FontSize = Convert.ToDouble(settings["fontSize"]);
                 }
@@ -76,16 +73,13 @@ namespace Translate.Pages
                 }
             }
             
-            System.Diagnostics.Debug.WriteLine($"! ! ! checking that h0e");
             if (settings["fontFamily"] != null)
             {
-                System.Diagnostics.Debug.WriteLine($"! ! ! setting to: {settings["fontFamily"]}");
                 inputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily($"{settings["fontFamily"]}");
                 outputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily($"{settings["fontFamily"]}");
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine($"setting to default, wh0re");
                 inputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily("Segoe UI");
                 outputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily("Segoe UI");
             }
@@ -116,7 +110,6 @@ namespace Translate.Pages
             }
             catch (Exception ex)
             {
-                // System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
 
@@ -137,7 +130,6 @@ namespace Translate.Pages
             }
             catch (Exception ex)
             {
-                // System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
 
@@ -146,7 +138,6 @@ namespace Translate.Pages
             double availableWidth = e.NewSize.Width;
             double availableHeight = e.NewSize.Height;
 
-            // Adjust the orientation of the mainpanel based on the available width and height
             if (availableWidth >= availableHeight)
             {
                 mainpanel.Orientation = Orientation.Horizontal;
