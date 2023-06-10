@@ -14,8 +14,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox PlaceholderText="Input" Grid.Row="0" Margin="20,20,20,10" x:Name="inputtxtbox"/>
-            <TextBox PlaceholderText="Output" Grid.Row="1" Margin="20,10,20,20" x:Name="outputtxtbox"/>
+            <TextBox PlaceholderText="Input" Grid.Row="0" TextWrapping="Wrap" Margin="20,20,20,10" x:Name="inputtxtbox"/>
+            <TextBox PlaceholderText="Output" Grid.Row="1" TextWrapping="Wrap" Margin="20,10,20,20" x:Name="outputtxtbox"/>
         </Grid>
         <Grid Width="300" x:Name="listcont" VerticalAlignment="Stretch">
             <StackPanel VerticalAlignment="Bottom" Margin="0,0,15,20">

@@ -25,7 +25,7 @@ namespace Translate.Pages
             UpdateSettings(null);
             jsonpath = ApplicationData.Current.LocalFolder.Path + "\\data.json";
             LoadDataAsync();
-            foreach (string key in parser.languageDictionary.Keys)
+            foreach (string key in NameParser.languageDictionary.Keys)
             {
                 inputlangtxtbox.Items.Add(key);
                 outputlangtxtbox.Items.Add(key);
@@ -193,8 +193,8 @@ namespace Translate.Pages
             else
             {
                 // TRANSLATION CODE HERE!
-                string fromcode = parser.GetCode(inputLanguage);
-                string tocode = parser.GetCode(outputLanguage);
+                string fromcode = NameParser.GetCode(inputLanguage);
+                string tocode = NameParser.GetCode(outputLanguage);
                 TranslationQuery query = new TranslationQuery() { fromCode = fromcode, toCode = tocode, translateQuery = inputText };
 
                 try

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Web.Http;
-using System.Text.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace TranslateBackend
 {
@@ -26,31 +28,26 @@ namespace TranslateBackend
             }
             else
             {
-
-                JsonDocument document = JsonDocument.Parse(json);
-
-                // Get the root element
-                JsonElement root = document.RootElement;
-
-                // Get the translations array
-                JsonElement translations = root[0];
-
-                // Initialize a string to store the combined translations
-                string combinedTranslations = "";
-
-                // Iterate over each translation
-                foreach (JsonElement translation in translations.EnumerateArray())
+                string fulltrans = null;
+                JArray jArray = JArray.Parse(json);
+                string generatedTranslation = null;
+                foreach (JToken item in jArray.First())
                 {
-                    // Get the translated sentence
-                    string sentence = translation[1].GetString();
-
-                    // Concatenate the sentence to the combinedTranslations string
-                    combinedTranslations += sentence + " ";
+                    if (item.Type == JTokenType.Array && item[0].Type == JTokenType.String)
+                    {
+                        string translation = item[0].ToString();
+                        generatedTranslation += translation + " ";
+                    }
                 }
-
-                // Remove the trailing space
-                combinedTranslations = combinedTranslations.Trim();
-                return combinedTranslations;
+                if (generatedTranslation.EndsWith(" "))
+                {
+                    generatedTranslation = generatedTranslation.Substring(0, generatedTranslation.Length - 1);
+                    return generatedTranslation.Replace("  ", " ");
+                }
+                else
+                {
+                    return generatedTranslation.Replace("  ", " ");
+                }
             }
         }
     }
