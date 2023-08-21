@@ -7,6 +7,7 @@ using TranslateBackend;
 using Windows.UI.Xaml.Controls;
 using Windows.Foundation.Collections;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Translate.Pages
 {
@@ -37,7 +38,6 @@ namespace Translate.Pages
             if (setting == null)
             {
                 UpdateSettings("compactmode");
-                UpdateSettings("autotranslate");
                 UpdateSettings("fontSize");
             }
             else if (settings != null && settings.ContainsKey(setting) && (settings[setting]?.ToString() == "True" || settings[setting]?.ToString() == "False"))
@@ -56,19 +56,6 @@ namespace Translate.Pages
                     }
                     // handle compact mode here.
                 }
-                if (setting == "autotranslate")
-                {
-                    bool value = StringToBool(settings[setting].ToString());
-                    if (value)
-                    {
-                        TranslateButton.Visibility = Visibility.Collapsed;
-                    }
-                    else
-                    {
-                        TranslateButton.Visibility = Visibility.Visible;
-                    }
-                    automatic = value;
-                }
 
             }
             else if (setting == "fontSize")
@@ -84,7 +71,7 @@ namespace Translate.Pages
                     outputtxtbox.FontSize = 16;
                 }
             }
-            
+
             if (settings["fontFamily"] != null)
             {
                 inputtxtbox.FontFamily = new Windows.UI.Xaml.Media.FontFamily($"{settings["fontFamily"]}");
@@ -123,7 +110,7 @@ namespace Translate.Pages
             catch { }
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void Translate()
         {
             if (inputlangtxtbox.SelectedItem == null || outputlangtxtbox.SelectedItem == null)
             {
@@ -156,7 +143,7 @@ namespace Translate.Pages
         {
             try
             {
-                await (new ContentDialog() { Title = "Oops, an error occured. Here are the the details:", Content = exception.Message, PrimaryButtonText= "OK" }).ShowAsync();
+                await (new ContentDialog() { Title = "Oops, an error occurred. Here are the details:", Content = exception.Message, PrimaryButtonText = "OK" }).ShowAsync();
             }
             catch { }
         }
@@ -207,7 +194,7 @@ namespace Translate.Pages
                     return null;
                 }
             }
-            
+
         }
 
         private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -217,28 +204,33 @@ namespace Translate.Pages
 
             if (availableWidth >= availableHeight)
             {
-                mainpanel.Orientation = Orientation.Horizontal;
+                mainGrid.ColumnDefinitions.Clear();
+                mainGrid.RowDefinitions.Clear();
+                mainGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+                mainGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
             }
             else
             {
-                mainpanel.Orientation = Orientation.Vertical;
+                mainGrid.ColumnDefinitions.Clear();
+                mainGrid.RowDefinitions.Clear();
+                mainGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
+                mainGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
             }
+        }
 
-            // Calculate the width and height of the textboxes grid based on the mainpanel's orientation
-            if (mainpanel.Orientation == Orientation.Horizontal)
-            {
-                double textBoxesWidth = availableWidth - 300;
-                txtboxes.Width = textBoxesWidth;
-                txtboxes.Height = availableHeight;
-                listcont.HorizontalAlignment = HorizontalAlignment.Right;
-            }
-            else
-            {
-                double textBoxesHeight = availableHeight - 200;
-                txtboxes.Width = availableWidth;
-                txtboxes.Height = textBoxesHeight;
-                listcont.HorizontalAlignment = HorizontalAlignment.Center;
-            }
+        DispatcherTimer translatetimer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(1) };
+
+        private void inputtxtbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            translatetimer.Tick += Translatetimer_Tick;
+            translatetimer.Stop();
+            translatetimer.Start();
+        }
+
+        private void Translatetimer_Tick(object sender, object e)
+        {
+            if (outputlangtxtbox.SelectedItem != null && inputlangtxtbox.SelectedItem != null && inputtxtbox.Text != string.Empty) { Translate(); }
+            translatetimer.Stop();
         }
     }
 }

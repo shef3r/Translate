@@ -25,11 +25,6 @@ namespace Translate.Pages
                 bool value = (bool)settings["compactmode"];
                 compactswitch.IsOn = value;
             }
-            if (settings["autotranslate"] != null)
-            {
-                bool value = (bool)settings["autotranslate"];
-                autoswitch.IsOn = value;
-            }
             if (settings["fontSize"] != null)
             {
                 NumberBoxSpinButtonPlacementExample.Value = Convert.ToDouble(settings["fontSize"]);
@@ -57,14 +52,12 @@ namespace Translate.Pages
                         settingtitle.FontSize = 30;
                         setting1.Padding = new Thickness(16);
                         setting2.Padding = new Thickness(16);
-                        setting3.Padding = new Thickness(16);
                     }
                     else if (value)
                     {
                         settingtitle.FontSize = 20;
                         setting1.Padding = new Thickness(15, 10, 15, 10);
                         setting2.Padding = new Thickness(15, 10, 15, 10);
-                        setting3.Padding = new Thickness(15, 10, 15, 10);
                     }
         }
 
@@ -88,8 +81,6 @@ namespace Translate.Pages
             UpdateSettings(); }
 
         private void historyswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "history"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); }
-
-        private void autoswitch_Toggled(object sender, RoutedEventArgs e) { string setting = "autotranslate"; settings[setting] = (sender as ToggleSwitch).IsOn; SettingChangedEvent?.Invoke(this, setting); }
 
         private void NumberBoxSpinButtonPlacementExample_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
         {

@@ -8,21 +8,22 @@
     mc:Ignorable="d"
     SizeChanged="Page_SizeChanged">
 
-    <StackPanel Orientation="Horizontal" x:Name="mainpanel">
-        <Grid HorizontalAlignment="Stretch" x:Name="txtboxes" VerticalAlignment="Stretch">
+    <Grid x:Name="mainGrid">
+        <Grid x:Name="grid1" Margin="20" Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="48"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox PlaceholderText="Input" Grid.Row="0" TextWrapping="Wrap" Margin="20,20,20,10" x:Name="inputtxtbox"/>
-            <TextBox PlaceholderText="Output" Grid.Row="1" TextWrapping="Wrap" Margin="20,10,20,20" x:Name="outputtxtbox"/>
+            <ComboBox PlaceholderText="Output language" x:Name="outputlangtxtbox" Grid.Row="0" Margin="0,0,0,5" HorizontalAlignment="Stretch"/>
+            <TextBox TextWrapping="Wrap" IsReadOnly="True" PlaceholderText="Type into the Input box and select a language to start translating." x:Name="outputtxtbox" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </Grid>
-        <Grid Width="300" x:Name="listcont" VerticalAlignment="Stretch">
-            <StackPanel VerticalAlignment="Bottom" Margin="0,0,15,20">
-                    <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Input language" x:Name="inputlangtxtbox" Margin="5"/>
-                    <ComboBox HorizontalAlignment="Stretch" PlaceholderText="Output language" x:Name="outputlangtxtbox" Margin="5"/>
-                    <Button HorizontalAlignment="Stretch" Height="100" FontSize="30" x:Name="TranslateButton" Click="Button_Click" Margin="5,5,5,0">Translate</Button>
-            </StackPanel>
+        <Grid x:Name="grid2" Margin="20" Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ComboBox PlaceholderText="Input language" x:Name="inputlangtxtbox" Grid.Row="0" Margin="0,0,0,5" HorizontalAlignment="Stretch"/>
+            <TextBox PlaceholderText="Input" TextWrapping="Wrap" TextChanged="inputtxtbox_TextChanged" x:Name="inputtxtbox" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </Grid>
-    </StackPanel>
+    </Grid>
 </Page>
