@@ -9,5 +9,9 @@
     <AppIconSource>C:\Users\Bruno\Downloads\logo.png</AppIconSource>
     <SplashScreenSource>C:\Users\Bruno\Downloads\logo.png</SplashScreenSource>
     <PackageLogoSource>C:\Users\Bruno\Downloads\logo.png</PackageLogoSource>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm|arm64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
 </Project>
